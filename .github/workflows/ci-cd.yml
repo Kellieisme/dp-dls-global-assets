@@ -22,7 +22,7 @@ jobs:
         run: |
           cd token-service
           echo "FIGMA_API_KEY=${{ secrets.FIGMA_API_KEY }}" > .env
-          echo "FIGMA_ICONS_FILE_KEY=${{ secrets.FIGMA_ICONS_FILE_KEY }}" >> .env
+          echo "FIGMA_ICONS_FILE_KEY=${{ env.FIGMA_ICONS_FILE_KEY }}" >> .env
           npm install
           npm run ts
           npm run icons
