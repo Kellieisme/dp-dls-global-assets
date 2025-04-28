@@ -20,12 +20,12 @@ jobs:
 
       - name: Create .env file
         run: |
+          cd token-service
           echo "FIGMA_API_KEY=${{ secrets.FIGMA_API_KEY }}" > .env
           echo "FIGMA_ICONS_FILE_KEY=${{ secrets.FIGMA_ICONS_FILE_KEY }}" >> .env
 
       - name: Install dependencies and build tokens
         run: |
-          cd token-service
           npm install
           npm run ts
           npm run icons
