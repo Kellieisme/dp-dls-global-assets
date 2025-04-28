@@ -28,6 +28,7 @@ jobs:
           cd token-service
           npm install
           npm run ts
+          npm run icons
           cd ..
 
       - name: Build assets
