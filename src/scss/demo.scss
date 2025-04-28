@@ -1,0 +1,159 @@
+@use 'base/variables';
+@use 'base/variablesBase';
+@use 'base/linkMixins';
+@use 'base/themeMixins';
+
+body {
+  background: $color-base-solids-neutral-20;
+  font-family: $content-base-font-family-boeing-meso;
+}
+
+header {
+  background: $color-base-solids-white;
+  padding: 30px;
+  background-size: 160px;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 5px;
+
+  img {
+    width: 8em;
+    margin-bottom: 1em;
+  }
+}
+
+main {
+  background: $color-base-solids-white;
+  margin: 20px auto;
+  padding: 40px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+div.link-sheet {
+  @include theme-light-color;
+  border: 2px solid var(--color-interactive-primary-border-focused);
+  margin-bottom: 20px;
+  padding: 20px;
+  &.theme-dark {
+    @include theme-dark-color;
+    border: none;
+  }
+}
+
+div.usage {
+  @include theme-dark-color;
+  background-color: black;
+  padding: 5px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+  code {
+    font-family: 'Courier New', monospace;
+    color: var(--color-interactive-accent-textandicon-default);
+  }
+}
+
+div.link-sheet.primary > a {
+  @include link-primary;
+}
+
+div.link-sheet.primary.underlined > a {
+  @include link-primary-underlined;
+}
+
+div.link-sheet.accent > a {
+  @include link-accent;
+}
+
+div.link-sheet.accent.visited > a {
+  @include link-accent-visited;
+}
+
+div.link-sheet.accent.underlined > a {
+  @include link-accent-underlined;
+}
+
+div.link-sheet.accent.underlined.visited > a {
+  @include link-accent-underlined-visited;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 1em;
+}
+section:not(:first-child) {
+  margin-top: 50px;
+}
+.section-heading {
+  color: $color-base-solids-blue-30;
+}
+.container-inner {
+  background: $color-base-solids-flight-80;
+  padding: 1em 0;
+}
+.row + .row {
+  margin-top: 1em;
+}
+.container-wrapper {
+  margin-bottom: 30px;
+}
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  > div {
+    border: 1px solid;
+    padding: 10px;
+    margin: 2px;
+  }
+}
+
+.chip {
+  background-color: $color-base-solids-blue-60;
+  color: $color-base-solids-white;
+  padding: 20px;
+  border: none;
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.theme-dark {
+  background: $color-base-solids-neutral-20;
+}
+
+.elevation-1 {
+  box-shadow: $box-shadow-light-elevation-1;
+  .theme-dark & {
+    box-shadow: $box-shadow-dark-elevation-1;
+  }
+}
+.elevation-2 {
+  box-shadow: $box-shadow-light-elevation-2;
+  .theme-dark & {
+    box-shadow: $box-shadow-dark-elevation-2;
+  }
+}
+.elevation-3 {
+  box-shadow: $box-shadow-light-elevation-3;
+  .theme-dark & {
+    box-shadow: $box-shadow-dark-elevation-3;
+  }
+}
+
+.elevation-primary-glow-backlit {
+  box-shadow: $box-shadow-light-interactive-primary-glow-backlit;
+  .theme-dark & {
+    box-shadow: $box-shadow-dark-interactive-primary-glow-backlit;
+  }
+}
+
+.elevation-accent-glow-backlit {
+  box-shadow: $box-shadow-light-interactive-accent-glow-backlit;
+  .theme-dark & {
+    box-shadow: $box-shadow-dark-interactive-accent-glow-backlit;
+  }
+}

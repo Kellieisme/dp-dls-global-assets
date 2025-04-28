@@ -1,0 +1,84 @@
+// Set a custom gutter at each breakpoint
+// Adapted from: https://stackoverflow.com/a/55737677
+
+// Custom map of gutter widths across breakpoints
+$grid-gutter-widths: (
+  xs: 16px,
+  sm: 16px,
+  md: 20px,
+  lg: 20px,
+  xl: 24px,
+  xxl: 24px,
+);
+
+// Custom map of condensed gutter widths across breakpoints
+$grid-gutter-widths-condensed: (
+  xs: 12px,
+  sm: 12px,
+  md: 16px,
+  lg: 16px,
+  xl: 20px,
+  xxl: 20px,
+);
+
+// Custom map of margin across breakpoints
+$container-margins: (
+  xs: 16px,
+  sm: 24px,
+  md: 24px,
+  lg: 32px,
+  xl: 32px,
+  xxl: 32px,
+);
+
+$max-container-width: 1128px;
+
+// Set the default (relaxed) gutter widths
+.container {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include make-container($gutter);
+    }
+  }
+}
+
+.row {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include make-row($gutter);
+    }
+  }
+}
+
+// Set the condensed gutter widths
+.condensed {
+  .container {
+    @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
+      @include media-breakpoint-up($breakpoint) {
+        @include make-container($gutter);
+      }
+    }
+  }
+
+  .row {
+    @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
+      @include media-breakpoint-up($breakpoint) {
+        @include make-row($gutter);
+      }
+    }
+  }
+}
+
+.container-wrapper {
+  max-width: $max-container-width;
+  @each $breakpoint, $margin in $container-margins {
+    @include media-breakpoint-up($breakpoint) {
+      padding-left: $margin;
+      padding-right: $margin;
+    }
+  }
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

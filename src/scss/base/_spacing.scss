@@ -1,0 +1,44 @@
+// Custom map of spacers for condensed mode
+$spacers-condensed: (
+  0: 0,
+  1: 0,
+  2: $spacer * .125,
+  3: $spacer * .25,
+  4: $spacer * .5,
+  5: $spacer,
+  6: $spacer * 1.25,
+  7: $spacer * 1.5,
+  8: $spacer * 2,
+  9: $spacer * 2.5,
+  10: $spacer * 3,
+  11: $spacer * 3.5,
+  12: $spacer * 4,
+  13: $spacer * 4.5,
+  14: $spacer * 5,
+  15: $spacer * 5.5,
+  16: $spacer * 6,
+  17: $spacer * 6.5
+);
+
+.condensed {
+  @each $prop, $abbrev in (padding: p, margin: m) {
+    @each $size, $value in $spacers-condensed {
+      .#{$abbrev}-#{$size} {
+        #{$prop}: $value !important;
+      }
+      @each $side, $key in (top: t, right: e, bottom: b, left: s) {
+        .#{$abbrev}#{$key}-#{$size} {
+          #{$prop}-#{$side}: $value !important;
+        }
+      }
+      .#{$abbrev}#{x}-#{$size} {
+        #{$prop}-#{left}: $value !important;
+        #{$prop}-#{right}: $value !important;
+      }
+      .#{$abbrev}#{y}-#{$size} {
+        #{$prop}-#{top}: $value !important;
+        #{$prop}-#{bottom}: $value !important;
+      }
+    }
+  }
+}
