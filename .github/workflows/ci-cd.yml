@@ -57,6 +57,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
+          registry-url: 'https://npm.pkg.github.com/'  # Set the registry URL
+
+      - name: Authenticate to GitHub Packages
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
       - name: Extract package info
         id: package_info
@@ -68,5 +72,5 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: |
-          npm publish --access public
+          npm publish
           echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
