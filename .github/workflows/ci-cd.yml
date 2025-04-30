@@ -47,6 +47,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      contents: read
+      package: write
     if: github.ref == 'refs/heads/main'
 
     steps:
@@ -74,3 +77,5 @@ jobs:
         run: |
           npm publish
           echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
