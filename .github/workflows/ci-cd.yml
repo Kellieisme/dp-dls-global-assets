@@ -57,7 +57,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
-          registry-url: 'https://npm.pkg.github.com/'  # Set the registry URL
+          registry-url: 'https://npm.pkg.github.com/'
 
       - name: Authenticate to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
