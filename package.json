@@ -1,9 +1,12 @@
 {
   "author": "BGS Digital Aviation Design System",
   "name": "@dasdigitalplatform/dls-global-assets",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "version": "2.0.0",
   "description": "Boeing global DLS web development assets",
-  "homepage": "https://git.web.boeing.com/design/design-system/dls-global-assets",
+  "homepage": "https://github.com/dasdigitalplatform/dls-global-assets",
   "browserslist": [
     "last 2 versions",
     "> 5%"
@@ -21,7 +24,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@git-ssh.web.boeing.com:design/design-system/dls-global-assets.git"
+    "url": "git@github.com:dasdigitalplatform/dls-global-assets.git"
   },
   "files": [
     "dist"
