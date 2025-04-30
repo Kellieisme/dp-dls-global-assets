@@ -5,7 +5,7 @@ on:
     branches:
       - '*'
 
-#Remove before going to prod
+# Remove before going to prod
 concurrency:
   group: release-workflow
   cancel-in-progress: true
