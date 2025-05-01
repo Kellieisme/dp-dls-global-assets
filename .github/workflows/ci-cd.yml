@@ -65,6 +65,9 @@ jobs:
       - name: Authenticate to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
+      - name: List dist directory before publish
+        run: ls -la dist/
+
       - name: Extract package info
         id: package_info
         run: |
