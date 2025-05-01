@@ -65,6 +65,12 @@ jobs:
       - name: Authenticate to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
+      - name: Download and extract dist artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: ./dist
+
       - name: List dist directory before publish
         run: ls -la dist/
 
