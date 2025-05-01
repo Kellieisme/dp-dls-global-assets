@@ -64,7 +64,7 @@
 
 ## Create an .npmrc
 
-Public NPM packages will be installed from the Boeing SRES package repository (Jfrog Artifactory) and private NPM packages (`@design/dls-global-assets`) will be downloaded from the Boeing GitLab package registry. To enable this, create a new filed named `.npmrc` in the project root. The content should be:
+Public NPM packages will be installed from the Boeing SRES package repository (Jfrog Artifactory) and private NPM packages (`@dasdigitalplatform/dls-global-assets`) will be downloaded from the Boeing GitLab package registry. To enable this, create a new filed named `.npmrc` in the project root. The content should be:
 
 ```
 registry=https://sres.web.boeing.com/artifactory/api/npm/npm-remote/
@@ -72,7 +72,7 @@ registry=https://sres.web.boeing.com/artifactory/api/npm/npm-remote/
 //sres.web.boeing.com/artifactory/api/npm/npm-remote/:username=JFROG_USERNAME
 //sres.web.boeing.com/artifactory/api/npm/npm-remote/:email=EMAIL
 //sres.web.boeing.com/artifactory/api/npm/npm-remote/:always-auth=true
-@design:registry=https://git.web.boeing.com/api/v4/packages/npm/
+@dasdigitalplatform:registry=https://git.web.boeing.com/api/v4/packages/npm/
 //git.web.boeing.com/api/v4/packages/npm/:_authToken=GITLAB_AUTH_TOKEN
 ```
 
