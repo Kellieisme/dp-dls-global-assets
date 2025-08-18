@@ -1,3 +1,3 @@
 /* Fonts */
-@import 'base/fonts';
-@include boeing-meso("../fonts")
+@use 'base/fonts' as fonts;
+@include fonts.boeing-meso("../fonts");

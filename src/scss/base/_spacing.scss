@@ -1,23 +1,24 @@
+@use './bootstrapMixins' as bootstrapMixins;
 // Custom map of spacers for condensed mode
 $spacers-condensed: (
   0: 0,
   1: 0,
-  2: $spacer * .125,
-  3: $spacer * .25,
-  4: $spacer * .5,
-  5: $spacer,
-  6: $spacer * 1.25,
-  7: $spacer * 1.5,
-  8: $spacer * 2,
-  9: $spacer * 2.5,
-  10: $spacer * 3,
-  11: $spacer * 3.5,
-  12: $spacer * 4,
-  13: $spacer * 4.5,
-  14: $spacer * 5,
-  15: $spacer * 5.5,
-  16: $spacer * 6,
-  17: $spacer * 6.5
+  2: bootstrapMixins.$spacer * .125,
+  3: bootstrapMixins.$spacer * .25,
+  4: bootstrapMixins.$spacer * .5,
+  5: bootstrapMixins.$spacer,
+  6: bootstrapMixins.$spacer * 1.25,
+  7: bootstrapMixins.$spacer * 1.5,
+  8: bootstrapMixins.$spacer * 2,
+  9: bootstrapMixins.$spacer * 2.5,
+  10: bootstrapMixins.$spacer * 3,
+  11: bootstrapMixins.$spacer * 3.5,
+  12: bootstrapMixins.$spacer * 4,
+  13: bootstrapMixins.$spacer * 4.5,
+  14: bootstrapMixins.$spacer * 5,
+  15: bootstrapMixins.$spacer * 5.5,
+  16: bootstrapMixins.$spacer * 6,
+  17: bootstrapMixins.$spacer * 6.5
 );
 
 .condensed {

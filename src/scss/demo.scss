@@ -1,15 +1,15 @@
-@import 'base/variables';
-@import 'base/variablesBase';
-@import 'base/linkMixins';
-@import 'base/themeMixins';
+@use 'base/variables' as vars;
+@use 'base/variablesBase' as varbase;
+@use 'base/linkMixins' as linkMixin;
+@use 'base/themeMixins' as themeMixin;
 
 body {
-  background: $color-base-solids-neutral-20;
-  font-family: $content-base-font-family-boeing-meso;
+  background: vars.$color-base-solids-neutral-20;
+  font-family: vars.$content-base-font-family-boeing-meso;
 }
 
 header {
-  background: $color-base-solids-white;
+  background: vars.$color-base-solids-white;
   padding: 30px;
   background-size: 160px;
   width: 90%;
@@ -23,26 +23,26 @@ header {
 }
 
 main {
-  background: $color-base-solids-white;
+  background: vars.$color-base-solids-white;
   margin: 20px auto;
   padding: 40px;
   width: 90%;
   border-radius: 5px;
 }
 
-div.link-sheet {
-  @include theme-light-color;
+div.linkMixin.link-sheet {
+  @include themeMixin.theme-light-color;
   border: 2px solid var(--color-interactive-primary-border-focused);
   margin-bottom: 20px;
   padding: 20px;
   &.theme-dark {
-    @include theme-dark-color;
+    @include themeMixin.theme-dark-color;
     border: none;
   }
 }
 
 div.usage {
-  @include theme-dark-color;
+  @include themeMixin.theme-dark-color;
   background-color: black;
   padding: 5px;
   margin-bottom: 30px;
@@ -54,27 +54,27 @@ div.usage {
 }
 
 div.link-sheet.primary > a {
-  @include link-primary;
+  @include linkMixin.link-primary;
 }
 
 div.link-sheet.primary.underlined > a {
-  @include link-primary-underlined;
+  @include linkMixin.link-primary-underlined;
 }
 
 div.link-sheet.accent > a {
-  @include link-accent;
+  @include linkMixin.link-accent;
 }
 
 div.link-sheet.accent.visited > a {
-  @include link-accent-visited;
+  @include linkMixin.link-accent-visited;
 }
 
 div.link-sheet.accent.underlined > a {
-  @include link-accent-underlined;
+  @include linkMixin.link-accent-underlined;
 }
 
 div.link-sheet.accent.underlined.visited > a {
-  @include link-accent-underlined-visited;
+  @include linkMixin.link-accent-underlined-visited;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -84,10 +84,10 @@ section:not(:first-child) {
   margin-top: 50px;
 }
 .section-heading {
-  color: $color-base-solids-blue-30;
+  color: vars.$color-base-solids-blue-30;
 }
 .container-inner {
-  background: $color-base-solids-flight-80;
+  background: vars.$color-base-solids-flight-80;
   padding: 1em 0;
 }
 .row + .row {
@@ -109,8 +109,8 @@ section:not(:first-child) {
 }
 
 .chip {
-  background-color: $color-base-solids-blue-60;
-  color: $color-base-solids-white;
+  background-color: vars.$color-base-solids-blue-60;
+  color: vars.$color-base-solids-white;
   padding: 20px;
   border: none;
 }
@@ -122,38 +122,38 @@ section:not(:first-child) {
 }
 
 .theme-dark {
-  background: $color-base-solids-neutral-20;
+  background: vars.$color-base-solids-neutral-20;
 }
 
 .elevation-1 {
-  box-shadow: $box-shadow-light-elevation-1;
+  box-shadow: vars.$box-shadow-light-elevation-1;
   .theme-dark & {
-    box-shadow: $box-shadow-dark-elevation-1;
+    box-shadow: vars.$box-shadow-dark-elevation-1;
   }
 }
 .elevation-2 {
-  box-shadow: $box-shadow-light-elevation-2;
+  box-shadow: vars.$box-shadow-light-elevation-2;
   .theme-dark & {
-    box-shadow: $box-shadow-dark-elevation-2;
+    box-shadow: vars.$box-shadow-dark-elevation-2;
   }
 }
 .elevation-3 {
-  box-shadow: $box-shadow-light-elevation-3;
+  box-shadow: vars.$box-shadow-light-elevation-3;
   .theme-dark & {
-    box-shadow: $box-shadow-dark-elevation-3;
+    box-shadow: vars.$box-shadow-dark-elevation-3;
   }
 }
 
 .elevation-primary-glow-backlit {
-  box-shadow: $box-shadow-light-interactive-primary-glow-backlit;
+  box-shadow: vars.$box-shadow-light-interactive-primary-glow-backlit;
   .theme-dark & {
-    box-shadow: $box-shadow-dark-interactive-primary-glow-backlit;
+    box-shadow: vars.$box-shadow-dark-interactive-primary-glow-backlit;
   }
 }
 
 .elevation-accent-glow-backlit {
-  box-shadow: $box-shadow-light-interactive-accent-glow-backlit;
+  box-shadow: vars.$box-shadow-light-interactive-accent-glow-backlit;
   .theme-dark & {
-    box-shadow: $box-shadow-dark-interactive-accent-glow-backlit;
+    box-shadow: vars.$box-shadow-dark-interactive-accent-glow-backlit;
   }
 }

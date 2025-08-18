@@ -3,6 +3,7 @@ image: registry.web.boeing.com/container/images/stack/ubi9minimal-node18:9.2-750
 stages:
   - build
   - deploy
+  - test
 
 build-package:
   stage: build
@@ -72,3 +73,42 @@ publish-npm:
       else
         echo "Version ${NPM_PACKAGE_VERSION} of ${NPM_PACKAGE_NAME} has already been published, so no new version has been published."
       fi
+
+# PR testing
+pr-develop:
+  stage: test
+  only:
+    - merge_requests
+  script:
+    # Log NPM configuration
+    - echo "===== NPM Configuration ====="
+    - npm config list
+    - echo "Registry:$(npm config get registry)"
+
+    # Add Figma Environment variables
+    - echo "FIGMA_API_KEY=${FIGMA_API_KEY}" > .env
+    - echo "FIGMA_ICONS_FILE_KEY=${FIGMA_ICONS_FILE_KEY}" >> .env
+    # Build tokens - commented out generation of scss files so that themeMixin.scss is uneffected
+    - cd token-service
+    - echo "registry=https://${JFROG_URL}/${JFROG_REPO}/" > .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:_password=${JFROG_PASSWORD}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
+    - echo "Created the following .npmrc:"; cat .npmrc
+    - npm install
+    - npm run ts
+    # https://api.figma.com/v1/files/ is returning a 404, so disabling icon generation for now
+    #- npm run icons
+    # Build assets
+    - cd ..
+    - echo "registry=https://${JFROG_URL}/${JFROG_REPO}/" > .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:_password=${JFROG_PASSWORD}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:username=${JFROG_USER}" >> .npmrc
+    - echo "//${JFROG_URL}/${JFROG_REPO}/:always-auth=true" >> .npmrc
+    - echo "Created the following .npmrc:"; cat .npmrc
+    - npm install
+    - npm run release
+  artifacts:
+    paths:
+      - coverage/            # Store coverage reports as artifacts
+      - lint-results/        # Store lint results as artifacts

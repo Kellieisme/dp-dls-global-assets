@@ -1,6 +1,14 @@
 // Set a custom gutter at each breakpoint
 // Adapted from: https://stackoverflow.com/a/55737677
 
+@use './typography' as typography;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+$_grid-breakpoints: typography.$grid-breakpoints;
+
 // Custom map of gutter widths across breakpoints
 $grid-gutter-widths: (
   xs: 16px,
