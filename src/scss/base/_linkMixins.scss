@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'themeMixins';
+@use 'variables' as vars;
+@use 'themeMixins' as themeMixins;
 
 
 /* STANDALONE or INLINE / PRIMARY */

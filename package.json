@@ -1,12 +1,9 @@
 {
   "author": "BGS Digital Aviation Design System",
-  "name": "@dasdigitalplatform/dls-global-assets",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "version": "2.0.0",
+  "name": "@dips/dls-global-assets",
+  "version": "2.1.2",
   "description": "Boeing global DLS web development assets",
-  "homepage": "https://github.com/dasdigitalplatform/dls-global-assets",
+  "homepage": "https://git.web.boeing.com/design/design-system/dls-global-assets",
   "browserslist": [
     "last 2 versions",
     "> 5%"
@@ -24,7 +21,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dasdigitalplatform/dls-global-assets.git"
+    "url": "git@git-ssh.web.boeing.com:design/design-system/dls-global-assets.git"
   },
   "files": [
     "dist"
@@ -40,7 +37,7 @@
   },
   "target": "web",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -61,7 +58,7 @@
     "mini-css-extract-plugin": "^2.4.4",
     "postcss": "^8.3.11",
     "postcss-loader": "^8.1.0",
-    "sass": "^1.72.0",
+    "sass": "^1.89.0",
     "sass-lint": "^1.13.1",
     "sass-loader": "^14.1.0",
     "terser-webpack-plugin": "^5.2.5",
