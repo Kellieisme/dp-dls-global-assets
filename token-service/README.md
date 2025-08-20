@@ -73,7 +73,7 @@ Alias tokens are prescriptive definitions of how base tokens are used. Aliases c
 
 * This project sources [Amazon Style Dictionary](https://amzn.github.io/style-dictionary/#/), which is a open source project that provides a series of APIs to compile design token representations, deep merge base & alias token relationship, and customize output formats. The detailed documentation on how we utilize these Style Dictionary APIs is available in the section below.
 
-* We leverage the [Tokens Studio](https://www.figma.com/developers/api) GitLab sync as a way to parse design tokens.
+* We leverage the [Tokens Studio](https://www.figma.com/developers/api) Github sync as a way to parse design tokens.
 
 * We leverage the [Figma REST API](https://www.figma.com/developers/api) as a way to parse icons defined in the Icons Library file.
 

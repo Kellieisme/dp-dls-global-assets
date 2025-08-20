@@ -64,23 +64,15 @@
 
 ## Create an .npmrc
 
-Public NPM packages will be installed from the Boeing SRES package repository (Jfrog Artifactory) and private NPM packages (`@dips/dls-global-assets`) will be downloaded from the Boeing GitLab package registry. To enable this, create a new filed named `.npmrc` in the project root. The content should be:
+Public NPM packages will be installed from the private NPM packages (`@dasdigitalplatform/dls-global-assets`) will be downloaded from the Boeing Github package registry. To enable this, create a new filed named `.npmrc` in the project root. The content should be:
 
 ```
-registry=https://sres.web.boeing.com/artifactory/api/npm/npm-remote/
-//sres.web.boeing.com/artifactory/api/npm/npm-remote/:_password=JFROG_PASSWORD
-//sres.web.boeing.com/artifactory/api/npm/npm-remote/:username=JFROG_USERNAME
-//sres.web.boeing.com/artifactory/api/npm/npm-remote/:email=EMAIL
-//sres.web.boeing.com/artifactory/api/npm/npm-remote/:always-auth=true
-@dips:registry=https://git.web.boeing.com/api/v4/packages/npm/
-//git.web.boeing.com/api/v4/packages/npm/:_authToken=GITLAB_AUTH_TOKEN
+@dasdigitalplatform:registry=https://git.web.boeing.com/api/v4/packages/npm/
+//git.web.boeing.com/api/v4/packages/npm/:_authToken=GITHUB_AUTH_TOKEN
 ```
 
 Replace the folowing values:
-- JFROG_PASSWORD: Login to [Artifactory](https://sres.web.boeing.com/ui/admin/artifactory/user_profile) using your Boeing email and Windows password. Go to User Profile and create a new Identity Token. Save in a safe place. Encode the Identity Token in [Base64](https://www.base64encode.org/) and use that string as the JFROG_PASSWORD.
-- JFROG_USERNAME: On [Artifactory](https://sres.web.boeing.com/) in the top right you will see your username, a 7-digit number.
-- EMAIL: Your Boeing email
-- GITLAB_AUTH_TOKEN: Create a [GitLab Personal Access Token](https://git.web.boeing.com/-/user_settings/personal_access_tokens) with all permissions. Save in a safe place. Use that string as the GITLAB_AUTH_TOKEN.
+- GITHUB_AUTH_TOKEN: Create a [Github Personal Access Token](https://github.com/settings/tokens) with all permissions. Save in a safe place. Use that string as the GITHUB_AUTH_TOKEN.
 
 
 ## Installation
@@ -119,7 +111,7 @@ $ npm install
 
 ### Run the token service
 
-Before building for the first time, run the token service according to the [documentation](https://git.web.boeing.com/design/design-system/dls-global-assets/-/blob/main/token-service/README.md):
+Before building for the first time, run the token service according to the [documentation](https://github.com/dasdigitalplatform/dls-global-assets/blob/main/token-service/README.md):
 
 The token service will build an copy a set of required generated SCSS, CSS, JS, and JSON files to the project `/src` folder.
 
