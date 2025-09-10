@@ -1,167 +1,161 @@
 @use './typographyMixins' as typography;
-@use './bootstrapMixins' as bm;
+@use './media-breakpoints' as breakpointMixins;
 
-
-$grid-breakpoints: bm.$custom-grid-breakpoints;
-$container-max-widths : bm.$container-max-widths;
-
-
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
+$grid-breakpoints: breakpointMixins.$custom-grid-breakpoints;
+$container-max-widths : breakpointMixins.$container-max-widths;
 
 .display-high {
   @include typography.typography-s-display-high;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-display-high;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-display-high;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-display-high;
   }
 }
 
 .display-medium {
   @include typography.typography-s-display-medium;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-display-medium;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-display-medium;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-display-medium;
   }
 }
 
 .h1, h1, .heading-high {
   @include typography.typography-s-heading-high;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-heading-high;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-heading-high;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-heading-high;
   }
 }
 
 .h2, h2, .heading-medium {
   @include typography.typography-s-heading-medium;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-heading-medium;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-heading-medium;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-heading-medium;
   }
 }
 
 .h3, h3, .heading-low {
   @include typography.typography-s-heading-low;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-heading-low;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-heading-low;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-heading-low;
   }
 }
 
 .h4, h4, .title-high {
   @include typography.typography-s-title-high;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-title-high;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-title-high;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-title-high;
   }
 }
 
 .h5, h5, .title-medium {
   @include typography.typography-s-title-medium;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-title-medium;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-title-medium;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-title-medium;
   }
 }
 
 .h6, h6, .title-low {
   @include typography.typography-s-title-low;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-title-low;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-title-low;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-title-low;
   }
 }
 
 .body-high-default {
   @include typography.typography-s-body-high-default;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-body-high-default;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-body-high-default;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-body-high-default;
   }
 }
 
 .body-high-highlight {
   @include typography.typography-s-body-high-highlight;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-body-high-highlight;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-body-high-highlight;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-body-high-highlight;
   }
 }
 
 .body-medium-default {
   @include typography.typography-s-body-medium-default;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-body-medium-default;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-body-medium-default;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-body-medium-default;
   }
 }
 
 .body-medium-highlight {
   @include typography.typography-s-body-medium-highlight;
-  @include media-breakpoint-up(md) { 
+  @include breakpointMixins.media-breakpoint-up(md) { 
     @include typography.typography-m-body-medium-highlight;
   }
-  @include media-breakpoint-up(lg) { 
+  @include breakpointMixins.media-breakpoint-up(lg) { 
     @include typography.typography-l-body-medium-highlight;
   }
-  @include media-breakpoint-up(xl) { 
+  @include breakpointMixins.media-breakpoint-up(xl) { 
     @include typography.typography-xl-body-medium-highlight;
   }
 }
