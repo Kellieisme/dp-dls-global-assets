@@ -1,13 +1,7 @@
-// Set a custom gutter at each breakpoint
-// Adapted from: https://stackoverflow.com/a/55737677
-
 @use './typography' as typography;
+@use './media-breakpoints' as breakpointMixins;
 
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-
-$_grid-breakpoints: typography.$grid-breakpoints;
+$_grid-breakpoints: breakpointMixins.$grid-breakpoints;
 
 // Custom map of gutter widths across breakpoints
 $grid-gutter-widths: (
@@ -41,11 +35,22 @@ $container-margins: (
 
 $max-container-width: 1128px;
 
-// Set the default (relaxed) gutter widths
+// Mixin for media queries
+@mixin media-breakpoint-up($breakpoint) {
+  $min-width: map-get($_grid-breakpoints, $breakpoint);
+  @if $min-width != null {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  } @else if $breakpoint == xs {
+    @content;
+  }
+}
+
 .container {
   @each $breakpoint, $gutter in $grid-gutter-widths {
     @include media-breakpoint-up($breakpoint) {
-      @include make-container($gutter);
+      @include breakpointMixins.make-container($gutter);
     }
   }
 }
@@ -53,17 +58,16 @@ $max-container-width: 1128px;
 .row {
   @each $breakpoint, $gutter in $grid-gutter-widths {
     @include media-breakpoint-up($breakpoint) {
-      @include make-row($gutter);
+      @include breakpointMixins.make-row($gutter);
     }
   }
 }
 
-// Set the condensed gutter widths
 .condensed {
   .container {
     @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
       @include media-breakpoint-up($breakpoint) {
-        @include make-container($gutter);
+        @include breakpointMixins.make-container($gutter);
       }
     }
   }
@@ -71,7 +75,7 @@ $max-container-width: 1128px;
   .row {
     @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
       @include media-breakpoint-up($breakpoint) {
-        @include make-row($gutter);
+        @include breakpointMixins.make-row($gutter);
       }
     }
   }
