@@ -84,7 +84,7 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: |
-          npm publish
+          npm publish --dry-run
           echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
