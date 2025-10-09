@@ -50,7 +50,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
@@ -84,7 +83,12 @@ jobs:
 
       - name: Publish to GitHub Packages
         run: |
-          npm publish
-          echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            npm publish
+            echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
+          else
+            npm publish --dry-run
+            echo "Dry-run: Would publish version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

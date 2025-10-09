@@ -1,6 +1,6 @@
 {
   "author": "BGS Digital Aviation Design System",
-  "name": "@dasdigitalplatform/dls-global-assets",
+  "name": "@jeppesen-foreflight/dls-global-assets",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
