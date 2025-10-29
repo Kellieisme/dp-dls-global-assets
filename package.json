@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Boeing global DLS web development assets",
   "homepage": "https://github.com/dasdigitalplatform/dls-global-assets",
   "browserslist": [
