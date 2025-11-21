@@ -121,6 +121,50 @@ The token service will build an copy a set of required generated SCSS, CSS, JS, 
 - `src/js/variables.module.js`
 - `src/json/variables.json`
 
+### Receiving Token Updates from dp-dls-global-tokens
+
+The design tokens used by this project are maintained in the [dp-dls-global-tokens](https://git.web.boeing.com/jeppesen-foreflight/dp-dls-global-tokens) repository. When tokens are updated, they need to be synced to this project:
+
+#### When to Update
+
+Update tokens when:
+- New token values are published in dp-dls-global-tokens
+- The external-tokens submodule is behind the latest develop branch
+
+#### Update Workflow
+
+1. **Receive synced tokens** - The tokens team will rsync compiled SCSS files to `external-tokens/scss/`:
+   ```bash
+   # This is done by the tokens team from dp-dls-global-tokens
+   rsync -av --delete \
+     /path/to/dp-dls-global-tokens/packages/tokens/dist/scss/ \
+     /path/to/dp-dls-global-assets/external-tokens/scss/
+   ```
+
+2. **Update the submodule pointer** - After tokens are synced, update the submodule:
+   ```bash
+   cd external-tokens
+   git checkout develop
+   git pull origin develop
+   cd ..
+   git add external-tokens
+   git commit -m "Update external-tokens submodule to latest develop"
+   git push origin develop
+   ```
+
+3. **Run the token service** - Process the updated tokens:
+   ```bash
+   cd token-service
+   npm install
+   npm run build
+   ```
+
+4. **Build assets** - Build the assets with updated tokens:
+   ```bash
+   npm run build
+   ```
+
+
 ### Build assets for development
 
 ```sh
