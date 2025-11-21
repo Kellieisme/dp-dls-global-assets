@@ -6,6 +6,7 @@
       "dom.iterable",
       "es2016"
     ],
+    "module": "ESNext",
     "target": "es6",
     "outDir": "build",
     "noUnusedLocals": true,
@@ -13,10 +14,14 @@
     "experimentalDecorators": true,
     "removeComments": true,
     "noImplicitAny": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "typeRoots": [
       "./node_modules/@types"
     ],
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "exclude": [
+    "external-tokens",
+    "node_modules"
+  ]
 }

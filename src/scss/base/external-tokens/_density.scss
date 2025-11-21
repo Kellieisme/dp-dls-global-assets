@@ -1,0 +1,117 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+
+
+@use 'sass:map';
+@use 'sass:meta';
+@use './utils';
+
+@use './density/relaxed';
+@use './density/condensed';
+
+$base-dimension-dynamic-s00: 0px;
+$base-dimension-dynamic-s01: 2px;
+$base-dimension-dynamic-s02: 4px;
+$base-dimension-dynamic-s03: 8px;
+$base-dimension-dynamic-s04: 12px;
+$base-dimension-dynamic-s05: 16px;
+$base-dimension-dynamic-s06: 20px;
+$base-dimension-dynamic-s07: 24px;
+$base-dimension-dynamic-s08: 32px;
+$base-dimension-dynamic-s09: 40px;
+$base-dimension-dynamic-s10: 48px;
+$base-dimension-dynamic-s11: 56px;
+$base-dimension-dynamic-s12: 64px;
+$base-dimension-dynamic-s13: 72px;
+$base-dimension-dynamic-s14: 80px;
+$base-dimension-dynamic-s15: 96px;
+$base-dimension-dynamic-s16: 112px;
+$base-dimension-dynamic-s17: 120px;
+$base-dimension-dynamic-s99: 999px;
+$base-dimension-dynamic-d03: 8px;
+$base-dimension-dynamic-d04: 12px;
+$base-dimension-dynamic-d05: 16px;
+$base-dimension-dynamic-d06: 20px;
+$base-dimension-dynamic-d07: 24px;
+$base-dimension-dynamic-d08: 32px;
+$base-dimension-dynamic-d09: 40px;
+$base-dimension-dynamic-d10: 48px;
+$base-dimension-dynamic-d11: 56px;
+$base-dimension-dynamic-d12: 64px;
+$base-dimension-dynamic-d13: 72px;
+$base-dimension-dynamic-d14: 80px;
+$base-dimension-dynamic-d15: 96px;
+$base-dimension-dynamic-d16: 112px;
+$base-dimension-dynamic-d17: 120px;
+$base-dimension-dynamic-i01: 2px;
+$base-dimension-dynamic-i02: 4px;
+$base-dimension-dynamic-i03: 8px;
+$base-dimension-dynamic-i04: 12px;
+$base-dimension-dynamic-i05: 16px;
+$base-dimension-dynamic-i06: 20px;
+$base-dimension-dynamic-i07: 24px;
+$base-dimension-dynamic-i08: 32px;
+$base-dimension-dynamic-i09: 40px;
+$base-dimension-dynamic-i10: 48px;
+
+$moduleDensity:(
+  theme-relaxed: meta.module-variables(relaxed),
+  theme-condensed: meta.module-variables(condensed),
+);
+
+@mixin generateDensityVariables () {
+  :root,
+  .theme-relaxed {
+    @include utils.themeVars($moduleDensity, 'theme-relaxed');
+  }
+  .theme-condensed {
+    @include utils.themeVars($moduleDensity, 'theme-condensed');
+  }
+  $base-dimension-dynamic-s00: var(--base-dimension-dynamic-s00) !global;
+  $base-dimension-dynamic-s01: var(--base-dimension-dynamic-s01) !global;
+  $base-dimension-dynamic-s02: var(--base-dimension-dynamic-s02) !global;
+  $base-dimension-dynamic-s03: var(--base-dimension-dynamic-s03) !global;
+  $base-dimension-dynamic-s04: var(--base-dimension-dynamic-s04) !global;
+  $base-dimension-dynamic-s05: var(--base-dimension-dynamic-s05) !global;
+  $base-dimension-dynamic-s06: var(--base-dimension-dynamic-s06) !global;
+  $base-dimension-dynamic-s07: var(--base-dimension-dynamic-s07) !global;
+  $base-dimension-dynamic-s08: var(--base-dimension-dynamic-s08) !global;
+  $base-dimension-dynamic-s09: var(--base-dimension-dynamic-s09) !global;
+  $base-dimension-dynamic-s10: var(--base-dimension-dynamic-s10) !global;
+  $base-dimension-dynamic-s11: var(--base-dimension-dynamic-s11) !global;
+  $base-dimension-dynamic-s12: var(--base-dimension-dynamic-s12) !global;
+  $base-dimension-dynamic-s13: var(--base-dimension-dynamic-s13) !global;
+  $base-dimension-dynamic-s14: var(--base-dimension-dynamic-s14) !global;
+  $base-dimension-dynamic-s15: var(--base-dimension-dynamic-s15) !global;
+  $base-dimension-dynamic-s16: var(--base-dimension-dynamic-s16) !global;
+  $base-dimension-dynamic-s17: var(--base-dimension-dynamic-s17) !global;
+  $base-dimension-dynamic-s99: var(--base-dimension-dynamic-s99) !global;
+  $base-dimension-dynamic-d03: var(--base-dimension-dynamic-d03) !global;
+  $base-dimension-dynamic-d04: var(--base-dimension-dynamic-d04) !global;
+  $base-dimension-dynamic-d05: var(--base-dimension-dynamic-d05) !global;
+  $base-dimension-dynamic-d06: var(--base-dimension-dynamic-d06) !global;
+  $base-dimension-dynamic-d07: var(--base-dimension-dynamic-d07) !global;
+  $base-dimension-dynamic-d08: var(--base-dimension-dynamic-d08) !global;
+  $base-dimension-dynamic-d09: var(--base-dimension-dynamic-d09) !global;
+  $base-dimension-dynamic-d10: var(--base-dimension-dynamic-d10) !global;
+  $base-dimension-dynamic-d11: var(--base-dimension-dynamic-d11) !global;
+  $base-dimension-dynamic-d12: var(--base-dimension-dynamic-d12) !global;
+  $base-dimension-dynamic-d13: var(--base-dimension-dynamic-d13) !global;
+  $base-dimension-dynamic-d14: var(--base-dimension-dynamic-d14) !global;
+  $base-dimension-dynamic-d15: var(--base-dimension-dynamic-d15) !global;
+  $base-dimension-dynamic-d16: var(--base-dimension-dynamic-d16) !global;
+  $base-dimension-dynamic-d17: var(--base-dimension-dynamic-d17) !global;
+  $base-dimension-dynamic-i01: var(--base-dimension-dynamic-i01) !global;
+  $base-dimension-dynamic-i02: var(--base-dimension-dynamic-i02) !global;
+  $base-dimension-dynamic-i03: var(--base-dimension-dynamic-i03) !global;
+  $base-dimension-dynamic-i04: var(--base-dimension-dynamic-i04) !global;
+  $base-dimension-dynamic-i05: var(--base-dimension-dynamic-i05) !global;
+  $base-dimension-dynamic-i06: var(--base-dimension-dynamic-i06) !global;
+  $base-dimension-dynamic-i07: var(--base-dimension-dynamic-i07) !global;
+  $base-dimension-dynamic-i08: var(--base-dimension-dynamic-i08) !global;
+  $base-dimension-dynamic-i09: var(--base-dimension-dynamic-i09) !global;
+  $base-dimension-dynamic-i10: var(--base-dimension-dynamic-i10) !global;
+}
+

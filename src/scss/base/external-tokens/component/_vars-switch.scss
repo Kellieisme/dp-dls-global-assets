@@ -1,0 +1,41 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-switch-corner-radius: $foundation-radius-full;
+$component-switch-handle-target: $foundation-sizing-4xl;
+$component-switch-handle-max: 28px;
+$component-switch-handle-icon: $foundation-icon-sm;
+$component-switch-handle-padding: $foundation-spacing-xs;
+$component-switch-handle-selected: $foundation-sizing-xl;
+$component-switch-handle-unselected-icon: $foundation-sizing-xl;
+$component-switch-handle-unselected: $foundation-sizing-m;
+$component-switch-handle-pressed: $foundation-sizing-2xl;
+$component-switch-state-layer-size: $foundation-sizing-3xl;
+$component-switch-width: $foundation-sizing-5xl;
+$component-switch-height: $foundation-sizing-2xl;
+$component-switch-selected-enabled-icon: $foundation-interactive-accent-textandicon-selected;
+$component-switch-selected-enabled-background: $foundation-interactive-accent-background-enabled-filled;
+$component-switch-selected-enabled-handle: $foundation-interactive-primary-textandicon-inverse;
+$component-switch-selected-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-switch-selected-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-switch-selected-disabled-handle: $foundation-interactive-primary-textandicon-inverse;
+$component-switch-unselected-enabled-icon: $foundation-interactive-primary-textandicon-inverse;
+$component-switch-unselected-enabled-background: $foundation-interactive-primary-background-enabled-tonal;
+$component-switch-unselected-enabled-border-color: $foundation-interactive-primary-border-enabled;
+$component-switch-unselected-enabled-handle: $foundation-interactive-primary-textandicon-primary-default;
+$component-switch-unselected-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-switch-unselected-disabled-background: $foundation-interactive-primary-background-enabled-tonal;
+$component-switch-unselected-disabled-border-color: $foundation-interactive-primary-border-disabled;
+$component-switch-unselected-disabled-handle: $foundation-interactive-primary-textandicon-disabled;
+$component-switch-unselected-border-width: $foundation-border-focused-width;
+$component-switch-hovered: $foundation-interactive-primary-background-hovered;
+$component-switch-pressed: $foundation-interactive-primary-background-selected;
+@mixin component-switch-unselected-enabled-border ($direction) {
+  @include utils.border($direction, $component-switch-unselected-border-width, $foundation-border-regular-style, $component-switch-unselected-enabled-border-color);;
+}
+@mixin component-switch-unselected-disabled-border ($direction) {
+  @include utils.border($direction, $component-switch-unselected-border-width, $foundation-border-regular-style, $component-switch-unselected-disabled-border-color);;
+}

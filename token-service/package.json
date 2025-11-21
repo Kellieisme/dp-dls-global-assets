@@ -18,22 +18,23 @@
     "ts": "npx tsc && node ./build/fetch/index generateTokensStudioStyleDictionaryTokens && npm run ts:compile",
     "ts:compile": "npx tsc && shx cp -R src/compile/configs build/compile && node ./build/compile/index build",
     "icons": "npm run icons:fetch && node ./build/fetch/index generateIcons",
-    "icons:fetch": "npx tsc && node ./build/fetch/data-icons"
+    "icons:fetch": "npx tsc && node ./build/fetch/data-icons",
+    "tokens:sync": "bash ./scripts/sync-external-tokens.sh"
   },
   "dependencies": {
-    "@iconify/tools": "^4.0.4",
-    "change-case": "^5.4.3",
-    "commander": "^11.0.0",
-    "dotenv": "^16.3.1",
-    "node-fetch": "^3.3.1",
+    "@iconify/tools": "^4.1.4",
+    "change-case": "^5.4.4",
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
     "hex-rgb": "^5.0.0",
-    "style-dictionary": "^3.8.0",
-    "typescript": "^5.1.6"
+    "node-fetch": "^3.3.2",
+    "style-dictionary": "^3.9.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.70.0",
-    "@types/node": "^20.4.2",
-    "@types/node-fetch": "^2.6.4",
+    "@figma/plugin-typings": "^1.108.0",
+    "@types/node": "^22.10.2",
+    "@types/node-fetch": "^2.6.11",
     "shx": "^0.3.4"
   },
   "type": "module"

@@ -1,0 +1,108 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-select-padding-horizontal: $foundation-spacing-s;
+$component-select-padding-vertical: $foundation-spacing-xs;
+$component-select-gap-vertical: $foundation-spacing-3xs;
+$component-select-top-label-padding-top: $foundation-spacing-3xs;
+$component-select-top-label-maxheight: $foundation-sizing-s;
+$component-select-label-only-padding-top: $foundation-spacing-xs;
+$component-select-background: $foundation-ui-glass-surface-thick;
+$component-select-enabeld-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-enabeld-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-enabeld-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-enabeld-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-enabeld-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-enabeld-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-hovered-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-hovered-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-hovered-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-hovered-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-hovered-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-hovered-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-hovered-background: $foundation-interactive-primary-background-hovered;
+$component-select-hovered-background-glow: $foundation-interactive-primary-glow-surface-medium;
+$component-select-hovered-border-color: $foundation-ui-glass-specular-border;
+$component-select-hovered-border-width: $foundation-border-regular-width;
+$component-select-focused-label: $foundation-interactive-accent-textandicon-default;
+$component-select-focused-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-focused-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-focused-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-focused-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-focused-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-focused-background: $foundation-interactive-primary-background-selected;
+$component-select-focused-border-color: $foundation-interactive-primary-border-focused;
+$component-select-focused-caret: $foundation-interactive-accent-textandicon-default;
+$component-select-focused-top-corner-radius: $foundation-radius-s;
+$component-select-focused-bottom-corner-radius: $foundation-radius-none;
+$component-select-focused-border-width: $foundation-border-regular-width;
+$component-select-error-label: $foundation-semantic-textandicon-error;
+$component-select-error-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-error-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-select-error-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-error-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-select-error-supporting-text: $foundation-semantic-textandicon-error;
+$component-select-error-border-color: $foundation-semantic-border-error;
+$component-select-error-border-width: $foundation-border-regular-width;
+$component-select-disabled-label: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-value: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-prefix: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-suffix: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-supporting-text: $foundation-interactive-primary-textandicon-disabled;
+$component-select-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-select-placeholder-textcolor: $foundation-interactive-primary-textandicon-disabled;
+$component-select-supporting-text-padding-horizontal: $foundation-spacing-m;
+$component-select-supporting-text-padding-vertical: $foundation-spacing-2xs;
+$component-select-supporting-text-gap: $foundation-spacing-m;
+$component-select-background-blur: $foundation-ui-glass-background-blur;
+$component-select-leading-icon-size: $foundation-icon-md;
+$component-select-leading-icon-margin-right: $foundation-spacing-xs;
+$component-select-trailing-item-size: $foundation-icon-md;
+$component-select-trailing-item-margin-left: $foundation-spacing-xs;
+$component-select-minwidth: $foundation-sizing-10xl;
+$component-select-content-margin-horizontal: $foundation-spacing-2xs;
+$component-select-content-gap-vertical: $foundation-spacing-3xs;
+$component-select-content-minheight: $foundation-sizing-2xl;
+$component-select-corner-radius: $foundation-radius-s;
+$component-option-content-minheight: $foundation-sizing-xl; // Minimum content height of Select options
+$component-option-padding-horizontal: $foundation-spacing-m;
+$component-option-padding-vertical: $foundation-spacing-s;
+$component-option-hovered: $foundation-interactive-primary-background-hovered;
+$component-option-selected: $foundation-interactive-primary-background-selected;
+@mixin component-select-hovered-border ($direction) {
+  @include utils.border($direction, $component-select-hovered-border-width, $foundation-border-regular-style, $component-select-hovered-border-color);;
+}
+@mixin component-select-focused-border ($direction) {
+  @include utils.border($direction, $component-select-focused-border-width, $foundation-border-regular-style, $component-select-focused-border-color);;
+}
+@mixin component-select-error-border ($direction) {
+  @include utils.border($direction, $component-select-error-border-width, $foundation-border-regular-style, $component-select-error-border-color);;
+}
+@mixin component-select-placeholder-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-select-label-top () {
+  @include typography.foundation-typography-label-lowest2();
+}
+@mixin component-select-label-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-select-value-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-select-messages-content () {
+  @include typography.foundation-typography-label-low();
+}
+@mixin component-select-prefix-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-select-suffix-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-option-hovered-glow () {
+  @include foundation-interactive-primary-glow-backlit();
+}

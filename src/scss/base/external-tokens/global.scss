@@ -1,0 +1,43 @@
+@forward './foundation';
+@forward './foundation-color';
+@forward './breakpoints';
+@forward './typography';
+@forward './typography.scss';
+
+@use './breakpoints';
+@use './foundation-color' as color;
+@use './density';
+
+$_initialized: false;
+
+@mixin initialize () {
+	@if $_initialized ==false {
+		@include density.generateDensityVariables();
+		@include color.generateColorThemeVariables();
+		@include breakpoints.generateBreakpointVariables();
+		$_initialized: true !global;
+	}
+}
+
+@include initialize();
+
+/*
+@forward './vars-Base.scss';
+@forward './Breakpoints';
+@forward './typography.scss';
+
+@use './Breakpoints';
+
+@mixin initialize () {
+	@if $initialized ==false {
+		@include Breakpoints.generateDensityVariables();
+		@include Breakpoints.generateColorThemeVariables();
+		@include Breakpoints.generateBreakpointVariables();
+		$initialized: true !global;
+	}
+}
+
+$initialized: false;
+
+@include initialize();
+*/

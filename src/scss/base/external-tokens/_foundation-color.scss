@@ -1,0 +1,320 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+
+
+@use 'sass:map';
+@use 'sass:meta';
+@use './utils';
+@use './base' as *;
+@use './foundation' as *;
+
+@use './color/dark';
+@use './color/light';
+
+$foundation-opacity-medium: 0.67;
+$foundation-opacity-low: 0.37;
+$foundation-opacity-border: 0.5;
+$foundation-opacity-semantic-tonal: 0.05;
+$foundation-elevation-shadow-1-color: rgba(#000000,0.1);
+$foundation-elevation-shadow-2-color: rgba(#000000,0.09);
+$foundation-elevation-shadow-3-color: rgba(#000000,0.2);
+$foundation-effect-primary-glow-backlit-color: #eef1f3;
+$foundation-effect-primary-glow-backlit-x: 0;
+$foundation-effect-primary-glow-backlit-y: 0;
+$foundation-effect-primary-glow-backlit-spread: 0;
+$foundation-effect-primary-glow-backlit-blur: 10;
+$foundation-effect-accent-glow-backlit-color: #eef1f3;
+$foundation-effect-accent-glow-backlit-x: 0;
+$foundation-effect-accent-glow-backlit-y: 0;
+$foundation-effect-accent-glow-backlit-spread: 0;
+$foundation-effect-accent-glow-backlit-blur: 10;
+$foundation-ui-textandicon-high: #dde2e7;
+$foundation-ui-textandicon-medium: rgba(#f7f9fa,0.67);
+$foundation-ui-textandicon-low: rgba(#f7f9fa,0.37);
+$foundation-ui-textandicon-inverse: #1b1c1d;
+$foundation-ui-background-high: #1a2631;
+$foundation-ui-background-medium: #23313d;
+$foundation-ui-background-low: #131c24;
+$foundation-ui-background-page: #131c24;
+$foundation-ui-glass-surface-thickest: rgba(#8093a5,0.30);
+$foundation-ui-glass-surface-thick: rgba(#4e6071,0.30);
+$foundation-ui-glass-surface-regular: rgba(#374958,0.30);
+$foundation-ui-glass-surface-thin: rgba(#23313d,0.30);
+$foundation-ui-glass-surface-thinnest: rgba(#131c24,0.4);
+$foundation-ui-divider-flat-high: rgba(#bdc7d0,0.16);
+$foundation-ui-divider-flat-low: rgba(#bdc7d0,0.12);
+$foundation-ui-embellishment: #42b4fa;
+$foundation-interactive-primary-textandicon-selected: #f7f9fa;
+$foundation-interactive-primary-textandicon-primary-default: #dde2e7;
+$foundation-interactive-primary-textandicon-secondary-default: #9eadbb;
+$foundation-interactive-primary-textandicon-disabled: rgba(#e3e2e4,0.38);
+$foundation-interactive-primary-textandicon-inverse: #23313d;
+$foundation-interactive-primary-background-enabled-filled: #eef1f3;
+$foundation-interactive-primary-background-enabled-tonal: rgba(#bdc7d0,0.05);
+$foundation-interactive-primary-background-hovered: rgba(#bdc7d0,0.05);
+$foundation-interactive-primary-background-selected: rgba(#bdc7d0,0.12);
+$foundation-interactive-primary-background-disabled: rgba(#e3e2e4,0.08);
+$foundation-interactive-primary-background-ripple: rgba(#84cfff,0.08);
+$foundation-interactive-primary-background-hovered-blendmode: plus-lighter;
+$foundation-interactive-primary-background-selected-blendmode: plus-lighter;
+$foundation-interactive-primary-border-hovered-flat: #eef1f3;
+$foundation-interactive-primary-border-selected: #eef1f3;
+$foundation-interactive-primary-border-enabled: rgba(#eef1f3,0.7);
+$foundation-interactive-primary-border-focused: rgba(#84cfff,0.5);
+$foundation-interactive-primary-border-disabled: rgba(#e3e2e4,0.08);
+$foundation-interactive-primary-glow-surface-small-blendmode: color-dodge;
+$foundation-interactive-primary-glow-surface-small-hovered-blendmode: color-dodge;
+$foundation-interactive-primary-glow-surface-medium-blendmode: color-dodge;
+$foundation-interactive-accent-textandicon-default: #84cfff;
+$foundation-interactive-accent-textandicon-selected: #c7e7ff;
+$foundation-interactive-accent-textandicon-disabled: rgba(#e3e2e4,0.38);
+$foundation-interactive-accent-textandicon-inverse: #00344c;
+$foundation-interactive-accent-textandicon-visited: #db8bff;
+$foundation-interactive-accent-background-enabled-filled: #84cfff;
+$foundation-interactive-accent-background-enabled-tonal: rgba(#c7e7ff,0.05);
+$foundation-interactive-accent-background-hovered: rgba(#bdc7d0,0.05);
+$foundation-interactive-accent-background-selected: rgba(#bdc7d0,0.16);
+$foundation-interactive-accent-background-disabled: rgba(#e3e2e4,0.08);
+$foundation-interactive-accent-background-hovered-blendmode: color-dodge;
+$foundation-interactive-accent-background-selected-blendmode: color-dodge;
+$foundation-interactive-accent-border-enabled: rgba(#84cfff,0.7);
+$foundation-interactive-accent-border-hovered: #84cfff;
+$foundation-interactive-accent-border-selected: #84cfff;
+$foundation-interactive-accent-border-disabled: rgba(#e3e2e4,0.08);
+$foundation-interactive-accent-glow-surface-small-blendmode: color-dodge;
+$foundation-interactive-accent-glow-surface-small-hovered-blendmode: color-dodge;
+$foundation-interactive-accent-glow-surface-medium-blendmode: color-dodge;
+$foundation-semantic-border-error: rgba(#ff888c,0.5);
+$foundation-semantic-border-warning: rgba(#f1c000,0.5);
+$foundation-semantic-border-success: rgba(#71df3e,0.5);
+$foundation-semantic-border-info: rgba(#84cfff,0.5);
+$foundation-semantic-textandicon-error: #ff888c;
+$foundation-semantic-textandicon-warning: #f1c000;
+$foundation-semantic-textandicon-success: #71df3e;
+$foundation-semantic-textandicon-info: #84cfff;
+$foundation-semantic-background-error-filled: #ff888c;
+$foundation-semantic-background-error-tonal: rgba(#ffb3b3,0.05);
+$foundation-semantic-background-error-ripple: rgba(#ff888c,0.08);
+$foundation-semantic-background-warning-filled: #f1c000;
+$foundation-semantic-background-warning-tonal: rgba(#f1c000,0.05);
+$foundation-semantic-background-warning-ripple: rgba(#f1c000,0.08);
+$foundation-semantic-background-success-filled: #71df3e;
+$foundation-semantic-background-success-tonal: rgba(#71df3e,0.05);
+$foundation-semantic-background-success-ripple: rgba(#71df3e,0.08);
+$foundation-semantic-background-info-filled: #c7e7ff;
+$foundation-semantic-background-info-tonal: rgba(#c7e7ff,0.05);
+$foundation-semantic-background-info-ripple: rgba(#c7e7ff,0.08);
+$foundation-gradient-glass-specular-surface-0: rgba(#ffffff,0);
+$foundation-gradient-glass-specular-surface-100: rgba(#ffffff,0.02);
+$foundation-gradient-glass-specular-border-0: rgba(#ffffff,0.22);
+$foundation-gradient-glass-specular-border-45: rgba(#ffffff,0.02);
+$foundation-gradient-glass-specular-border-60: rgba(#ffffff,0.02);
+$foundation-gradient-glass-specular-border-89: rgba(#ffffff,0.0925);
+$foundation-gradient-glass-specular-border-100: rgba(#ffffff,0.12);
+$foundation-gradient-glass-specular-divider-0: rgba(#ffffff,0.02);
+$foundation-gradient-glass-specular-divider-10: rgba(#ffffff,0.12);
+$foundation-gradient-glass-specular-divider-44: rgba(#ffffff,0.08);
+$foundation-gradient-glass-specular-divider-100: rgba(#ffffff,0.02);
+$foundation-gradient-primary-glow-surface-base-0: rgba(#ffffff,0.06);
+$foundation-gradient-primary-glow-surface-base-56: rgba(#ffffff,0);
+$foundation-gradient-primary-glow-surface-base-100: rgba(#ffffff,0);
+$foundation-gradient-primary-glow-surface-small-0: rgba(#4e6071,0.12);
+$foundation-gradient-primary-glow-surface-small-74: rgba(#4e6071,0);
+$foundation-gradient-primary-glow-surface-medium-0: rgba(#4e6071,0.12);
+$foundation-gradient-primary-glow-surface-medium-100: rgba(#4e6071,0);
+$foundation-gradient-primary-border-hovered-specular-0: rgba(#ffffff,0.22);
+$foundation-gradient-primary-border-hovered-specular-11: rgba(#ffffff,0.17);
+$foundation-gradient-primary-border-hovered-specular-45: rgba(#ffffff,0.02);
+$foundation-gradient-primary-border-hovered-specular-60: rgba(#ffffff,0.02);
+$foundation-gradient-primary-border-hovered-specular-100: rgba(#ffffff,0.12);
+$foundation-gradient-accent-glow-surface-base-0: rgba(#ffffff, 0.06);
+$foundation-gradient-accent-glow-surface-base-56: rgba(#ffffff, 0.00);
+$foundation-gradient-accent-glow-surface-base-100: rgba(#ffffff, 0.00);
+$foundation-gradient-accent-glow-surface-small-0: rgba(#4e6071, 0.12);
+$foundation-gradient-accent-glow-surface-small-74: rgba(#4e6071, 0.00);
+$foundation-gradient-accent-glow-surface-medium-0: rgba(#4e6071,0.12);
+$foundation-gradient-accent-glow-surface-medium-100: rgba(#4e6071,0);
+$foundation-static-white: #faf9fb;
+$foundation-static-black: #252627;
+$foundation-static-gray: #67798a;
+
+$moduleColor:(
+  theme-dark: meta.module-variables(dark),
+  theme-light: meta.module-variables(light),
+);
+
+@mixin generateColorThemeVariables () {
+  :root,
+  .theme-dark {
+    @include utils.themeVars($moduleColor, 'theme-dark');
+  }
+  .theme-light {
+    @include utils.themeVars($moduleColor, 'theme-light');
+  }
+  $foundation-opacity-medium: var(--foundation-opacity-medium) !global;
+  $foundation-opacity-low: var(--foundation-opacity-low) !global;
+  $foundation-opacity-border: var(--foundation-opacity-border) !global;
+  $foundation-opacity-semantic-tonal: var(--foundation-opacity-semantic-tonal) !global;
+  $foundation-elevation-shadow-1-color: var(--foundation-elevation-shadow-1-color) !global;
+  $foundation-elevation-shadow-2-color: var(--foundation-elevation-shadow-2-color) !global;
+  $foundation-elevation-shadow-3-color: var(--foundation-elevation-shadow-3-color) !global;
+  $foundation-effect-primary-glow-backlit-color: var(--foundation-effect-primary-glow-backlit-color) !global;
+  $foundation-effect-primary-glow-backlit-x: var(--foundation-effect-primary-glow-backlit-x) !global;
+  $foundation-effect-primary-glow-backlit-y: var(--foundation-effect-primary-glow-backlit-y) !global;
+  $foundation-effect-primary-glow-backlit-spread: var(--foundation-effect-primary-glow-backlit-spread) !global;
+  $foundation-effect-primary-glow-backlit-blur: var(--foundation-effect-primary-glow-backlit-blur) !global;
+  $foundation-effect-accent-glow-backlit-color: var(--foundation-effect-accent-glow-backlit-color) !global;
+  $foundation-effect-accent-glow-backlit-x: var(--foundation-effect-accent-glow-backlit-x) !global;
+  $foundation-effect-accent-glow-backlit-y: var(--foundation-effect-accent-glow-backlit-y) !global;
+  $foundation-effect-accent-glow-backlit-spread: var(--foundation-effect-accent-glow-backlit-spread) !global;
+  $foundation-effect-accent-glow-backlit-blur: var(--foundation-effect-accent-glow-backlit-blur) !global;
+  $foundation-ui-textandicon-high: var(--foundation-ui-textandicon-high) !global;
+  $foundation-ui-textandicon-medium: var(--foundation-ui-textandicon-medium) !global;
+  $foundation-ui-textandicon-low: var(--foundation-ui-textandicon-low) !global;
+  $foundation-ui-textandicon-inverse: var(--foundation-ui-textandicon-inverse) !global;
+  $foundation-ui-background-high: var(--foundation-ui-background-high) !global;
+  $foundation-ui-background-medium: var(--foundation-ui-background-medium) !global;
+  $foundation-ui-background-low: var(--foundation-ui-background-low) !global;
+  $foundation-ui-background-page: var(--foundation-ui-background-page) !global;
+  $foundation-ui-glass-surface-thickest: var(--foundation-ui-glass-surface-thickest) !global;
+  $foundation-ui-glass-surface-thick: var(--foundation-ui-glass-surface-thick) !global;
+  $foundation-ui-glass-surface-regular: var(--foundation-ui-glass-surface-regular) !global;
+  $foundation-ui-glass-surface-thin: var(--foundation-ui-glass-surface-thin) !global;
+  $foundation-ui-glass-surface-thinnest: var(--foundation-ui-glass-surface-thinnest) !global;
+  $foundation-ui-divider-flat-high: var(--foundation-ui-divider-flat-high) !global;
+  $foundation-ui-divider-flat-low: var(--foundation-ui-divider-flat-low) !global;
+  $foundation-ui-embellishment: var(--foundation-ui-embellishment) !global;
+  $foundation-interactive-primary-textandicon-selected: var(--foundation-interactive-primary-textandicon-selected) !global;
+  $foundation-interactive-primary-textandicon-primary-default: var(--foundation-interactive-primary-textandicon-primary-default) !global;
+  $foundation-interactive-primary-textandicon-secondary-default: var(--foundation-interactive-primary-textandicon-secondary-default) !global;
+  $foundation-interactive-primary-textandicon-disabled: var(--foundation-interactive-primary-textandicon-disabled) !global;
+  $foundation-interactive-primary-textandicon-inverse: var(--foundation-interactive-primary-textandicon-inverse) !global;
+  $foundation-interactive-primary-background-enabled-filled: var(--foundation-interactive-primary-background-enabled-filled) !global;
+  $foundation-interactive-primary-background-enabled-tonal: var(--foundation-interactive-primary-background-enabled-tonal) !global;
+  $foundation-interactive-primary-background-hovered: var(--foundation-interactive-primary-background-hovered) !global;
+  $foundation-interactive-primary-background-selected: var(--foundation-interactive-primary-background-selected) !global;
+  $foundation-interactive-primary-background-disabled: var(--foundation-interactive-primary-background-disabled) !global;
+  $foundation-interactive-primary-background-ripple: var(--foundation-interactive-primary-background-ripple) !global;
+  $foundation-interactive-primary-background-hovered-blendmode: var(--foundation-interactive-primary-background-hovered-blendmode) !global;
+  $foundation-interactive-primary-background-selected-blendmode: var(--foundation-interactive-primary-background-selected-blendmode) !global;
+  $foundation-interactive-primary-border-hovered-flat: var(--foundation-interactive-primary-border-hovered-flat) !global;
+  $foundation-interactive-primary-border-selected: var(--foundation-interactive-primary-border-selected) !global;
+  $foundation-interactive-primary-border-enabled: var(--foundation-interactive-primary-border-enabled) !global;
+  $foundation-interactive-primary-border-focused: var(--foundation-interactive-primary-border-focused) !global;
+  $foundation-interactive-primary-border-disabled: var(--foundation-interactive-primary-border-disabled) !global;
+  $foundation-interactive-primary-glow-surface-small-blendmode: var(--foundation-interactive-primary-glow-surface-small-blendmode) !global;
+  $foundation-interactive-primary-glow-surface-small-hovered-blendmode: var(--foundation-interactive-primary-glow-surface-small-hovered-blendmode) !global;
+  $foundation-interactive-primary-glow-surface-medium-blendmode: var(--foundation-interactive-primary-glow-surface-medium-blendmode) !global;
+  $foundation-interactive-accent-textandicon-default: var(--foundation-interactive-accent-textandicon-default) !global;
+  $foundation-interactive-accent-textandicon-selected: var(--foundation-interactive-accent-textandicon-selected) !global;
+  $foundation-interactive-accent-textandicon-disabled: var(--foundation-interactive-accent-textandicon-disabled) !global;
+  $foundation-interactive-accent-textandicon-inverse: var(--foundation-interactive-accent-textandicon-inverse) !global;
+  $foundation-interactive-accent-textandicon-visited: var(--foundation-interactive-accent-textandicon-visited) !global;
+  $foundation-interactive-accent-background-enabled-filled: var(--foundation-interactive-accent-background-enabled-filled) !global;
+  $foundation-interactive-accent-background-enabled-tonal: var(--foundation-interactive-accent-background-enabled-tonal) !global;
+  $foundation-interactive-accent-background-hovered: var(--foundation-interactive-accent-background-hovered) !global;
+  $foundation-interactive-accent-background-selected: var(--foundation-interactive-accent-background-selected) !global;
+  $foundation-interactive-accent-background-disabled: var(--foundation-interactive-accent-background-disabled) !global;
+  $foundation-interactive-accent-background-hovered-blendmode: var(--foundation-interactive-accent-background-hovered-blendmode) !global;
+  $foundation-interactive-accent-background-selected-blendmode: var(--foundation-interactive-accent-background-selected-blendmode) !global;
+  $foundation-interactive-accent-border-enabled: var(--foundation-interactive-accent-border-enabled) !global;
+  $foundation-interactive-accent-border-hovered: var(--foundation-interactive-accent-border-hovered) !global;
+  $foundation-interactive-accent-border-selected: var(--foundation-interactive-accent-border-selected) !global;
+  $foundation-interactive-accent-border-disabled: var(--foundation-interactive-accent-border-disabled) !global;
+  $foundation-interactive-accent-glow-surface-small-blendmode: var(--foundation-interactive-accent-glow-surface-small-blendmode) !global;
+  $foundation-interactive-accent-glow-surface-small-hovered-blendmode: var(--foundation-interactive-accent-glow-surface-small-hovered-blendmode) !global;
+  $foundation-interactive-accent-glow-surface-medium-blendmode: var(--foundation-interactive-accent-glow-surface-medium-blendmode) !global;
+  $foundation-semantic-border-error: var(--foundation-semantic-border-error) !global;
+  $foundation-semantic-border-warning: var(--foundation-semantic-border-warning) !global;
+  $foundation-semantic-border-success: var(--foundation-semantic-border-success) !global;
+  $foundation-semantic-border-info: var(--foundation-semantic-border-info) !global;
+  $foundation-semantic-textandicon-error: var(--foundation-semantic-textandicon-error) !global;
+  $foundation-semantic-textandicon-warning: var(--foundation-semantic-textandicon-warning) !global;
+  $foundation-semantic-textandicon-success: var(--foundation-semantic-textandicon-success) !global;
+  $foundation-semantic-textandicon-info: var(--foundation-semantic-textandicon-info) !global;
+  $foundation-semantic-background-error-filled: var(--foundation-semantic-background-error-filled) !global;
+  $foundation-semantic-background-error-tonal: var(--foundation-semantic-background-error-tonal) !global;
+  $foundation-semantic-background-error-ripple: var(--foundation-semantic-background-error-ripple) !global;
+  $foundation-semantic-background-warning-filled: var(--foundation-semantic-background-warning-filled) !global;
+  $foundation-semantic-background-warning-tonal: var(--foundation-semantic-background-warning-tonal) !global;
+  $foundation-semantic-background-warning-ripple: var(--foundation-semantic-background-warning-ripple) !global;
+  $foundation-semantic-background-success-filled: var(--foundation-semantic-background-success-filled) !global;
+  $foundation-semantic-background-success-tonal: var(--foundation-semantic-background-success-tonal) !global;
+  $foundation-semantic-background-success-ripple: var(--foundation-semantic-background-success-ripple) !global;
+  $foundation-semantic-background-info-filled: var(--foundation-semantic-background-info-filled) !global;
+  $foundation-semantic-background-info-tonal: var(--foundation-semantic-background-info-tonal) !global;
+  $foundation-semantic-background-info-ripple: var(--foundation-semantic-background-info-ripple) !global;
+  $foundation-gradient-glass-specular-surface-0: var(--foundation-gradient-glass-specular-surface-0) !global;
+  $foundation-gradient-glass-specular-surface-100: var(--foundation-gradient-glass-specular-surface-100) !global;
+  $foundation-gradient-glass-specular-border-0: var(--foundation-gradient-glass-specular-border-0) !global;
+  $foundation-gradient-glass-specular-border-45: var(--foundation-gradient-glass-specular-border-45) !global;
+  $foundation-gradient-glass-specular-border-60: var(--foundation-gradient-glass-specular-border-60) !global;
+  $foundation-gradient-glass-specular-border-89: var(--foundation-gradient-glass-specular-border-89) !global;
+  $foundation-gradient-glass-specular-border-100: var(--foundation-gradient-glass-specular-border-100) !global;
+  $foundation-gradient-glass-specular-divider-0: var(--foundation-gradient-glass-specular-divider-0) !global;
+  $foundation-gradient-glass-specular-divider-10: var(--foundation-gradient-glass-specular-divider-10) !global;
+  $foundation-gradient-glass-specular-divider-44: var(--foundation-gradient-glass-specular-divider-44) !global;
+  $foundation-gradient-glass-specular-divider-100: var(--foundation-gradient-glass-specular-divider-100) !global;
+  $foundation-gradient-primary-glow-surface-base-0: var(--foundation-gradient-primary-glow-surface-base-0) !global;
+  $foundation-gradient-primary-glow-surface-base-56: var(--foundation-gradient-primary-glow-surface-base-56) !global;
+  $foundation-gradient-primary-glow-surface-base-100: var(--foundation-gradient-primary-glow-surface-base-100) !global;
+  $foundation-gradient-primary-glow-surface-small-0: var(--foundation-gradient-primary-glow-surface-small-0) !global;
+  $foundation-gradient-primary-glow-surface-small-74: var(--foundation-gradient-primary-glow-surface-small-74) !global;
+  $foundation-gradient-primary-glow-surface-medium-0: var(--foundation-gradient-primary-glow-surface-medium-0) !global;
+  $foundation-gradient-primary-glow-surface-medium-100: var(--foundation-gradient-primary-glow-surface-medium-100) !global;
+  $foundation-gradient-primary-border-hovered-specular-0: var(--foundation-gradient-primary-border-hovered-specular-0) !global;
+  $foundation-gradient-primary-border-hovered-specular-11: var(--foundation-gradient-primary-border-hovered-specular-11) !global;
+  $foundation-gradient-primary-border-hovered-specular-45: var(--foundation-gradient-primary-border-hovered-specular-45) !global;
+  $foundation-gradient-primary-border-hovered-specular-60: var(--foundation-gradient-primary-border-hovered-specular-60) !global;
+  $foundation-gradient-primary-border-hovered-specular-100: var(--foundation-gradient-primary-border-hovered-specular-100) !global;
+  $foundation-gradient-accent-glow-surface-base-0: var(--foundation-gradient-accent-glow-surface-base-0) !global;
+  $foundation-gradient-accent-glow-surface-base-56: var(--foundation-gradient-accent-glow-surface-base-56) !global;
+  $foundation-gradient-accent-glow-surface-base-100: var(--foundation-gradient-accent-glow-surface-base-100) !global;
+  $foundation-gradient-accent-glow-surface-small-0: var(--foundation-gradient-accent-glow-surface-small-0) !global;
+  $foundation-gradient-accent-glow-surface-small-74: var(--foundation-gradient-accent-glow-surface-small-74) !global;
+  $foundation-gradient-accent-glow-surface-medium-0: var(--foundation-gradient-accent-glow-surface-medium-0) !global;
+  $foundation-gradient-accent-glow-surface-medium-100: var(--foundation-gradient-accent-glow-surface-medium-100) !global;
+  $foundation-static-white: var(--foundation-static-white) !global;
+  $foundation-static-black: var(--foundation-static-black) !global;
+  $foundation-static-gray: var(--foundation-static-gray) !global;
+}
+
+$foundation-ui-glass-specular-surface: linear-gradient (-156deg, rgba($base-color-solids-white, 0.00) 0%, rgba($base-color-solids-white, 0.02) 100%);
+$foundation-ui-glass-specular-border: linear-gradient (247deg, rgba($base-color-solids-white, 0.12) 100%, rgba($base-color-solids-white, 0.02) 60%, rgba($base-color-solids-white, 0.02) 45%, rgba($base-color-solids-white, 0.22) 0%);
+$foundation-ui-glass-background-blur: $foundation-effect-glass-background-blur; // Background blur for all glass materials
+$foundation-ui-divider-specular-horizontal: linear-gradient (90deg, rgba($base-color-solids-white, 0.02) 0%, rgba($base-color-solids-white, 0.12) 10%, rgba($base-color-solids-white, 0.08) 44%, rgba($base-color-solids-white, 0.02) 100%);
+$foundation-ui-divider-specular-vertical: linear-gradient (180deg, rgba($base-color-solids-white, 0.02) 0%, rgba($base-color-solids-white, 0.12) 10%, rgba($base-color-solids-white, 0.08) 44%, rgba($base-color-solids-white, 0.02) 100%);
+$foundation-interactive-primary-border-hovered-specular: linear-gradient(204deg, $foundation-gradient-primary-border-hovered-specular-0 0%, $foundation-gradient-primary-border-hovered-specular-11 11%, $foundation-gradient-primary-border-hovered-specular-45 45%, $foundation-gradient-primary-border-hovered-specular-60 60%, $foundation-gradient-primary-border-hovered-specular-100 100%);
+// Used on hover state for small elements which do not require scaling.
+// Blend-mode: color-dodge
+$foundation-interactive-primary-glow-surface-small: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-small-0 0%, $foundation-gradient-primary-glow-surface-small-74 74%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-base-0 0%, $foundation-gradient-primary-glow-surface-base-56 56%);
+$foundation-interactive-primary-glow-surface-small-hovered: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-small-0 0%, $foundation-gradient-primary-glow-surface-small-74 74%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-base-0 0%, $foundation-gradient-primary-glow-surface-base-56 56%), linear-gradient(0deg, $foundation-interactive-primary-background-hovered 0%,$foundation-interactive-primary-background-hovered 100%);
+// Used on hover state for small elements which do not require scaling.
+// Blend-mode: color-dodge
+$foundation-interactive-primary-glow-surface-medium: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-medium-0 0%, $foundation-gradient-primary-glow-surface-medium-100 100%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-primary-glow-surface-base-0 0%, $foundation-gradient-primary-glow-surface-base-100 100%);
+// Used on hover state for small elements which do not require scaling.
+// Blend-mode: color-dodge
+$foundation-interactive-accent-glow-surface-small: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-small-0 0%, $foundation-gradient-accent-glow-surface-small-74 74%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-base-0 0%, $foundation-gradient-accent-glow-surface-base-56 56%);
+$foundation-interactive-accent-glow-surface-small-hovered: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-small-0 0%, $foundation-gradient-accent-glow-surface-small-74 74%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-base-0 0%, $foundation-gradient-accent-glow-surface-base-56 56%), linear-gradient(0deg, $foundation-interactive-accent-background-hovered 0%,$foundation-interactive-accent-background-hovered 100%);
+// Used on hover state for small elements which do not require scaling.
+// Blend-mode: color-dodge
+$foundation-interactive-accent-glow-surface-medium: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-medium-0 0%, $foundation-gradient-accent-glow-surface-medium-100 100%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-base-0 0%, $foundation-gradient-accent-glow-surface-base-100 100%);
+@mixin foundation-elevation-1 () {
+  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blurpx $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color;
+}
+@mixin foundation-elevation-2 () {
+  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blurpx $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color,
+              $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blurpx $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color;
+}
+@mixin foundation-elevation-3 () {
+  box-shadow: $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blurpx $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color,
+              $foundation-elevation-shadow-3-x $foundation-elevation-shadow-3-y $foundation-elevation-shadow-3-blurpx $foundation-elevation-shadow-3-spread $foundation-elevation-shadow-3-color;
+}
+@mixin foundation-interactive-primary-glow-backlit () {
+  box-shadow: $foundation-effect-primary-glow-backlit-x $foundation-effect-primary-glow-backlit-y $foundation-effect-primary-glow-backlit-blurpx $foundation-effect-primary-glow-backlit-spread $foundation-effect-primary-glow-backlit-color;
+}
+@mixin foundation-interactive-accent-glow-backlit () {
+  box-shadow: $foundation-effect-accent-glow-backlit-x $foundation-effect-accent-glow-backlit-y $foundation-effect-accent-glow-backlit-blurpx $foundation-effect-accent-glow-backlit-spread $foundation-effect-accent-glow-backlit-color;
+}
