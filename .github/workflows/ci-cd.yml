@@ -17,20 +17,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      - name: Install dependencies and build tokens
+      - name: Install dependencies and sync external tokens
         run: |
           cd token-service
-          echo "FIGMA_API_KEY=${{ secrets.FIGMA_API_KEY }}" > .env
-          echo "FIGMA_ICONS_FILE_KEY=${{ vars.FIGMA_ICONS_FILE_KEY }}" >> .env
           npm install
-          npm run ts
-          npm run icons
+          # Sync external tokens instead of fetching from Figma
+          npm run tokens:sync
           cd ..
 
       - name: Build assets
