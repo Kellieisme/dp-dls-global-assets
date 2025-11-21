@@ -109,60 +109,66 @@ $ npm install
 
 ## Build Assets
 
-### Run the token service
+### Working with Design Tokens
 
-Before building for the first time, run the token service according to the [documentation](https://github.com/dasdigitalplatform/dls-global-assets/blob/main/token-service/README.md):
+This project uses design tokens from two sources:
 
-The token service will build an copy a set of required generated SCSS, CSS, JS, and JSON files to the project `/src` folder.
+#### 1. External Tokens (Primary) - dp-dls-global-tokens
 
-- `src/css/variables.css`
-- `src/scss/_variables.scss`
-- `src/js/variables.js`
-- `src/js/variables.module.js`
-- `src/json/variables.json`
+The main design tokens are maintained in the [dp-dls-global-tokens](https://git.web.boeing.com/jeppesen-foreflight/dp-dls-global-tokens) repository and included as a git submodule at `token-service/external-tokens/`.
 
-### Receiving Token Updates from dp-dls-global-tokens
-
-The design tokens used by this project are maintained in the [dp-dls-global-tokens](https://git.web.boeing.com/jeppesen-foreflight/dp-dls-global-tokens) repository. When tokens are updated, they need to be synced to this project:
-
-#### When to Update
-
-Update tokens when:
+**When to Update External Tokens:**
 - New token values are published in dp-dls-global-tokens
-- The external-tokens submodule is behind the latest develop branch
+- Design system colors, typography, spacing, or components change
 
-#### Update Workflow
+**External Tokens Update Workflow:**
 
-1. **Receive synced tokens** - The tokens team will rsync compiled SCSS files to `external-tokens/scss/`:
+1. **Build tokens in external repo** (usually done by tokens team):
    ```bash
-   # This is done by the tokens team from dp-dls-global-tokens
-   rsync -av --delete \
-     /path/to/dp-dls-global-tokens/packages/tokens/dist/scss/ \
-     /path/to/dp-dls-global-assets/external-tokens/scss/
+   cd /path/to/dp-dls-global-tokens/packages/tokens
+   npm install
+   npm run compile
    ```
 
-2. **Update the submodule pointer** - After tokens are synced, update the submodule:
-   ```bash
-   cd external-tokens
-   git checkout develop
-   git pull origin develop
-   cd ..
-   git add external-tokens
-   git commit -m "Update external-tokens submodule to latest develop"
-   git push origin develop
-   ```
-
-3. **Run the token service** - Process the updated tokens:
+2. **Sync compiled tokens to this repo**:
    ```bash
    cd token-service
-   npm install
-   npm run build
+   npm run tokens:sync
+   ```
+   
+   This script copies the compiled SCSS from `external-tokens/packages/tokens/dist/scss/` to `src/scss/base/external-tokens/` and generates an aggregator file.
+
+3. **Update the submodule reference** (optional - to track the external repo version):
+   ```bash
+   cd token-service/external-tokens
+   git pull origin develop
+   cd ../..
+   git add token-service/external-tokens
+   git commit -m "Update external-tokens submodule"
    ```
 
-4. **Build assets** - Build the assets with updated tokens:
-   ```bash
-   npm run build
-   ```
+**External token outputs:**
+- SCSS partials in `src/scss/base/external-tokens/`
+- Aggregator file: `src/scss/base/external-tokens/_external-tokens.scss`
+- Import in your SCSS: `@import 'base/external-tokens';`
+
+#### 2. Legacy Token Service (Figma-based)
+
+The token-service generates tokens from Figma API for backward compatibility.
+
+**Run the token service** (before building for the first time):
+```bash
+cd token-service
+npm install
+npm run ts
+```
+
+This generates:
+- `src/css/variables.css` and `src/css/variablesBase.css`
+- `src/js/variables.js` and `src/js/variables.module.js`
+- `src/json/variables.json`
+
+See [token-service/README.md](token-service/README.md) for full documentation.
 
 
 ### Build assets for development
