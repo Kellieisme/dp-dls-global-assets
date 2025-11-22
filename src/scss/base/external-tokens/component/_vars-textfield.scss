@@ -1,0 +1,166 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-textfield-background: $foundation-ui-glass-surface-thick;
+$component-textfield-enabeld-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-enabeld-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-enabeld-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-enabeld-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-enabeld-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-enabeld-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-hovered-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-hovered-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-hovered-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-hovered-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-hovered-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-hovered-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-hovered-background: $foundation-interactive-primary-background-hovered;
+$component-textfield-hovered-background-glow: $foundation-interactive-primary-glow-surface-medium;
+$component-textfield-hovered-border-color: $foundation-ui-glass-specular-border;
+$component-textfield-hovered-border-width: $foundation-border-regular-width;
+$component-textfield-focused-label: $foundation-interactive-accent-textandicon-default;
+$component-textfield-focused-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-focused-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-focused-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-focused-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-focused-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-focused-background: $foundation-interactive-primary-background-selected;
+$component-textfield-focused-border-color: $foundation-interactive-primary-border-focused;
+$component-textfield-focused-caret: $foundation-interactive-accent-textandicon-default;
+$component-textfield-focused-border-width: $foundation-border-regular-width;
+$component-textfield-error-label: $foundation-semantic-textandicon-error;
+$component-textfield-error-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-error-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textfield-error-prefix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-error-suffix: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textfield-error-supporting-text: $foundation-semantic-textandicon-error;
+$component-textfield-error-border-color: $foundation-semantic-border-error;
+$component-textfield-error-border-width: $foundation-border-regular-width;
+$component-textfield-disabled-label: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-value: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-prefix: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-suffix: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-supporting-text: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-textfield-placeholder-textcolor: $foundation-interactive-primary-textandicon-disabled;
+$component-textfield-padding-horizontal: $foundation-spacing-s;
+$component-textfield-padding-vertical: $foundation-spacing-xs;
+$component-textfield-corner-radius: $foundation-radius-s;
+$component-textfield-top-label-maxheight: $foundation-sizing-s;
+$component-textfield-top-label-padding-top: $foundation-spacing-3xs;
+$component-textfield-leading-icon-margin-right: $foundation-spacing-xs;
+$component-textfield-leading-icon-size: $foundation-icon-md;
+$component-textfield-content-margin-horizontal: $foundation-spacing-2xs;
+$component-textfield-content-gap-vertical: $foundation-spacing-3xs;
+$component-textfield-content-gap-horizontal: $foundation-spacing-2xs; // Defines the spacing between prefix, value and suffix
+$component-textfield-content-minheight: $foundation-sizing-2xl;
+$component-textfield-trailing-item-margin-left: $foundation-spacing-xs;
+$component-textfield-trailing-item-size: $foundation-icon-md;
+$component-textfield-supporting-text-padding-horizontal: $foundation-spacing-m;
+$component-textfield-supporting-text-padding-vertical: $foundation-spacing-2xs;
+$component-textfield-supporting-text-gap: $foundation-spacing-m;
+$component-textfield-minwidth: $foundation-sizing-10xl;
+$component-textfield-background-blur: $foundation-ui-glass-background-blur;
+$component-textarea-padding-horizontal: $foundation-spacing-m;
+$component-textarea-padding-vertical: $foundation-spacing-2xs;
+$component-textarea-gap-vertical: $foundation-spacing-3xs;
+$component-textarea-top-label-padding-top: $foundation-spacing-3xs;
+$component-textarea-top-label-maxheight: $foundation-sizing-s;
+$component-textarea-label-only-padding-top: $foundation-spacing-xs;
+$component-textarea-background: $foundation-ui-glass-surface-thick;
+$component-textarea-enabeld-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textarea-enabeld-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-enabeld-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-enabeld-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textarea-hovered-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textarea-hovered-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-hovered-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-hovered-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textarea-hovered-background: $foundation-interactive-primary-background-hovered;
+$component-textarea-hovered-background-glow: $foundation-interactive-primary-glow-surface-medium;
+$component-textarea-hovered-border-color: $foundation-ui-glass-specular-border;
+$component-textarea-hovered-border-width: $foundation-border-regular-width;
+$component-textarea-focused-label: $foundation-interactive-accent-textandicon-default;
+$component-textarea-focused-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-focused-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-focused-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-textarea-focused-background: $foundation-interactive-primary-background-selected;
+$component-textarea-focused-border-color: $foundation-interactive-primary-border-focused;
+$component-textarea-focused-caret: $foundation-interactive-accent-textandicon-default;
+$component-textarea-focused-border-width: $foundation-border-regular-width;
+$component-textarea-error-label: $foundation-semantic-textandicon-error;
+$component-textarea-error-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-error-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-textarea-error-supporting-text: $foundation-semantic-textandicon-error;
+$component-textarea-error-border-color: $foundation-semantic-border-error;
+$component-textarea-error-border-width: $foundation-border-regular-width;
+$component-textarea-disabled-label: $foundation-interactive-primary-textandicon-disabled;
+$component-textarea-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-textarea-disabled-value: $foundation-interactive-primary-textandicon-disabled;
+$component-textarea-disabled-supporting-text: $foundation-interactive-primary-textandicon-disabled;
+$component-textarea-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-textarea-placeholder-textcolor: $foundation-interactive-primary-textandicon-disabled;
+$component-textarea-supporting-text-padding-horizontal: $foundation-spacing-m;
+$component-textarea-supporting-text-padding-vertical: $foundation-spacing-2xs;
+$component-textarea-supporting-text-gap: $foundation-spacing-m;
+$component-textarea-corner-radius: $foundation-radius-s;
+$component-textarea-background-blur: $foundation-ui-glass-background-blur;
+$component-select-content-minheight: $foundation-sizing-2xl;
+@mixin component-textfield-hovered-border ($direction) {
+  @include utils.border($direction, $component-textfield-hovered-border-width, $foundation-border-regular-style, $component-textfield-hovered-border-color);;
+}
+@mixin component-textfield-focused-border ($direction) {
+  @include utils.border($direction, $component-textfield-focused-border-width, $foundation-border-regular-style, $component-textfield-focused-border-color);;
+}
+@mixin component-textfield-error-border ($direction) {
+  @include utils.border($direction, $component-textfield-error-border-width, $foundation-border-regular-style, $component-textfield-error-border-color);;
+}
+@mixin component-textfield-placeholder-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textfield-label-top () {
+  @include typography.foundation-typography-label-lowest2();
+}
+@mixin component-textfield-label-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textfield-value-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textfield-messages-content () {
+  @include typography.foundation-typography-label-low();
+}
+@mixin component-textfield-prefix-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textfield-suffix-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textarea-hovered-border ($direction) {
+  @include utils.border($direction, $component-textarea-hovered-border-width, $foundation-border-regular-style, $component-textarea-hovered-border-color);;
+}
+@mixin component-textarea-focused-border ($direction) {
+  @include utils.border($direction, $component-textarea-focused-border-width, $foundation-border-regular-style, $component-textarea-focused-border-color);;
+}
+@mixin component-textarea-error-border ($direction) {
+  @include utils.border($direction, $component-textarea-error-border-width, $foundation-border-regular-style, $component-textarea-error-border-color);;
+}
+@mixin component-textarea-placeholder-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textarea-label-top () {
+  @include typography.foundation-typography-label-lowest2();
+}
+@mixin component-textarea-label-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textarea-value-content () {
+  @include typography.foundation-typography-label-medium();
+}
+@mixin component-textarea-messages-content () {
+  @include typography.foundation-typography-label-low();
+}

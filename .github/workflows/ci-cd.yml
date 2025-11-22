@@ -16,27 +16,24 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      - name: Install dependencies and build tokens
-        run: |
-          cd token-service
-          echo "FIGMA_API_KEY=${{ secrets.FIGMA_API_KEY }}" > .env
-          echo "FIGMA_ICONS_FILE_KEY=${{ vars.FIGMA_ICONS_FILE_KEY }}" >> .env
-          npm install
-          npm run ts
-          npm run icons
-          cd ..
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install token-service dependencies
+        run: cd token-service && npm install
+
+      - name: Generate token files
+        run: cd token-service && npm run ts
 
       - name: Build assets
-        run: |
-          npm install
-          npm run release
+        run: npm run release
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -53,10 +50,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
           registry-url: 'https://npm.pkg.github.com/'

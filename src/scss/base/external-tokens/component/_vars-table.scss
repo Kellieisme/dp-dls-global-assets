@@ -1,0 +1,35 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-table-vertical-padding: $foundation-spacing-s;
+$component-table-emphasis-none: $base-color-solids-transparent;
+$component-table-emphasis-low: $foundation-ui-background-low;
+$component-table-emphasis-medium: $foundation-ui-background-medium;
+$component-table-emphasis-high: $foundation-ui-background-high;
+$component-table-cell-padding: $foundation-spacing-m;
+$component-table-cell-gap: $foundation-spacing-m;
+$component-table-cell-background-color: $base-color-solids-transparent;
+$component-table-cell-border-color: $base-color-solids-transparent;
+$component-table-cell-enabled-state-color: $base-color-solids-transparent;
+$component-table-cell-enabled-textandicon-color: $foundation-interactive-primary-textandicon-primary-default;
+$component-table-cell-hovered-state-color: $foundation-interactive-primary-background-hovered;
+$component-table-cell-hovered-textandicon-color: $foundation-interactive-primary-textandicon-selected;
+$component-table-cell-focused-state-color: $foundation-interactive-primary-background-selected;
+$component-table-cell-focused-textandicon-color: $foundation-interactive-primary-textandicon-selected;
+$component-table-cell-disabled-state-color: $base-color-solids-transparent;
+$component-table-cell-disabled-textandicon-color: $foundation-interactive-primary-textandicon-disabled;
+$component-table-cell-min-height: $foundation-sizing-4xl;
+$component-table-header-padding: $foundation-spacing-m;
+$component-table-header-gap: $foundation-spacing-m;
+$component-table-header-background-color: $base-color-solids-transparent;
+$component-table-header-textandicon-color: $foundation-ui-textandicon-high;
+$component-table-header-min-height: $foundation-sizing-5xl;
+@mixin component-table-cell-textstyle () {
+  @include typography.foundation-typography-body-low-default();
+}
+@mixin component-table-header-textstyle () {
+  @include typography.foundation-typography-body-low-highlight();
+}

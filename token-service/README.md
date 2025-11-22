@@ -141,3 +141,119 @@ Requirements of token service code updates are case by case, but there are a few
 
 * In most cases the token service throws an error upon addition of alias tokens, or for base tokens where a category already exists, there's likely a naming convention infringement in Tokens Studio.
 * When adding a new base token type, make sure to check in with engineering representatives from all platforms to align how the tokens will be consumed and the desired formats.
+
+## External Tokens & Angular Integration (Migration Guide)
+
+This repository can consume design tokens from the external repo `dp-dls-global-tokens` (added as a git submodule under `token-service/external-tokens`) instead of (or in addition to) the local `figma-data/tokens-studio.json` flow.
+
+### 1. Add Submodules
+
+```bash
+git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-tokens token-service/external-tokens
+git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-angular angular
+```
+
+### 2. Build External Tokens
+
+From the external tokens package:
+
+```bash
+cd token-service/external-tokens/packages/tokens
+npm install
+npm run compile   # or npm run compile_ts_all depending on version
+```
+
+If you see a Style Dictionary API error, verify the `style-dictionary` version and the use of `StyleDictionary.extend(config)` in `src/compile/index.ts`. (Current error indicates a mismatch between library version and invocation.)
+
+### 3. Sync SCSS Artifacts Locally
+
+Copies built SCSS into `src/scss/base/external-tokens/` and creates an aggregator partial.
+
+```bash
+cd token-service
+npm run tokens:sync
+```
+
+Generated aggregator: `src/scss/base/_external-tokens.scss` exposes mixins and forwards the external token modules.
+
+### 4. Import in Global Styles (Non-Angular)
+
+```scss
+@import 'base/external-tokens';
+@include dls-init-themes(); // Initializes theme variable sets
+```
+
+### 5. Angular Project Integration
+
+In `angular` (submodule or installed package):
+
+Add to `angular.json` `styles` array (if consuming compiled package versions):
+
+```jsonc
+"styles": [
+  "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/fonts.scss",
+  "./node_modules/@jeppesen-foreflight/dp-dls-global-angular/styles/global.scss",
+  "src/styles.scss"
+]
+```
+
+If using submodule directly, adjust paths to point to `angular/projects/design/dp-dls-global-angular/styles/*`.
+
+### 6. Theme Switching
+
+The Angular `ThemeToggleService` toggles classes like `theme-relaxed` / `theme-condensed` on `<body>`. External SCSS exports mixins generating corresponding CSS custom properties. Ensure initialization mixin runs once globally.
+
+### 7. Component Token Usage Examples
+
+Alias token based SCSS (prefer alias over base):
+
+```scss
+.atm-button-primary {
+  @include foundation-typography-body-medium-default; // external mixin
+  background: var(--color-light-interactive-accent-background-enabled-filled);
+  color: var(--color-light-interactive-accent-textandicon-inverse);
+  box-shadow: var(--box-shadow-light-elevation-2);
+  padding: var(--size-relaxed-spacing-s) var(--size-relaxed-spacing-m);
+  border-radius: var(--size-relaxed-radius-s);
+}
+```
+
+Runtime theme toggle (Angular component TS):
+
+```typescript
+constructor(private themeToggle: ThemeToggleService) {}
+
+switchDensity(density: 'relaxed' | 'condensed') {
+  this.themeToggle.setDensityTheme(density); // Implementation sets body class
+}
+```
+
+### 8. Unified Build Script (Optional)
+
+Add to `token-service/package.json` (example):
+
+```jsonc
+"scripts": {
+  "tokens:build:external": "cd external-tokens/packages/tokens && npm run compile && cd - && npm run tokens:sync && npm run ts"
+}
+```
+
+### 9. Deprecating `figma-data/tokens-studio.json`
+
+Once external tokens fully replace the parsing flow, you can remove the `generateTokensStudioStyleDictionaryTokens` step and rely solely on external builds. Keep the fallback until parity is confirmed.
+
+### 10. Troubleshooting
+
+| Symptom | Likely Cause | Resolution |
+|---------|--------------|------------|
+| Style Dictionary config load error | Version/API mismatch | Ensure `style-dictionary` version matches code; use `StyleDictionary.extend(config)` |
+| Missing SCSS mixins | Build not run or sync skipped | Re-run external compile then `npm run tokens:sync` |
+| Variable undefined at runtime | Global init mixin not included | Confirm `@include dls-init-themes();` in global stylesheet |
+| Icons not rendering | `svgSet.svg` not copied/declared in assets | Update `angular.json` assets to include icons set |
+
+### 11. Recommended Next Enhancements
+
+1. CI job to run external tokens build and sync before publishing.
+2. Add a semantic version bump script tying token changes to release notes.
+3. Create an Angular schematic to auto-add styles and assets configuration.
+
