@@ -1,4 +1,4 @@
-@use './Breakpoints' as *;
+@use './_breakpoints' as *;
 @use 'base/fonts' as fonts;
 
 @include fonts.boeing-meso('../fonts');
