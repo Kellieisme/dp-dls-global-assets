@@ -302,19 +302,18 @@ $foundation-interactive-accent-glow-surface-small-hovered: radial-gradient(101.0
 // Blend-mode: color-dodge
 $foundation-interactive-accent-glow-surface-medium: radial-gradient(101.08% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-medium-0 0%, $foundation-gradient-accent-glow-surface-medium-100 100%), radial-gradient(100.02% 100% at 50% 100%, $foundation-gradient-accent-glow-surface-base-0 0%, $foundation-gradient-accent-glow-surface-base-100 100%);
 @mixin foundation-elevation-1 () {
-  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blurpx $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color;
+  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blur px $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color;
 }
 @mixin foundation-elevation-2 () {
-  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blurpx $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color,
-              $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blurpx $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color;
+  box-shadow: $foundation-elevation-shadow-1-x $foundation-elevation-shadow-1-y $foundation-elevation-shadow-1-blur px $foundation-elevation-shadow-1-spread $foundation-elevation-shadow-1-color,
+              $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blur px $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color;
 }
 @mixin foundation-elevation-3 () {
-  box-shadow: $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blurpx $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color,
-              $foundation-elevation-shadow-3-x $foundation-elevation-shadow-3-y $foundation-elevation-shadow-3-blurpx $foundation-elevation-shadow-3-spread $foundation-elevation-shadow-3-color;
+  box-shadow: $foundation-elevation-shadow-2-x $foundation-elevation-shadow-2-y $foundation-elevation-shadow-2-blur px $foundation-elevation-shadow-2-spread $foundation-elevation-shadow-2-color,
+              $foundation-elevation-shadow-3-x $foundation-elevation-shadow-3-y $foundation-elevation-shadow-3-blur px $foundation-elevation-shadow-3-spread $foundation-elevation-shadow-3-color;
 }
 @mixin foundation-interactive-primary-glow-backlit () {
   box-shadow: $foundation-effect-primary-glow-backlit-x $foundation-effect-primary-glow-backlit-y $foundation-effect-primary-glow-backlit-blur px $foundation-effect-primary-glow-backlit-spread $foundation-effect-primary-glow-backlit-color;
 }
 @mixin foundation-interactive-accent-glow-backlit () {
-  box-shadow: $foundation-effect-accent-glow-backlit-x $foundation-effect-accent-glow-backlit-y #{$foundation-effect-accent-glow-backlit-blur}px $foundation-effect-accent-glow-backlit-spread $foundation-effect-accent-glow-backlit-color;
 }
