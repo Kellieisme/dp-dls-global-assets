@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "2.1.5",
+  "version": "4.0.0",
   "description": "Atmosphere global assets",
   "homepage": "https://github.com/jeppesen-foreflight/dp-dls-global-assets",
   "browserslist": [
