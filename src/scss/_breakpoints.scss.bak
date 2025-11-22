@@ -211,47 +211,6 @@ $module:(
 
 );
 
-@mixin  () {
-
-  $foundation-layout-width-frame: var(--foundation-layout-width-frame) !global;
-  $foundation-layout-width-min: var(--foundation-layout-width-min) !global;
-  $foundation-layout-width-max: var(--foundation-layout-width-max) !global;
-  $foundation-typography-display-high-font-family: var(--foundation-typography-display-high-font-family) !global;
-  $foundation-typography-display-high-font-size: var(--foundation-typography-display-high-font-size) !global;
-  $foundation-typography-display-high-font-weight: var(--foundation-typography-display-high-font-weight) !global;
-  $foundation-typography-display-high-letter-spacing: var(--foundation-typography-display-high-letter-spacing) !global;
-  $foundation-typography-display-high-line-height: var(--foundation-typography-display-high-line-height) !global;
-  $foundation-typography-display-high-paragraph-spacing: var(--foundation-typography-display-high-paragraph-spacing) !global;
-  $foundation-typography-display-high-paragraph-indent: var(--foundation-typography-display-high-paragraph-indent) !global;
-  $foundation-typography-display-high-text-case: var(--foundation-typography-display-high-text-case) !global;
-  $foundation-typography-display-high-text-decoration: var(--foundation-typography-display-high-text-decoration) !global;
-  $foundation-typography-display-medium-font-family: var(--foundation-typography-display-medium-font-family) !global;
-  $foundation-typography-display-medium-font-size: var(--foundation-typography-display-medium-font-size) !global;
-  $foundation-typography-display-medium-font-weight: var(--foundation-typography-display-medium-font-weight) !global;
-  $foundation-typography-display-medium-letter-spacing: var(--foundation-typography-display-medium-letter-spacing) !global;
-  $foundation-typography-display-medium-line-height: var(--foundation-typography-display-medium-line-height) !global;
-  $foundation-typography-display-medium-paragraph-spacing: var(--foundation-typography-display-medium-paragraph-spacing) !global;
-  $foundation-typography-display-medium-paragraph-indent: var(--foundation-typography-display-medium-paragraph-indent) !global;
-  $foundation-typography-display-medium-text-case: var(--foundation-typography-display-medium-text-case) !global;
-  $foundation-typography-display-medium-text-decoration: var(--foundation-typography-display-medium-text-decoration) !global;
-  $foundation-typography-heading-high-font-family: var(--foundation-typography-heading-high-font-family) !global;
-  $foundation-typography-heading-high-font-size: var(--foundation-typography-heading-high-font-size) !global;
-  $foundation-typography-heading-high-font-weight: var(--foundation-typography-heading-high-font-weight) !global;
-  $foundation-typography-heading-high-letter-spacing: var(--foundation-typography-heading-high-letter-spacing) !global;
-  $foundation-typography-heading-high-line-height: var(--foundation-typography-heading-high-line-height) !global;
-  $foundation-typography-heading-high-paragraph-spacing: var(--foundation-typography-heading-high-paragraph-spacing) !global;
-  $foundation-typography-heading-high-paragraph-indent: var(--foundation-typography-heading-high-paragraph-indent) !global;
-  $foundation-typography-heading-high-text-case: var(--foundation-typography-heading-high-text-case) !global;
-  $foundation-typography-heading-high-text-decoration: var(--foundation-typography-heading-high-text-decoration) !global;
-  $foundation-typography-heading-medium-font-family: var(--foundation-typography-heading-medium-font-family) !global;
-  $foundation-typography-heading-medium-font-size: var(--foundation-typography-heading-medium-font-size) !global;
-  $foundation-typography-heading-medium-font-weight: var(--foundation-typography-heading-medium-font-weight) !global;
-  $foundation-typography-heading-medium-letter-spacing: var(--foundation-typography-heading-medium-letter-spacing) !global;
-  $foundation-typography-heading-medium-line-height: var(--foundation-typography-heading-medium-line-height) !global;
-  $foundation-typography-heading-medium-paragraph-spacing: var(--foundation-typography-heading-medium-paragraph-spacing) !global;
-  $foundation-typography-heading-medium-paragraph-indent: var(--foundation-typography-heading-medium-paragraph-indent) !global;
-  $foundation-typography-heading-medium-text-case: var(--foundation-typography-heading-medium-text-case) !global;
-  $foundation-typography-heading-medium-text-decoration: var(--foundation-typography-heading-medium-text-decoration) !global;
   $foundation-typography-heading-low-font-family: var(--foundation-typography-heading-low-font-family) !global;
   $foundation-typography-heading-low-font-size: var(--foundation-typography-heading-low-font-size) !global;
   $foundation-typography-heading-low-font-weight: var(--foundation-typography-heading-low-font-weight) !global;
