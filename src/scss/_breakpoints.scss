@@ -2,12 +2,6 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-
-
-
-
-
-
 $foundation-layout-width-frame: 2560px;
 $foundation-layout-width-min: 1600px;
 $foundation-layout-width-max: 2560px;
@@ -208,6 +202,12 @@ $foundation-grid-column-margin: 32px;
 $foundation-grid-column-gutter: 24px;
 
 $module:(
-
+  "breakpoints": (
+    "small": 0px,
+    "medium": 600px,
+    "large": 1024px,
+    "xlarge": 1440px,
+    "xxlarge": 1920px
+  )
 );
 
