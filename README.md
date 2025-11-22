@@ -77,7 +77,7 @@ Replace the following values:
 $ npm install
 ```
 
-> If npm install fails because it can't connect to Artifactory, it may help to first run `npm config set strict-ssl false`
+> If npm install fails, it may help to first run `npm config set strict-ssl false`
 
 # Configuration
 
