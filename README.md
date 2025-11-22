@@ -6,20 +6,18 @@
   - [Features](#features)
   - [Requirements](#requirements)
 - [Setup](#setup)
+  - [Create an .npmrc](#create-an-npmrc)
   - [Installation](#installation)
 - [Configuration](#configuration)
   - [Environment Configuration](#environment-configuration)
 - [Development](#development)
   - [Assets Source](#assets-source)
+  - [Working with Design Tokens](#working-with-design-tokens)
   - [Build Assets](#build-assets)
-    - [Build assets for development](#build-assets-for-development)
-    - [Start a development server](#start-a-development-server---reloading-automatically-after-each-file-change)
 - [Production](#production)
   - [Build Assets](#build-assets-1)
+  - [Publishing to GitHub Packages](#publishing-to-github-packages)
   - [Get Built Assets](#get-built-assets)
-- [Run Code Style Linters](#run-code-style-linters)
-  - [SASS](#sass)
-  - [JavaScript](#javascript)
 - [Additional Tools](#additional-tools)
   - [Run Assets Bundle Analyzer](#run-assets-bundle-analyzer)
 
@@ -41,38 +39,33 @@
 
 - The built CSS / JavaScript files will respect the **configured supported browser versions** using the following tools:
   - [`autoprefixer`](https://github.com/postcss/autoprefixer) - automatically adds vendor prefixes to CSS rules
-  - [`babel-preset-env`](https://babeljs.io/docs/en/babel-preset-env) - smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (_and optionally, browser polyfills_) are needed by your target environment(s).
 - Support for **assets optimization** for production environment with ability to configure:
   - **Code Minification** of _JavaScript_ and _CSS_ processed files.
   - **Optimize Assets Loading** - inline and embed **images** / **fonts** files having file size below a _configurable_ threshold value.
   - **Image Optimization** - optimize `jpeg`, `jpg`, `png`, `gif`, `svg` filesize and loading type via [`imagemin`](https://github.com/imagemin/imagemin). Plugin and Loader for webpack to optimize (_compress_) all images using `imagemin`. Do not worry about size of images, now they are always optimized/compressed.
-- Support for **source code syntax style and formatting linters** that analyze source code to flag any programming errors, bugs, stylistic errors or suspicious constructs:
-  - **SASS/PostCSS syntax checker** - you can change or add additional rules in `.sasslintrc` file. Configuration options can be found on [`sass-lint`](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml) documentation.
-  - **JavaScript syntax checker** - following the `airbnb` style, you can review and configure the rules in `.eslintrc` file. Configuration options can be found on [`eslint`](https://eslint.org/docs/user-guide/configuring) documentation.
 - Latest [Webpack 5](https://github.com/webpack/webpack) - _JavaScript_ module bundler.
 - Latest [SASS/PostCSS](https://github.com/sass/sass) compiler based on Dart `sass`.
-- Latest [Babel 7](https://github.com/babel/babel) (`@babel/core`) - JavaScript compiler - _Use next generation JavaScript, today._
 - Configured and ready to use **Webpack Dev Server** plugin for faster local development - [`webpack-dev-server`](https://webpack.js.org/configuration/dev-server/)
 - Integration with [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) - _Visualize size of webpack output files with an interactive zoomable treemap._
 
 ## Requirements
 
-- `node` : `>=18.12.0`
+- `node` : `>=20.0.0`
 - `npm`
 
 # Setup
 
 ## Create an .npmrc
 
-Public NPM packages will be installed from the private NPM packages (`@jeppesen-foreflight/dls-global-assets`) will be downloaded from the Boeing Github package registry. To enable this, create a new filed named `.npmrc` in the project root. The content should be:
+Public NPM packages will be installed from npmjs.com. Private NPM packages (`@jeppesen-foreflight/dls-global-assets`) will be downloaded from the GitHub Package Registry. To enable this, create a new file named `.npmrc` in your project root. The content should be:
 
 ```
-@jeppesen-foreflight:registry=https://git.web.boeing.com/api/v4/packages/npm/
-//git.web.boeing.com/api/v4/packages/npm/:_authToken=GITHUB_AUTH_TOKEN
+@jeppesen-foreflight:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=GITHUB_AUTH_TOKEN
 ```
 
-Replace the folowing values:
-- GITHUB_AUTH_TOKEN: Create a [Github Personal Access Token](https://github.com/settings/tokens) with all permissions. Save in a safe place. Use that string as the GITHUB_AUTH_TOKEN.
+Replace the following values:
+- `GITHUB_AUTH_TOKEN`: Create a [GitHub Personal Access Token](https://github.com/settings/tokens) with `read:packages` permission. Save it in a safe place and use that string as the GITHUB_AUTH_TOKEN.
 
 
 ## Installation
@@ -101,62 +94,50 @@ $ npm install
 ## Assets Source
 
 - **SASS/PostCSS** files are located under `src/scss/`
-- **JavaScript** files with support of latest ECMAScript _ES6 / ECMAScript 2016(ES7)/ etc_ files are located under `src/js/`
+- **JavaScript** files with support of latest ECMAScript _ES6+_ are located under `src/js/`
 - **Image** files are located under `src/images/`
 - **Font** files are located under `src/fonts/`
 - **HTML** files are located under `src/`
   - It will **automatically** build **all HTML files** placed under `src/` directory.
 
-## Build Assets
+## Working with Design Tokens
 
-### Working with Design Tokens
+This project uses design tokens from two sources that work together to provide a complete design system.
 
-This project uses design tokens from two sources:
+### 1. External Tokens (Primary Design System)
 
-#### 1. External Tokens (Primary) - dp-dls-global-tokens
+The primary design tokens are maintained in the separate [dp-dls-global-tokens](https://github.com/jeppesen-foreflight/dp-dls-global-tokens) repository. Compiled SCSS tokens from that repository are committed directly to this project at:
 
-The main design tokens are maintained in the [dp-dls-global-tokens](https://git.web.boeing.com/jeppesen-foreflight/dp-dls-global-tokens) repository and included as a git submodule at `token-service/external-tokens/`.
+```
+src/scss/base/external-tokens/
+```
 
-**When to Update External Tokens:**
-- New token values are published in dp-dls-global-tokens
-- Design system colors, typography, spacing, or components change
+These tokens include:
+- Foundation tokens (colors, typography, spacing, borders, shadows)
+- Breakpoint definitions
+- Density and sizing tokens
+- Component-specific tokens
+- Theme switching variables
 
-**External Tokens Update Workflow:**
+**To use external tokens in your SCSS:**
+```scss
+@import 'base/external-tokens';
+```
 
-1. **Build tokens in external repo** (usually done by tokens team):
-   ```bash
-   cd /path/to/dp-dls-global-tokens/packages/tokens
-   npm install
-   npm run compile
-   ```
+**Updating External Tokens:**
 
-2. **Sync compiled tokens to this repo**:
-   ```bash
-   cd token-service
-   npm run tokens:sync
-   ```
-   
-   This script copies the compiled SCSS from `external-tokens/packages/tokens/dist/scss/` to `src/scss/base/external-tokens/` and generates an aggregator file.
+When the tokens team publishes new token updates:
 
-3. **Update the submodule reference** (optional - to track the external repo version):
-   ```bash
-   cd token-service/external-tokens
-   git pull origin develop
-   cd ../..
-   git add token-service/external-tokens
-   git commit -m "Update external-tokens submodule"
-   ```
+1. Obtain the compiled SCSS files from the tokens team
+2. Copy them to `src/scss/base/external-tokens/`
+3. Commit the changes
+4. Build and test
 
-**External token outputs:**
-- SCSS partials in `src/scss/base/external-tokens/`
-- Aggregator file: `src/scss/base/external-tokens/_external-tokens.scss`
-- Import in your SCSS: `@import 'base/external-tokens';`
+### 2. Legacy Token Service (Figma Integration)
 
-#### 2. Legacy Token Service (Figma-based)
+The token-service generates additional tokens from Figma for backward compatibility and supplementary design values. This service must be run before building the assets.
 
-The token-service generates tokens from Figma API for backward compatibility.
-
-**Run the token service** (before building for the first time):
+**Generate token files** (required before first build):
 ```bash
 cd token-service
 npm install
@@ -165,13 +146,16 @@ npm run ts
 
 This generates:
 - `src/css/variables.css` and `src/css/variablesBase.css`
-- `src/js/variables.js` and `src/js/variables.module.js`
-- `src/json/variables.json`
+- `src/js/variables.js` and `src/js/variables.module.js`  
+- `src/json/variables.json` and `src/json/variablesBase.json`
+
+**Prerequisites for token service:**
+- Figma Personal Access Token (see [token-service/README.md](token-service/README.md))
+- Environment variables: `FIGMA_API_KEY` and `FIGMA_ICONS_FILE_KEY`
 
 See [token-service/README.md](token-service/README.md) for full documentation.
 
-
-### Build assets for development
+## Build Assets
 
 ```sh
 $ npm run build
@@ -183,15 +167,47 @@ $ npm run build
 $ npm run start
 ```
 
+This starts a webpack dev server with hot module replacement for rapid development.
+
 # Production
 
 ## Build Assets
 
-Optimize assets for production by:
+Optimize assets for production:
 
 ```sh
 $ npm run release
 ```
+
+This command:
+1. Runs the token service to generate design tokens
+2. Compiles and minifies SCSS to CSS
+3. Optimizes and copies JavaScript files
+4. Optimizes images and fonts
+5. Generates production-ready HTML
+6. Outputs everything to the `dist/` directory
+
+## Publishing to GitHub Packages
+
+This package is automatically published to GitHub Packages via CI/CD when changes are pushed to the `main` branch.
+
+**Manual Publishing:**
+
+1. Ensure you're on the `main` branch
+2. Update the version in `package.json`
+3. Commit and push changes
+4. The CI/CD pipeline will automatically:
+   - Generate tokens from Figma
+   - Build production assets
+   - Publish to GitHub Packages
+
+**CI/CD Pipeline:**
+
+The GitHub Actions workflow (`.github/workflows/ci-cd.yml`) runs on every push and:
+1. Installs dependencies
+2. Generates design tokens from Figma
+3. Builds production assets
+4. Publishes to GitHub Packages (on main branch only)
 
 ## Get Built Assets
 
@@ -204,20 +220,6 @@ $ npm run release
 
 - _Fonts_ are located under `/dist/fonts/`
 - _HTML_ files are located under `/dist/`
-
-# Run Code Style Linters
-
-## SASS
-
-```sh
-$ npm run lint:sass
-```
-
-## JavaScript
-
-```sh
-$ npm run lint:js
-```
 
 # Additional Tools
 
