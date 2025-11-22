@@ -1,3 +1,0 @@
-[submodule "token-service/external-tokens"]
-	path = token-service/external-tokens
-	url = https://github.com/jeppesen-foreflight/dp-dls-global-tokens
