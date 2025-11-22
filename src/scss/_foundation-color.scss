@@ -313,7 +313,7 @@ $foundation-interactive-accent-glow-surface-medium: radial-gradient(101.08% 100%
               $foundation-elevation-shadow-3-x $foundation-elevation-shadow-3-y $foundation-elevation-shadow-3-blurpx $foundation-elevation-shadow-3-spread $foundation-elevation-shadow-3-color;
 }
 @mixin foundation-interactive-primary-glow-backlit () {
-  box-shadow: $foundation-effect-primary-glow-backlit-x $foundation-effect-primary-glow-backlit-y $foundation-effect-primary-glow-backlit-blurpx $foundation-effect-primary-glow-backlit-spread $foundation-effect-primary-glow-backlit-color;
+  box-shadow: $foundation-effect-primary-glow-backlit-x $foundation-effect-primary-glow-backlit-y $foundation-effect-primary-glow-backlit-blur px $foundation-effect-primary-glow-backlit-spread $foundation-effect-primary-glow-backlit-color;
 }
 @mixin foundation-interactive-accent-glow-backlit () {
   box-shadow: $foundation-effect-accent-glow-backlit-x $foundation-effect-accent-glow-backlit-y $foundation-effect-accent-glow-backlit-blurpx $foundation-effect-accent-glow-backlit-spread $foundation-effect-accent-glow-backlit-color;
