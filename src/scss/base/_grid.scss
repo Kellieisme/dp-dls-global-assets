@@ -1,0 +1,96 @@
+@use './typography' as typography;
+@use './media-breakpoints' as breakpointMixins;
+
+$_grid-breakpoints: breakpointMixins.$grid-breakpoints;
+
+// Custom map of gutter widths across breakpoints
+$grid-gutter-widths: (
+  xs: 16px,
+  sm: 16px,
+  md: 20px,
+  lg: 20px,
+  xl: 24px,
+  xxl: 24px,
+);
+
+// Custom map of condensed gutter widths across breakpoints
+$grid-gutter-widths-condensed: (
+  xs: 12px,
+  sm: 12px,
+  md: 16px,
+  lg: 16px,
+  xl: 20px,
+  xxl: 20px,
+);
+
+// Custom map of margin across breakpoints
+$container-margins: (
+  xs: 16px,
+  sm: 24px,
+  md: 24px,
+  lg: 32px,
+  xl: 32px,
+  xxl: 32px,
+);
+
+$max-container-width: 1128px;
+
+// Mixin for media queries
+@mixin media-breakpoint-up($breakpoint) {
+  $min-width: map-get($_grid-breakpoints, $breakpoint);
+  @if $min-width != null {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  } @else if $breakpoint == xs {
+    @content;
+  }
+}
+
+.container {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include breakpointMixins.make-container($gutter);
+    }
+  }
+}
+
+.row {
+  @each $breakpoint, $gutter in $grid-gutter-widths {
+    @include media-breakpoint-up($breakpoint) {
+      @include breakpointMixins.make-row($gutter);
+    }
+  }
+}
+
+.condensed {
+  .container {
+    @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
+      @include media-breakpoint-up($breakpoint) {
+        @include breakpointMixins.make-container($gutter);
+      }
+    }
+  }
+
+  .row {
+    @each $breakpoint, $gutter in $grid-gutter-widths-condensed {
+      @include media-breakpoint-up($breakpoint) {
+        @include breakpointMixins.make-row($gutter);
+      }
+    }
+  }
+}
+
+.container-wrapper {
+  max-width: $max-container-width;
+  @each $breakpoint, $margin in $container-margins {
+    @include media-breakpoint-up($breakpoint) {
+      padding-left: $margin;
+      padding-right: $margin;
+    }
+  }
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

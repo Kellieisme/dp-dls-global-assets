@@ -4,6 +4,8 @@
 .npmrc
 
 #Token service generated files
+src/css/variables.css
+src/css/variablesBase.css
 src/js/variables.js
 src/js/variablesBase.js
 src/js/variables.module.js

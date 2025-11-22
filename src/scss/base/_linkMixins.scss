@@ -1,0 +1,97 @@
+@use 'variables' as vars;
+@use 'themeMixins' as themeMixins;
+
+
+/* STANDALONE or INLINE / PRIMARY */
+@mixin link-primary {
+  color: var(--color-interactive-primary-textandicon-primary-default);
+  text-decoration: none;
+  text-underline-offset: 4px; 
+  &:visited {
+    color: var(--color-interactive-primary-textandicon-primary-default);
+  }
+  &:hover {
+    text-decoration: underline; 
+    color: var(--color-interactive-primary-textandicon-primary-default);  
+  }
+  &:focus {
+    text-decoration: underline;
+    border-radius: var(--atmosphere-radius-xs, 4px);
+    outline: 2px solid var(--color-interactive-primary-border-focused);
+  }
+  &:active {
+    text-decoration: underline;
+    color: var(--color-interactive-primary-textandicon-selected);
+  }
+  &.disabled {
+    &:link, &:focus, &:hover, &:active, &:visited {
+      color: var(--color-interactive-primary-textandicon-disabled);
+      text-decoration: none;
+      outline: none;
+      cursor: default;
+    }
+  }
+}
+
+/* STANDALONE or INLINE / PRIMARY / UNDERLINED */
+@mixin link-primary-underlined {
+  @include link-primary;
+  text-decoration: underline;
+}
+
+/* STANDALONE or INLINE / ACCENT */
+@mixin link-accent {
+  color: var(--color-interactive-accent-textandicon-default);
+  text-decoration: none;
+  text-underline-offset: 4px; 
+  &:visited {
+    text-decoration: none;
+    color: var(--color-interactive-accent-textandicon-default);
+  }
+  &:hover {
+    text-decoration: underline;  
+  }
+  &:focus {
+    text-decoration: underline;
+    border-radius: var(--atmosphere-radius-xs, 4px);
+    outline: 2px solid var(--color-interactive-primary-border-focused);
+  }
+  &:active {
+    text-decoration: underline;
+    color: var(--color-interactive-accent-textandicon-selected);
+  }
+  &.disabled {
+    &:link, &:focus, &:hover, &:active, &:visited {
+      color: var(--color-interactive-primary-textandicon-disabled);
+      text-decoration: none;
+      outline: none;
+      cursor: default;
+    }
+  }
+}
+
+/* STANDALONE or INLINE / ACCENT / VISITED */
+@mixin link-accent-visited {
+  @include link-accent;
+  &:visited {
+    // THIS TOKEN IS NOT CURRENTLY BEING EXPORTED FROM THE TOKEN SERVICE
+    color: var(--color-interactive-accent-textandicon-visited, #DB8BFF);
+  }
+}
+
+/* STANDALONE or INLINE / ACCENT / UNDERLINE */
+@mixin link-accent-underlined {
+  @include link-accent;
+  text-decoration: underline;
+}
+
+
+/* STANDALONE or INLINE / ACCENT / UNDERLINE / VISITED */
+@mixin link-accent-underlined-visited {
+  @include link-accent;
+  text-decoration: underline;
+  &:visited {
+    // THIS TOKEN IS NOT CURRENTLY BEING EXPORTED FROM THE TOKEN SERVICE
+    color: var(--color-interactive-accent-textandicon-visited, #DB8BFF);
+  }
+}

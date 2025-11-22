@@ -14,7 +14,7 @@ $_initialized: false;
 	@if $_initialized ==false {
 		@include density.generateDensityVariables();
 		@include color.generateColorThemeVariables();
-		@include breakpoints.generateBreakpointVariables();
+		// @include breakpoints.generateBreakpointVariables();
 		$_initialized: true !global;
 	}
 }

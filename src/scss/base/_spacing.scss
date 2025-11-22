@@ -1,0 +1,45 @@
+@use './media-breakpoints' as breakpointMixins;
+// Custom map of spacers for condensed mode
+$spacers-condensed: (
+  0: 0,
+  1: 0,
+  2: breakpointMixins.$spacer * .125,
+  3: breakpointMixins.$spacer * .25,
+  4: breakpointMixins.$spacer * .5,
+  5: breakpointMixins.$spacer,
+  6: breakpointMixins.$spacer * 1.25,
+  7: breakpointMixins.$spacer * 1.5,
+  8: breakpointMixins.$spacer * 2,
+  9: breakpointMixins.$spacer * 2.5,
+  10: breakpointMixins.$spacer * 3,
+  11: breakpointMixins.$spacer * 3.5,
+  12: breakpointMixins.$spacer * 4,
+  13: breakpointMixins.$spacer * 4.5,
+  14: breakpointMixins.$spacer * 5,
+  15: breakpointMixins.$spacer * 5.5,
+  16: breakpointMixins.$spacer * 6,
+  17: breakpointMixins.$spacer * 6.5
+);
+
+.condensed {
+  @each $prop, $abbrev in (padding: p, margin: m) {
+    @each $size, $value in $spacers-condensed {
+      .#{$abbrev}-#{$size} {
+        #{$prop}: $value !important;
+      }
+      @each $side, $key in (top: t, right: e, bottom: b, left: s) {
+        .#{$abbrev}#{$key}-#{$size} {
+          #{$prop}-#{$side}: $value !important;
+        }
+      }
+      .#{$abbrev}#{x}-#{$size} {
+        #{$prop}-#{left}: $value !important;
+        #{$prop}-#{right}: $value !important;
+      }
+      .#{$abbrev}#{y}-#{$size} {
+        #{$prop}-#{top}: $value !important;
+        #{$prop}-#{bottom}: $value !important;
+      }
+    }
+  }
+}

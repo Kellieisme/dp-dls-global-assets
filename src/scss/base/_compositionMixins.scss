@@ -1,0 +1,115 @@
+@mixin composition-light-ui-glass-surface-specular {
+  background: linear-gradient(-156deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.16) 100%);
+}
+
+@mixin composition-light-ui-glass-border-specular {
+  border-image-source: linear-gradient(247deg, rgba(255, 255, 255, 0.49) 100%, rgba(255, 255, 255, 0.40) 60%, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.75) 0%);
+}
+
+@mixin composition-light-ui-glass-background-blur {
+  backdrop-filter: blur(100px);
+}
+
+@mixin composition-light-ui-divider-specular-horizontal {
+  border-image-source: linear-gradient(90deg, rgba(#1a2631, 0.02) 0%, rgba(#1a2631, 0.12) 10%, rgba(#1a2631, 0.08) 44%, rgba(#1a2631, 0.02) 100%);
+}
+
+@mixin composition-light-ui-divider-specular-vertical {
+  border-image-source: linear-gradient(180deg, rgba(#1a2631, 0.02) 0%, rgba(#1a2631, 0.12) 10%, rgba(#1a2631, 0.08) 44%, rgba(#1a2631, 0.02) 100%);
+}
+
+@mixin composition-light-interactive-primary-background-hovered-multiply {
+  background: #1a26310d;
+  mix-blend-mode: multiply;
+}
+
+@mixin composition-light-interactive-primary-background-selected-multiply {
+  background: #1a26311f;
+  mix-blend-mode: multiply;
+}
+
+@mixin composition-light-interactive-primary-border-hovered-specular {
+  border-image-source: linear-gradient(247deg, rgba(255, 255, 255, 0.49) 100%, rgba(255, 255, 255, 0.40) 60%, rgba(255, 255, 255, 0.40) 45%, rgba(255, 255, 255, 0.75) 0%);
+}
+
+@mixin composition-light-interactive-primary-glow-small-surface {
+  background: 0;
+  mix-blend-mode: 0;
+}
+
+@mixin composition-light-interactive-primary-glow-medium-surface {
+  background: 0;
+  mix-blend-mode: 0;
+}
+
+@mixin composition-light-interactive-accent-background-hovered-multiply {
+  background: #005f8e0d;
+  mix-blend-mode: multiply;
+}
+
+@mixin composition-light-interactive-accent-background-selected-multiply {
+  background: #005f8e1f;
+  mix-blend-mode: multiply;
+}
+
+@mixin composition-dark-ui-glass-surface-specular {
+  background: linear-gradient(-156deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+@mixin composition-dark-ui-glass-border-specular {
+  border-image-source: linear-gradient(247deg, rgba(255, 255, 255, 0.12) 100%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.22) 0%);
+}
+
+@mixin composition-dark-ui-glass-background-blur {
+  backdrop-filter: blur(100px);
+}
+
+@mixin composition-dark-ui-divider-specular-horizontal {
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.12) 10%, rgba(255, 255, 255, 0.08) 44%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+@mixin composition-dark-ui-divider-specular-vertical {
+  border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.12) 10%, rgba(255, 255, 255, 0.08) 44%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+@mixin composition-dark-interactive-primary-background-hovered-plus-lighter {
+  background: #bdc7d00d;
+  mix-blend-mode: plus-lighter;
+}
+
+@mixin composition-dark-interactive-primary-background-selected-plus-lighter {
+  background: #bdc7d01f;
+  mix-blend-mode: plus-lighter;
+}
+
+@mixin composition-dark-interactive-primary-border-hovered-specular {
+  border-image-source: linear-gradient(247deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 45%, rgba(255, 255, 255, 0.12) 0%);
+}
+
+@mixin composition-dark-interactive-primary-glow-small-surface {
+  background: radial-gradient(
+101.08% 100% at 50% 100%, rgba(#4e6071, 0.12) 0%, rgba(#4e6071, 0.00) 73.85%), 
+
+radial-gradient(
+100.02% 100% at 50% 100%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 55.59%);
+  mix-blend-mode: color-dodge;
+}
+
+@mixin composition-dark-interactive-primary-glow-medium-surface {
+  background: radial-gradient(
+101.08% 100% at 50% 100%, rgba(#4e6071, 0.12) 0%, rgba(#4e6071, 0.00) 100%), 
+
+radial-gradient(
+100.02% 100% at 50% 100%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%);
+  mix-blend-mode: color-dodge;
+}
+
+@mixin composition-dark-interactive-accent-background-hovered-color-dodge {
+  background: #bdc7d00d;
+  mix-blend-mode: color-dodge;
+}
+
+@mixin composition-dark-interactive-accent-background-selected-color-dodge {
+  background: #bdc7d01f;
+  mix-blend-mode: color-dodge;
+}
