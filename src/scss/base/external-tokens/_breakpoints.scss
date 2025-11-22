@@ -4,9 +4,16 @@
 
 
 
+@use 'sass:map';
+@use 'sass:meta';
+@use './utils';
+@use './foundation-color' as *;
 
-
-
+@use './breakpoint/extra-large';
+@use './breakpoint/large';
+@use './breakpoint/expanded';
+@use './breakpoint/medium';
+@use './breakpoint/compact';
 
 $foundation-layout-width-frame: 2560px;
 $foundation-layout-width-min: 1600px;
@@ -207,12 +214,60 @@ $foundation-grid-column-size: auto;
 $foundation-grid-column-margin: 32px;
 $foundation-grid-column-gutter: 24px;
 
-$module:(
-
+$moduleBreakpoint:(
+  extra-large: meta.module-variables(extra-large),
+  large: meta.module-variables(large),
+  expanded: meta.module-variables(expanded),
+  medium: meta.module-variables(medium),
+  compact: meta.module-variables(compact),
 );
 
-@mixin  () {
+@mixin media-breakpoint ($breakpoints, $name, $token:'foundation-layout-width-max') {
+	@if $breakpoints == null {
+		@warn 'No breakpoints provided.';
+		$breakpoints: $moduleBreakpoint;
+	}
+	$breakpoint: map-get($breakpoints, $name);
+	@if $breakpoint == null {
+		@warn 'Breakpoint not found: #{$name}';
+	}
+	$max: map-get($breakpoint, $token);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	}
+}
 
+@mixin generateBreakpointVariables () {
+  :root {
+    @include utils.themeVars($moduleBreakpoint, 'extra-large');
+  }
+  @include media-breakpoint($moduleBreakpoint, 'extra-large') {
+    :root {
+      @include utils.themeVars($moduleBreakpoint, 'extra-large');
+    }
+  }
+  @include media-breakpoint($moduleBreakpoint, 'large') {
+    :root {
+      @include utils.themeVars($moduleBreakpoint, 'large');
+    }
+  }
+  @include media-breakpoint($moduleBreakpoint, 'expanded') {
+    :root {
+      @include utils.themeVars($moduleBreakpoint, 'expanded');
+    }
+  }
+  @include media-breakpoint($moduleBreakpoint, 'medium') {
+    :root {
+      @include utils.themeVars($moduleBreakpoint, 'medium');
+    }
+  }
+  @include media-breakpoint($moduleBreakpoint, 'compact') {
+    :root {
+      @include utils.themeVars($moduleBreakpoint, 'compact');
+    }
+  }
   $foundation-layout-width-frame: var(--foundation-layout-width-frame) !global;
   $foundation-layout-width-min: var(--foundation-layout-width-min) !global;
   $foundation-layout-width-max: var(--foundation-layout-width-max) !global;
