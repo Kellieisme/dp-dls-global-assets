@@ -17,27 +17,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies and sync external tokens
-        run: |
-          cd token-service
-          npm install
-          # Sync external tokens instead of fetching from Figma
-          npm run tokens:sync
-          cd ..
+      - name: Install dependencies
+        run: npm install
 
       - name: Build assets
-        run: |
-          npm install
-          npm run release
+        run: npm run release
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
