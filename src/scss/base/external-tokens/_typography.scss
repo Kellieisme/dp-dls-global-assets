@@ -1,0 +1,256 @@
+@use './Breakpoints' as *;
+@use './fonts';
+
+@include fonts.boeing-meso('../fonts');
+
+@mixin foundation-typography-display-high () {
+  font-family: $foundation-typography-display-high-font-family;
+  font-weight: $foundation-typography-display-high-font-weight;
+  line-height: $foundation-typography-display-high-line-height;
+  font-size: $foundation-typography-display-high-font-size;
+  letter-spacing: $foundation-typography-display-high-letter-spacing;
+  margin-bottom: $foundation-typography-display-high-paragraph-spacing;
+  text-indent: $foundation-typography-display-high-paragraph-indent;
+  text-transform: $foundation-typography-display-high-text-case;
+  text-decoration: $foundation-typography-display-high-text-decoration;
+}
+
+@mixin foundation-typography-display-medium {
+  font-family: $foundation-typography-display-medium-font-family;
+  font-weight: $foundation-typography-display-medium-font-weight;
+  line-height: $foundation-typography-display-medium-line-height;
+  font-size: $foundation-typography-display-medium-font-size;
+  letter-spacing: $foundation-typography-display-medium-letter-spacing;
+  margin-bottom: $foundation-typography-display-medium-paragraph-spacing;
+  text-indent: $foundation-typography-display-medium-paragraph-indent;
+  text-transform: $foundation-typography-display-medium-text-case;
+  text-decoration: $foundation-typography-display-medium-text-decoration;
+}
+
+@mixin foundation-typography-heading-high {
+  font-family: $foundation-typography-heading-high-font-family;
+  font-weight: $foundation-typography-heading-high-font-weight;
+  line-height: $foundation-typography-heading-high-line-height;
+  font-size: $foundation-typography-heading-high-font-size;
+  letter-spacing: $foundation-typography-heading-high-letter-spacing;
+  margin-bottom: $foundation-typography-heading-high-paragraph-spacing;
+  text-indent: $foundation-typography-heading-high-paragraph-indent;
+  text-transform: $foundation-typography-heading-high-text-case;
+  text-decoration: $foundation-typography-heading-high-text-decoration;
+}
+
+@mixin foundation-typography-heading-medium {
+  font-family: $foundation-typography-heading-medium-font-family;
+  font-weight: $foundation-typography-heading-medium-font-weight;
+  line-height: $foundation-typography-heading-medium-line-height;
+  font-size: $foundation-typography-heading-medium-font-size;
+  letter-spacing: $foundation-typography-heading-medium-letter-spacing;
+  margin-bottom: $foundation-typography-heading-medium-paragraph-spacing;
+  text-indent: $foundation-typography-heading-medium-paragraph-indent;
+  text-transform: $foundation-typography-heading-medium-text-case;
+  text-decoration: $foundation-typography-heading-medium-text-decoration;
+}
+
+@mixin foundation-typography-heading-low {
+  font-family: $foundation-typography-heading-low-font-family;
+  font-weight: $foundation-typography-heading-low-font-weight;
+  line-height: $foundation-typography-heading-low-line-height;
+  font-size: $foundation-typography-heading-low-font-size;
+  letter-spacing: $foundation-typography-heading-low-letter-spacing;
+  margin-bottom: $foundation-typography-heading-low-paragraph-spacing;
+  text-indent: $foundation-typography-heading-low-paragraph-indent;
+  text-transform: $foundation-typography-heading-low-text-case;
+  text-decoration: $foundation-typography-heading-low-text-decoration;
+}
+
+@mixin foundation-typography-title-high {
+  font-family: $foundation-typography-title-high-font-family;
+  font-weight: $foundation-typography-title-high-font-weight;
+  line-height: $foundation-typography-title-high-line-height;
+  font-size: $foundation-typography-title-high-font-size;
+  letter-spacing: $foundation-typography-title-high-letter-spacing;
+  margin-bottom: $foundation-typography-title-high-paragraph-spacing;
+  text-indent: $foundation-typography-title-high-paragraph-indent;
+  text-transform: $foundation-typography-title-high-text-case;
+  text-decoration: $foundation-typography-title-high-text-decoration;
+}
+
+@mixin foundation-typography-title-medium {
+  font-family: $foundation-typography-title-medium-font-family;
+  font-weight: $foundation-typography-title-medium-font-weight;
+  line-height: $foundation-typography-title-medium-line-height;
+  font-size: $foundation-typography-title-medium-font-size;
+  letter-spacing: $foundation-typography-title-medium-letter-spacing;
+  margin-bottom: $foundation-typography-title-medium-paragraph-spacing;
+  text-indent: $foundation-typography-title-medium-paragraph-indent;
+  text-transform: $foundation-typography-title-medium-text-case;
+  text-decoration: $foundation-typography-title-medium-text-decoration;
+}
+
+@mixin foundation-typography-title-low {
+  font-family: $foundation-typography-title-low-font-family;
+  font-weight: $foundation-typography-title-low-font-weight;
+  line-height: $foundation-typography-title-low-line-height;
+  font-size: $foundation-typography-title-low-font-size;
+  letter-spacing: $foundation-typography-title-low-letter-spacing;
+  margin-bottom: $foundation-typography-title-low-paragraph-spacing;
+  text-indent: $foundation-typography-title-low-paragraph-indent;
+  text-transform: $foundation-typography-title-low-text-case;
+  text-decoration: $foundation-typography-title-low-text-decoration;
+}
+
+@mixin foundation-typography-body-high-default {
+  font-family: $foundation-typography-body-high-default-font-family;
+  font-weight: $foundation-typography-body-high-default-font-weight;
+  line-height: $foundation-typography-body-high-default-line-height;
+  font-size: $foundation-typography-body-high-default-font-size;
+  letter-spacing: $foundation-typography-body-high-default-letter-spacing;
+  margin-bottom: $foundation-typography-body-high-default-paragraph-spacing;
+  text-indent: $foundation-typography-body-high-default-paragraph-indent;
+  text-transform: $foundation-typography-body-high-default-text-case;
+  text-decoration: $foundation-typography-body-high-default-text-decoration;
+}
+
+@mixin foundation-typography-body-high-highlight {
+  font-family: $foundation-typography-body-high-highlight-font-family;
+  font-weight: $foundation-typography-body-high-highlight-font-weight;
+  line-height: $foundation-typography-body-high-highlight-line-height;
+  font-size: $foundation-typography-body-high-highlight-font-size;
+  letter-spacing: $foundation-typography-body-high-highlight-letter-spacing;
+  margin-bottom: $foundation-typography-body-high-highlight-paragraph-spacing;
+  text-indent: $foundation-typography-body-high-highlight-paragraph-indent;
+  text-transform: $foundation-typography-body-high-highlight-text-case;
+  text-decoration: $foundation-typography-body-high-highlight-text-decoration;
+}
+
+@mixin foundation-typography-body-medium-default {
+  font-family: $foundation-typography-body-medium-default-font-family;
+  font-weight: $foundation-typography-body-medium-default-font-weight;
+  line-height: $foundation-typography-body-medium-default-line-height;
+  font-size: $foundation-typography-body-medium-default-font-size;
+  letter-spacing: $foundation-typography-body-medium-default-letter-spacing;
+  margin-bottom: $foundation-typography-body-medium-default-paragraph-spacing;
+  text-indent: $foundation-typography-body-medium-default-paragraph-indent;
+  text-transform: $foundation-typography-body-medium-default-text-case;
+  text-decoration: $foundation-typography-body-medium-default-text-decoration;
+}
+
+@mixin foundation-typography-body-medium-highlight {
+  font-family: $foundation-typography-body-medium-highlight-font-family;
+  font-weight: $foundation-typography-body-medium-highlight-font-weight;
+  line-height: $foundation-typography-body-medium-highlight-line-height;
+  font-size: $foundation-typography-body-medium-highlight-font-size;
+  letter-spacing: $foundation-typography-body-medium-highlight-letter-spacing;
+  margin-bottom: $foundation-typography-body-medium-highlight-paragraph-spacing;
+  text-indent: $foundation-typography-body-medium-highlight-paragraph-indent;
+  text-transform: $foundation-typography-body-medium-highlight-text-case;
+  text-decoration: $foundation-typography-body-medium-highlight-text-decoration;
+}
+
+@mixin foundation-typography-body-low-default {
+  font-family: $foundation-typography-body-low-default-font-family;
+  font-weight: $foundation-typography-body-low-default-font-weight;
+  line-height: $foundation-typography-body-low-default-line-height;
+  font-size: $foundation-typography-body-low-default-font-size;
+  letter-spacing: $foundation-typography-body-low-default-letter-spacing;
+  margin-bottom: $foundation-typography-body-low-default-paragraph-spacing;
+  text-indent: $foundation-typography-body-low-default-paragraph-indent;
+  text-transform: $foundation-typography-body-low-default-text-case;
+  text-decoration: $foundation-typography-body-low-default-text-decoration;
+}
+
+@mixin foundation-typography-body-low-highlight {
+  font-family: $foundation-typography-body-low-highlight-font-family;
+  font-weight: $foundation-typography-body-low-highlight-font-weight;
+  line-height: $foundation-typography-body-low-highlight-line-height;
+  font-size: $foundation-typography-body-low-highlight-font-size;
+  letter-spacing: $foundation-typography-body-low-highlight-letter-spacing;
+  margin-bottom: $foundation-typography-body-low-highlight-paragraph-spacing;
+  text-indent: $foundation-typography-body-low-highlight-paragraph-indent;
+  text-transform: $foundation-typography-body-low-highlight-text-case;
+  text-decoration: $foundation-typography-body-low-highlight-text-decoration;
+}
+
+@mixin foundation-typography-body-lowest-default {
+  font-family: $foundation-typography-body-lowest-default-font-family;
+  font-weight: $foundation-typography-body-lowest-default-font-weight;
+  line-height: $foundation-typography-body-lowest-default-line-height;
+  font-size: $foundation-typography-body-lowest-default-font-size;
+  letter-spacing: $foundation-typography-body-lowest-default-letter-spacing;
+  margin-bottom: $foundation-typography-body-lowest-default-paragraph-spacing;
+  text-indent: $foundation-typography-body-lowest-default-paragraph-indent;
+  text-transform: $foundation-typography-body-lowest-default-text-case;
+  text-decoration: $foundation-typography-body-lowest-default-text-decoration;
+}
+
+@mixin foundation-typography-body-lowest-highlight {
+  font-family: $foundation-typography-body-lowest-highlight-font-family;
+  font-weight: $foundation-typography-body-lowest-highlight-font-weight;
+  line-height: $foundation-typography-body-lowest-highlight-line-height;
+  font-size: $foundation-typography-body-lowest-highlight-font-size;
+  letter-spacing: $foundation-typography-body-lowest-highlight-letter-spacing;
+  margin-bottom: $foundation-typography-body-lowest-highlight-paragraph-spacing;
+  text-indent: $foundation-typography-body-lowest-highlight-paragraph-indent;
+  text-transform: $foundation-typography-body-lowest-highlight-text-case;
+  text-decoration: $foundation-typography-body-lowest-highlight-text-decoration;
+}
+
+@mixin foundation-typography-label-high {
+  font-family: $foundation-typography-label-high-font-family;
+  font-weight: $foundation-typography-label-high-font-weight;
+  line-height: $foundation-typography-label-high-line-height;
+  font-size: $foundation-typography-label-high-font-size;
+  letter-spacing: $foundation-typography-label-high-letter-spacing;
+  margin-bottom: $foundation-typography-label-high-paragraph-spacing;
+  text-indent: $foundation-typography-label-high-paragraph-indent;
+  text-transform: $foundation-typography-label-high-text-case;
+  text-decoration: $foundation-typography-label-high-text-decoration;
+}
+
+@mixin foundation-typography-label-medium {
+  font-family: $foundation-typography-label-medium-font-family;
+  font-weight: $foundation-typography-label-medium-font-weight;
+  line-height: $foundation-typography-label-medium-line-height;
+  font-size: $foundation-typography-label-medium-font-size;
+  letter-spacing: $foundation-typography-label-medium-letter-spacing;
+  margin-bottom: $foundation-typography-label-medium-paragraph-spacing;
+  text-indent: $foundation-typography-label-medium-paragraph-indent;
+  text-transform: $foundation-typography-label-medium-text-case;
+  text-decoration: $foundation-typography-label-medium-text-decoration;
+}
+
+@mixin foundation-typography-label-low {
+  font-family: $foundation-typography-label-low-font-family;
+  font-weight: $foundation-typography-label-low-font-weight;
+  line-height: $foundation-typography-label-low-line-height;
+  font-size: $foundation-typography-label-low-font-size;
+  letter-spacing: $foundation-typography-label-low-letter-spacing;
+  margin-bottom: $foundation-typography-label-low-paragraph-spacing;
+  text-indent: $foundation-typography-label-low-paragraph-indent;
+  text-transform: $foundation-typography-label-low-text-case;
+  text-decoration: $foundation-typography-label-low-text-decoration;
+}
+
+@mixin foundation-typography-label-lowest {
+  font-family: $foundation-typography-label-lowest-font-family;
+  font-weight: $foundation-typography-label-lowest-font-weight;
+  line-height: $foundation-typography-label-lowest-line-height;
+  font-size: $foundation-typography-label-lowest-font-size;
+  letter-spacing: $foundation-typography-label-lowest-letter-spacing;
+  margin-bottom: $foundation-typography-label-lowest-paragraph-spacing;
+  text-indent: $foundation-typography-label-lowest-paragraph-indent;
+  text-transform: $foundation-typography-label-lowest-text-case;
+  text-decoration: $foundation-typography-label-lowest-text-decoration;
+}
+
+@mixin foundation-typography-label-lowest2 {
+  font-family: $foundation-typography-label-lowest2-font-family;
+  font-weight: $foundation-typography-label-lowest2-font-weight;
+  line-height: $foundation-typography-label-lowest2-line-height;
+  font-size: $foundation-typography-label-lowest2-font-size;
+  letter-spacing: $foundation-typography-label-lowest2-letter-spacing;
+  margin-bottom: $foundation-typography-label-lowest2-paragraph-spacing;
+  text-indent: $foundation-typography-label-lowest2-paragraph-indent;
+  text-transform: $foundation-typography-label-lowest2-text-case;
+  text-decoration: $foundation-typography-label-lowest2-text-decoration;
+}

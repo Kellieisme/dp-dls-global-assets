@@ -1,0 +1,43 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-checkbox-gap: $foundation-spacing-2xs-fixed;
+$component-checkbox-default-unselected-icon-background: $foundation-interactive-primary-background-enabled-tonal;
+$component-checkbox-default-unselected-icon-border: $foundation-interactive-primary-border-enabled;
+$component-checkbox-default-indeterminate-icon-background: $foundation-interactive-accent-background-enabled-filled;
+$component-checkbox-default-indeterminate-icon-shape: $foundation-interactive-accent-textandicon-inverse;
+$component-checkbox-default-selected-icon-background: $foundation-interactive-accent-background-enabled-filled;
+$component-checkbox-default-selected-icon-shape: $foundation-interactive-accent-textandicon-inverse;
+$component-checkbox-default-hovered: $foundation-interactive-primary-glow-surface-small-hovered;
+$component-checkbox-default-focused: $foundation-interactive-primary-background-selected;
+$component-checkbox-default-pressed: $foundation-interactive-primary-background-selected;
+$component-checkbox-default-ripple: $foundation-interactive-primary-background-ripple;
+$component-checkbox-default-label-textcolor: $foundation-ui-textandicon-medium;
+$component-checkbox-error-unselected-icon-background: $foundation-semantic-background-error-tonal;
+$component-checkbox-error-unselected-icon-border: $foundation-semantic-border-error;
+$component-checkbox-error-indeterminate-icon-background: $foundation-semantic-background-error-filled;
+$component-checkbox-error-indeterminate-icon-shape: $foundation-interactive-accent-textandicon-inverse;
+$component-checkbox-error-selected-icon-background: $foundation-semantic-background-error-filled;
+$component-checkbox-error-selected-icon-shape: $foundation-interactive-accent-textandicon-inverse;
+$component-checkbox-error-hovered: $foundation-interactive-primary-glow-surface-small-hovered;
+$component-checkbox-error-focused: $foundation-interactive-primary-background-selected;
+$component-checkbox-error-pressed: $foundation-interactive-primary-background-selected;
+$component-checkbox-error-ripple: $foundation-semantic-background-error-ripple;
+$component-checkbox-error-label-textcolor: $foundation-ui-textandicon-medium;
+$component-checkbox-disabled-unselected-icon-background: $foundation-interactive-primary-background-disabled;
+$component-checkbox-disabled-unselected-icon-color: $foundation-interactive-primary-border-disabled;
+$component-checkbox-disabled-indeterminate-icon-background: $foundation-interactive-primary-background-disabled;
+$component-checkbox-disabled-indeterminate-icon-shape: $foundation-interactive-primary-textandicon-disabled;
+$component-checkbox-disabled-selected-icon-background: $foundation-interactive-primary-background-disabled;
+$component-checkbox-disabled-selected-icon-shape: $foundation-interactive-primary-textandicon-disabled;
+$component-checkbox-disabled-label-textcolor: $foundation-interactive-primary-textandicon-disabled;
+$component-checkbox-target-size: $foundation-sizing-4xl;
+$component-checkbox-state-layer-size: $foundation-sizing-3xl;
+$component-checkbox-icon-size: $foundation-sizing-3xl;
+$component-checkbox-corner-radius: $foundation-radius-full;
+@mixin component-checkbox-label-textstyle () {
+  @include typography.foundation-typography-label-low();
+}

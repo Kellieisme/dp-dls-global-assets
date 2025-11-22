@@ -1,0 +1,17 @@
+
+// Do not edit directly, this file was auto-generated.
+
+@forward '../global';
+@use '../global' as *;
+
+$component-badge-large-height: $foundation-sizing-m-fixed;
+$component-badge-large-min-width: $foundation-sizing-m-fixed;
+$component-badge-large-max-width: $foundation-sizing-2xl-fixed;
+$component-badge-padding-horizontal: $foundation-spacing-2xs-fixed;
+$component-badge-textcolor: $foundation-ui-textandicon-inverse;
+$component-badge-corner-radius: $foundation-radius-full;
+$component-badge-background: $foundation-semantic-background-error-filled;
+$component-badge-small-size: 6px;
+@mixin textstyle () {
+  @include typography.foundation-typography-label-lowest();
+}

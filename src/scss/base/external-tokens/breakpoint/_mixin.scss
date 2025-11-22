@@ -1,0 +1,57 @@
+@use './vars-Compact' as *;
+@use './vars-Medium' as *;
+@use './vars-Expanded' as *;
+@use './vars-Large' as *;
+@use './vars-Extra-Large' as *;
+
+$compact:(
+	min: $foundation-layout-width-min-compact,
+	max: $foundation-layout-width-max-compact,
+	default: $foundation-layout-width-frame-compact
+);
+
+$medium:(
+	min: $foundation-layout-width-min-medium,
+	max: $foundation-layout-width-max-medium,
+	default: $foundation-layout-width-frame-medium
+);
+
+$expanded:(
+	min: $foundation-layout-width-min-expanded,
+	max: $foundation-layout-width-max-expanded,
+	default: $foundation-layout-width-frame-expanded
+);
+
+$large:(
+	min: $foundation-layout-width-min-large,
+	max: $foundation-layout-width-max-large
+	default: $foundation-layout-width-frame-large
+);
+
+$extra-large:(
+	min: $foundation-layout-width-min-extra-large,
+	max: $foundation-layout-width-max-extra-large,
+	default: $foundation-layout-width-frame-extra-large
+);
+
+$breakpoint:(
+	compact: $compact,
+	medium: $medium,
+	expamded: $expanded,
+	large: $large,
+	extra-large: $extra-large
+);
+
+@mixin media-breakpoint-down($name) {
+	$bp: map-get($breakpoint, $name);
+	$max: map-get($bp, 'max');
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	}
+
+	@else {
+		@content;
+	}
+}
