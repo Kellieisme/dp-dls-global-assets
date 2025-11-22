@@ -211,7 +211,7 @@ $module:(
 
 );
 
-@mixin generateBreakpointVariables() {
+@mixin  () {
 
   $foundation-layout-width-frame: var(--foundation-layout-width-frame) !global;
   $foundation-layout-width-min: var(--foundation-layout-width-min) !global;
