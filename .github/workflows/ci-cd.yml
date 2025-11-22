@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install token-service dependencies
+        run: cd token-service && npm install
+
+      - name: Generate token files
+        run: cd token-service && npm run ts
+
       - name: Build assets
         run: npm run release
 
