@@ -62,7 +62,7 @@ This document outlines the requirements for enhancing the `@jeppesen-foreflight/
 4. **Single Source** - Simplifies maintenance without complex sync processes between repos
 5. **Current Reality** - Component token files already exist here without external generation
 
-**Foundation tokens** (e.g., `$foundation-*`) continue to come from dp-dls-global-tokens as the design source of truth.
+**Foundation tokens** (e.g., `--color-primary-500`, `--spacing-md`) continue to come from dp-dls-global-tokens as the design source of truth.
 
 **Component tokens** (e.g., `$component-button-*`) are web framework semantic aliases maintained in this repo.
 
@@ -292,7 +292,7 @@ npm install @jeppesen-foreflight/dls-global-assets
 **Before (using foundation tokens directly):**
 ```scss
 .mat-mdc-button.mat-primary .mat-icon {
-  color: $foundation-interactive-primary-textandicon-primary-default;
+  color: var(--color-interactive-primary-textandicon-primary-default);
 }
 ```
 
