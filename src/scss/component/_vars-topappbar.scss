@@ -31,3 +31,32 @@ $component-top-app-bar-compact-padding-horizontal: $foundation-spacing-2xs-fixed
 @mixin component-top-app-bar-app-name-text-style () {
   @include typography.foundation-typography-title-low();
 }
+
+@mixin generateComponentTopappbarVariables() {
+  :root {
+    --component-top-app-bar-surface: #{$component-top-app-bar-surface};
+    --component-top-app-bar-content-gap: #{$component-top-app-bar-content-gap};
+    --component-top-app-bar-app-name-padding-horizontal: #{$component-top-app-bar-app-name-padding-horizontal};
+    --component-top-app-bar-app-name-text-color: #{$component-top-app-bar-app-name-text-color};
+    --component-top-app-bar-icons-gap: #{$component-top-app-bar-icons-gap};
+    --component-top-app-bar-profile-gap: #{$component-top-app-bar-profile-gap};
+    --component-top-app-bar-profile-divider-padding-left: #{$component-top-app-bar-profile-divider-padding-left};
+    --component-top-app-bar-profile-user-profile-padding-left: #{$component-top-app-bar-profile-user-profile-padding-left};
+    --component-top-app-bar-profile-user-profile-padding-right: #{$component-top-app-bar-profile-user-profile-padding-right};
+    --component-top-app-bar-extra-large-height: #{$component-top-app-bar-extra-large-height};
+    --component-top-app-bar-extra-large-padding-vertical: #{$component-top-app-bar-extra-large-padding-vertical};
+    --component-top-app-bar-extra-large-padding-horizontal: #{$component-top-app-bar-extra-large-padding-horizontal};
+    --component-top-app-bar-large-height: #{$component-top-app-bar-large-height};
+    --component-top-app-bar-large-padding-vertical: #{$component-top-app-bar-large-padding-vertical};
+    --component-top-app-bar-large-padding-horizontal: #{$component-top-app-bar-large-padding-horizontal};
+    --component-top-app-bar-expanded-height: #{$component-top-app-bar-expanded-height};
+    --component-top-app-bar-expanded-padding-vertical: #{$component-top-app-bar-expanded-padding-vertical};
+    --component-top-app-bar-expanded-padding-horizontal: #{$component-top-app-bar-expanded-padding-horizontal};
+    --component-top-app-bar-medium-height: #{$component-top-app-bar-medium-height};
+    --component-top-app-bar-medium-padding-vertical: #{$component-top-app-bar-medium-padding-vertical};
+    --component-top-app-bar-medium-padding-horizontal: #{$component-top-app-bar-medium-padding-horizontal};
+    --component-top-app-bar-compact-height: #{$component-top-app-bar-compact-height};
+    --component-top-app-bar-compact-padding-vertical: #{$component-top-app-bar-compact-padding-vertical};
+    --component-top-app-bar-compact-padding-horizontal: #{$component-top-app-bar-compact-padding-horizontal};
+  }
+}

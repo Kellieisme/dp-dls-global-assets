@@ -47,6 +47,14 @@
 @use './component/vars-divider' as divider;
 @use './component/vars-navigation' as navigation;
 @use './component/vars-table' as table;
+@use './component/vars-tabs' as tabs;
+@use './component/vars-tooltip' as tooltip;
+@use './component/vars-snackbar' as snackbar;
+@use './component/vars-topappbar' as topappbar;
+@use './component/vars-breadcrumb' as breadcrumb;
+@use './component/vars-profile' as profile;
+@use './component/vars-sidesheet' as sidesheet;
+@use './component/vars-date picker' as datepicker;
 
 // ===========================
 // MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
@@ -71,9 +79,12 @@
   @include divider.generateComponentDividerVariables();
   @include navigation.generateComponentNavigationVariables();
   @include table.generateComponentTableVariables();
-  
-  // TODO: Add additional component token generation mixins as they are implemented
-  // @include tabs.generateComponentTabsVariables();
-  // @include tooltip.generateComponentTooltipVariables();
-  // ... etc
+  @include tabs.generateComponentTabsVariables();
+  @include tooltip.generateComponentTooltipVariables();
+  @include snackbar.generateComponentSnackbarVariables();
+  @include topappbar.generateComponentTopappbarVariables();
+  @include breadcrumb.generateComponentBreadcrumbVariables();
+  @include profile.generateComponentProfileVariables();
+  @include sidesheet.generateComponentSidesheetVariables();
+  @include datepicker.generateComponentDatePickerVariables();
 }

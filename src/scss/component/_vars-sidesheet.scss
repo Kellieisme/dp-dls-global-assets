@@ -26,3 +26,27 @@ $component-sidesheet-footer-padding-horizontal: $foundation-spacing-xs;
 @mixin component-sidesheet-header-textstyle () {
   @include typography.foundation-typography-title-low();
 }
+
+@mixin generateComponentSidesheetVariables() {
+  :root {
+    --component-sidesheet-docked-margin: #{$component-sidesheet-docked-margin};
+    --component-sidesheet-docked-background: #{$component-sidesheet-docked-background};
+    --component-sidesheet-docked-corner-radius: #{$component-sidesheet-docked-corner-radius};
+    --component-sidesheet-floating-margin: #{$component-sidesheet-floating-margin};
+    --component-sidesheet-floating-background: #{$component-sidesheet-floating-background};
+    --component-sidesheet-floating-background-effect: #{$component-sidesheet-floating-background-effect};
+    --component-sidesheet-floating-corner-radius: #{$component-sidesheet-floating-corner-radius};
+    --component-sidesheet-floating-specular: #{$component-sidesheet-floating-specular};
+    --component-sidesheet-padding-horizontal: #{$component-sidesheet-padding-horizontal};
+    --component-sidesheet-padding-top: #{$component-sidesheet-padding-top};
+    --component-sidesheet-gap: #{$component-sidesheet-gap};
+    --component-sidesheet-header-action-size: #{$component-sidesheet-header-action-size};
+    --component-sidesheet-header-gap: #{$component-sidesheet-header-gap};
+    --component-sidesheet-header-padding-vertical: #{$component-sidesheet-header-padding-vertical};
+    --component-sidesheet-header-textandicon: #{$component-sidesheet-header-textandicon};
+    --component-sidesheet-footer-gap: #{$component-sidesheet-footer-gap};
+    --component-sidesheet-footer-padding-top: #{$component-sidesheet-footer-padding-top};
+    --component-sidesheet-footer-padding-bottom: #{$component-sidesheet-footer-padding-bottom};
+    --component-sidesheet-footer-padding-horizontal: #{$component-sidesheet-footer-padding-horizontal};
+  }
+}
