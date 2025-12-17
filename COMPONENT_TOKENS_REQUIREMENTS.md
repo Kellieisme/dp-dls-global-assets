@@ -100,8 +100,8 @@ Each component token file should include a mixin to generate CSS custom properti
 
 ```scss
 // Component token SCSS variables (maintained in dls-global-assets)
-$component-button-outlined-primary-enabled-textandicon: $foundation-interactive-primary-textandicon-primary-default;
-$component-button-outlined-primary-enabled-border-color: $foundation-interactive-primary-border-enabled;
+$component-button-outlined-primary-enabled-textandicon: $button-outlined-primary-enabled-textandicon;
+$component-button-outlined-primary-enabled-border-color: $button-outlined-primary-enabled-border-color;
 // ... all existing variables ...
 
 // ===========================
