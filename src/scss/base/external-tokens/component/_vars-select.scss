@@ -106,3 +106,80 @@ $component-option-selected: $foundation-interactive-primary-background-selected;
 @mixin component-option-hovered-glow () {
   @include foundation-interactive-primary-glow-backlit();
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentSelectVariables() {
+  :root {
+    --component-select-padding-horizontal: #{$component-select-padding-horizontal};
+    --component-select-padding-vertical: #{$component-select-padding-vertical};
+    --component-select-gap-vertical: #{$component-select-gap-vertical};
+    --component-select-top-label-padding-top: #{$component-select-top-label-padding-top};
+    --component-select-top-label-maxheight: #{$component-select-top-label-maxheight};
+    --component-select-label-only-padding-top: #{$component-select-label-only-padding-top};
+    --component-select-background: #{$component-select-background};
+    --component-select-enabeld-label: #{$component-select-enabeld-label};
+    --component-select-enabeld-icon: #{$component-select-enabeld-icon};
+    --component-select-enabeld-value: #{$component-select-enabeld-value};
+    --component-select-enabeld-prefix: #{$component-select-enabeld-prefix};
+    --component-select-enabeld-suffix: #{$component-select-enabeld-suffix};
+    --component-select-enabeld-supporting-text: #{$component-select-enabeld-supporting-text};
+    --component-select-hovered-label: #{$component-select-hovered-label};
+    --component-select-hovered-icon: #{$component-select-hovered-icon};
+    --component-select-hovered-value: #{$component-select-hovered-value};
+    --component-select-hovered-prefix: #{$component-select-hovered-prefix};
+    --component-select-hovered-suffix: #{$component-select-hovered-suffix};
+    --component-select-hovered-supporting-text: #{$component-select-hovered-supporting-text};
+    --component-select-hovered-background: #{$component-select-hovered-background};
+    --component-select-hovered-background-glow: #{$component-select-hovered-background-glow};
+    --component-select-hovered-border-color: #{$component-select-hovered-border-color};
+    --component-select-hovered-border-width: #{$component-select-hovered-border-width};
+    --component-select-focused-label: #{$component-select-focused-label};
+    --component-select-focused-icon: #{$component-select-focused-icon};
+    --component-select-focused-value: #{$component-select-focused-value};
+    --component-select-focused-prefix: #{$component-select-focused-prefix};
+    --component-select-focused-suffix: #{$component-select-focused-suffix};
+    --component-select-focused-supporting-text: #{$component-select-focused-supporting-text};
+    --component-select-focused-background: #{$component-select-focused-background};
+    --component-select-focused-border-color: #{$component-select-focused-border-color};
+    --component-select-focused-caret: #{$component-select-focused-caret};
+    --component-select-focused-top-corner-radius: #{$component-select-focused-top-corner-radius};
+    --component-select-focused-bottom-corner-radius: #{$component-select-focused-bottom-corner-radius};
+    --component-select-focused-border-width: #{$component-select-focused-border-width};
+    --component-select-error-label: #{$component-select-error-label};
+    --component-select-error-icon: #{$component-select-error-icon};
+    --component-select-error-value: #{$component-select-error-value};
+    --component-select-error-prefix: #{$component-select-error-prefix};
+    --component-select-error-suffix: #{$component-select-error-suffix};
+    --component-select-error-supporting-text: #{$component-select-error-supporting-text};
+    --component-select-error-border-color: #{$component-select-error-border-color};
+    --component-select-error-border-width: #{$component-select-error-border-width};
+    --component-select-disabled-label: #{$component-select-disabled-label};
+    --component-select-disabled-icon: #{$component-select-disabled-icon};
+    --component-select-disabled-value: #{$component-select-disabled-value};
+    --component-select-disabled-prefix: #{$component-select-disabled-prefix};
+    --component-select-disabled-suffix: #{$component-select-disabled-suffix};
+    --component-select-disabled-supporting-text: #{$component-select-disabled-supporting-text};
+    --component-select-disabled-background: #{$component-select-disabled-background};
+    --component-select-placeholder-textcolor: #{$component-select-placeholder-textcolor};
+    --component-select-supporting-text-padding-horizontal: #{$component-select-supporting-text-padding-horizontal};
+    --component-select-supporting-text-padding-vertical: #{$component-select-supporting-text-padding-vertical};
+    --component-select-supporting-text-gap: #{$component-select-supporting-text-gap};
+    --component-select-background-blur: #{$component-select-background-blur};
+    --component-select-leading-icon-size: #{$component-select-leading-icon-size};
+    --component-select-leading-icon-margin-right: #{$component-select-leading-icon-margin-right};
+    --component-select-trailing-item-size: #{$component-select-trailing-item-size};
+    --component-select-trailing-item-margin-left: #{$component-select-trailing-item-margin-left};
+    --component-select-minwidth: #{$component-select-minwidth};
+    --component-select-content-margin-horizontal: #{$component-select-content-margin-horizontal};
+    --component-select-content-gap-vertical: #{$component-select-content-gap-vertical};
+    --component-select-content-minheight: #{$component-select-content-minheight};
+    --component-select-corner-radius: #{$component-select-corner-radius};
+    --component-option-content-minheight: #{$component-option-content-minheight};
+    --component-option-padding-horizontal: #{$component-option-padding-horizontal};
+    --component-option-padding-vertical: #{$component-option-padding-vertical};
+    --component-option-hovered: #{$component-option-hovered};
+    --component-option-selected: #{$component-option-selected};
+  }
+}

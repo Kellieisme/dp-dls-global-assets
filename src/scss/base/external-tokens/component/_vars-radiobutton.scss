@@ -26,3 +26,30 @@ $component-radio-button-corner-radius: $foundation-radius-full;
 @mixin component-radio-button-label-textstyle () {
   @include typography.foundation-typography-label-medium();
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentRadioVariables() {
+  :root {
+    --component-radio-button-label-gap: #{$component-radio-button-label-gap};
+    --component-radio-button-label-enabled: #{$component-radio-button-label-enabled};
+    --component-radio-button-label-disabled: #{$component-radio-button-label-disabled};
+    --component-radio-button-unselected-icon-resting: #{$component-radio-button-unselected-icon-resting};
+    --component-radio-button-unselected-icon-hovered: #{$component-radio-button-unselected-icon-hovered};
+    --component-radio-button-unselected-icon-pressed: #{$component-radio-button-unselected-icon-pressed};
+    --component-radio-button-selected-icon-resting: #{$component-radio-button-selected-icon-resting};
+    --component-radio-button-selected-icon-hovered: #{$component-radio-button-selected-icon-hovered};
+    --component-radio-button-selected-icon-pressed: #{$component-radio-button-selected-icon-pressed};
+    --component-radio-button-error-icon-resting: #{$component-radio-button-error-icon-resting};
+    --component-radio-button-error-icon-hovered: #{$component-radio-button-error-icon-hovered};
+    --component-radio-button-error-icon-pressed: #{$component-radio-button-error-icon-pressed};
+    --component-radio-button-disabled-icon-resting: #{$component-radio-button-disabled-icon-resting};
+    --component-radio-button-hovered: #{$component-radio-button-hovered};
+    --component-radio-button-pressed: #{$component-radio-button-pressed};
+    --component-radio-button-target-size: #{$component-radio-button-target-size};
+    --component-radio-button-state-layer-size: #{$component-radio-button-state-layer-size};
+    --component-radio-button-icon-size: #{$component-radio-button-icon-size};
+    --component-radio-button-corner-radius: #{$component-radio-button-corner-radius};
+  }
+}

@@ -41,3 +41,45 @@ $component-checkbox-corner-radius: $foundation-radius-full;
 @mixin component-checkbox-label-textstyle () {
   @include typography.foundation-typography-label-low();
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentCheckboxVariables() {
+  :root {
+    --component-checkbox-gap: #{$component-checkbox-gap};
+    --component-checkbox-default-unselected-icon-background: #{$component-checkbox-default-unselected-icon-background};
+    --component-checkbox-default-unselected-icon-border: #{$component-checkbox-default-unselected-icon-border};
+    --component-checkbox-default-indeterminate-icon-background: #{$component-checkbox-default-indeterminate-icon-background};
+    --component-checkbox-default-indeterminate-icon-shape: #{$component-checkbox-default-indeterminate-icon-shape};
+    --component-checkbox-default-selected-icon-background: #{$component-checkbox-default-selected-icon-background};
+    --component-checkbox-default-selected-icon-shape: #{$component-checkbox-default-selected-icon-shape};
+    --component-checkbox-default-hovered: #{$component-checkbox-default-hovered};
+    --component-checkbox-default-focused: #{$component-checkbox-default-focused};
+    --component-checkbox-default-pressed: #{$component-checkbox-default-pressed};
+    --component-checkbox-default-ripple: #{$component-checkbox-default-ripple};
+    --component-checkbox-default-label-textcolor: #{$component-checkbox-default-label-textcolor};
+    --component-checkbox-error-unselected-icon-background: #{$component-checkbox-error-unselected-icon-background};
+    --component-checkbox-error-unselected-icon-border: #{$component-checkbox-error-unselected-icon-border};
+    --component-checkbox-error-indeterminate-icon-background: #{$component-checkbox-error-indeterminate-icon-background};
+    --component-checkbox-error-indeterminate-icon-shape: #{$component-checkbox-error-indeterminate-icon-shape};
+    --component-checkbox-error-selected-icon-background: #{$component-checkbox-error-selected-icon-background};
+    --component-checkbox-error-selected-icon-shape: #{$component-checkbox-error-selected-icon-shape};
+    --component-checkbox-error-hovered: #{$component-checkbox-error-hovered};
+    --component-checkbox-error-focused: #{$component-checkbox-error-focused};
+    --component-checkbox-error-pressed: #{$component-checkbox-error-pressed};
+    --component-checkbox-error-ripple: #{$component-checkbox-error-ripple};
+    --component-checkbox-error-label-textcolor: #{$component-checkbox-error-label-textcolor};
+    --component-checkbox-disabled-unselected-icon-background: #{$component-checkbox-disabled-unselected-icon-background};
+    --component-checkbox-disabled-unselected-icon-color: #{$component-checkbox-disabled-unselected-icon-color};
+    --component-checkbox-disabled-indeterminate-icon-background: #{$component-checkbox-disabled-indeterminate-icon-background};
+    --component-checkbox-disabled-indeterminate-icon-shape: #{$component-checkbox-disabled-indeterminate-icon-shape};
+    --component-checkbox-disabled-selected-icon-background: #{$component-checkbox-disabled-selected-icon-background};
+    --component-checkbox-disabled-selected-icon-shape: #{$component-checkbox-disabled-selected-icon-shape};
+    --component-checkbox-disabled-label-textcolor: #{$component-checkbox-disabled-label-textcolor};
+    --component-checkbox-target-size: #{$component-checkbox-target-size};
+    --component-checkbox-state-layer-size: #{$component-checkbox-state-layer-size};
+    --component-checkbox-icon-size: #{$component-checkbox-icon-size};
+    --component-checkbox-corner-radius: #{$component-checkbox-corner-radius};
+  }
+}

@@ -39,3 +39,40 @@ $component-switch-pressed: $foundation-interactive-primary-background-selected;
 @mixin component-switch-unselected-disabled-border ($direction) {
   @include utils.border($direction, $component-switch-unselected-border-width, $foundation-border-regular-style, $component-switch-unselected-disabled-border-color);;
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentSwitchVariables() {
+  :root {
+    --component-switch-corner-radius: #{$component-switch-corner-radius};
+    --component-switch-handle-target: #{$component-switch-handle-target};
+    --component-switch-handle-max: #{$component-switch-handle-max};
+    --component-switch-handle-icon: #{$component-switch-handle-icon};
+    --component-switch-handle-padding: #{$component-switch-handle-padding};
+    --component-switch-handle-selected: #{$component-switch-handle-selected};
+    --component-switch-handle-unselected-icon: #{$component-switch-handle-unselected-icon};
+    --component-switch-handle-unselected: #{$component-switch-handle-unselected};
+    --component-switch-handle-pressed: #{$component-switch-handle-pressed};
+    --component-switch-state-layer-size: #{$component-switch-state-layer-size};
+    --component-switch-width: #{$component-switch-width};
+    --component-switch-height: #{$component-switch-height};
+    --component-switch-selected-enabled-icon: #{$component-switch-selected-enabled-icon};
+    --component-switch-selected-enabled-background: #{$component-switch-selected-enabled-background};
+    --component-switch-selected-enabled-handle: #{$component-switch-selected-enabled-handle};
+    --component-switch-selected-disabled-icon: #{$component-switch-selected-disabled-icon};
+    --component-switch-selected-disabled-background: #{$component-switch-selected-disabled-background};
+    --component-switch-selected-disabled-handle: #{$component-switch-selected-disabled-handle};
+    --component-switch-unselected-enabled-icon: #{$component-switch-unselected-enabled-icon};
+    --component-switch-unselected-enabled-background: #{$component-switch-unselected-enabled-background};
+    --component-switch-unselected-enabled-border-color: #{$component-switch-unselected-enabled-border-color};
+    --component-switch-unselected-enabled-handle: #{$component-switch-unselected-enabled-handle};
+    --component-switch-unselected-disabled-icon: #{$component-switch-unselected-disabled-icon};
+    --component-switch-unselected-disabled-background: #{$component-switch-unselected-disabled-background};
+    --component-switch-unselected-disabled-border-color: #{$component-switch-unselected-disabled-border-color};
+    --component-switch-unselected-disabled-handle: #{$component-switch-unselected-disabled-handle};
+    --component-switch-unselected-border-width: #{$component-switch-unselected-border-width};
+    --component-switch-hovered: #{$component-switch-hovered};
+    --component-switch-pressed: #{$component-switch-pressed};
+  }
+}

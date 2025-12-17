@@ -41,3 +41,33 @@ $component-menu-select-top-corner-radius: $foundation-radius-none;
 @mixin component-menu-border ($direction) {
   @include utils.border($direction, $component-menu-border-width, $foundation-border-regular-style, $component-menu-border-color);;
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentMenuVariables() {
+  :root {
+    --component-menu-border-color: #{$component-menu-border-color};
+    --component-menu-border-width: #{$component-menu-border-width};
+    --component-menu-divider-height: #{$component-menu-divider-height};
+    --component-menu-item-min-height: #{$component-menu-item-min-height};
+    --component-menu-item-vertical-padding: #{$component-menu-item-vertical-padding};
+    --component-menu-item-horizontal-padding: #{$component-menu-item-horizontal-padding};
+    --component-menu-item-gap: #{$component-menu-item-gap};
+    --component-menu-item-enabled-supporting-text: #{$component-menu-item-enabled-supporting-text};
+    --component-menu-item-enabled-textandicon: #{$component-menu-item-enabled-textandicon};
+    --component-menu-item-hovered-supporting-text: #{$component-menu-item-hovered-supporting-text};
+    --component-menu-item-hovered-textandicon: #{$component-menu-item-hovered-textandicon};
+    --component-menu-item-hovered-background: #{$component-menu-item-hovered-background};
+    --component-menu-item-pressed-supporting-text: #{$component-menu-item-pressed-supporting-text};
+    --component-menu-item-pressed-textandicon: #{$component-menu-item-pressed-textandicon};
+    --component-menu-item-pressed-background: #{$component-menu-item-pressed-background};
+    --component-menu-item-disabled-supporting-text: #{$component-menu-item-disabled-supporting-text};
+    --component-menu-item-disabled-textandicon: #{$component-menu-item-disabled-textandicon};
+    --component-menu-vertical-padding: #{$component-menu-vertical-padding};
+    --component-menu-generic-corner-radius: #{$component-menu-generic-corner-radius};
+    --component-menu-background: #{$component-menu-background};
+    --component-menu-select-bottom-corner-radius: #{$component-menu-select-bottom-corner-radius};
+    --component-menu-select-top-corner-radius: #{$component-menu-select-top-corner-radius};
+  }
+}

@@ -4,15 +4,25 @@
 // This file tests that the component token generation mixin works correctly
 // Compile with: sass src/scss/test-component-tokens.scss dist/test-component-tokens.css
 
-// Import only the components we've implemented (to avoid errors in other files)
+// Import all implemented components
 @use 'base/external-tokens/component/vars-commonbutton' as button;
 @use 'base/external-tokens/component/vars-textfield' as textfield;
 @use 'base/external-tokens/component/vars-iconbutton' as iconbutton;
+@use 'base/external-tokens/component/vars-menu' as menu;
+@use 'base/external-tokens/component/vars-checkbox' as checkbox;
+@use 'base/external-tokens/component/vars-radiobutton' as radio;
+@use 'base/external-tokens/component/vars-select' as select;
+@use 'base/external-tokens/component/vars-switch' as switch;
 
-// Generate CSS custom properties for the 3 implemented components
+// Generate CSS custom properties for all implemented components
 @include button.generateComponentButtonVariables();
 @include textfield.generateComponentTextfieldVariables();
 @include iconbutton.generateComponentIconButtonVariables();
+@include menu.generateComponentMenuVariables();
+@include checkbox.generateComponentCheckboxVariables();
+@include radio.generateComponentRadioVariables();
+@include select.generateComponentSelectVariables();
+@include switch.generateComponentSwitchVariables();
 
 // Test usage: verify we can reference the generated custom properties
 .test-button {

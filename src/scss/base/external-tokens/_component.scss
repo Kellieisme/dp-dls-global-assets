@@ -34,6 +34,11 @@
 @use './component/vars-commonbutton' as button;
 @use './component/vars-textfield' as textfield;
 @use './component/vars-iconbutton' as iconbutton;
+@use './component/vars-menu' as menu;
+@use './component/vars-checkbox' as checkbox;
+@use './component/vars-radiobutton' as radio;
+@use './component/vars-select' as select;
+@use './component/vars-switch' as switch;
 
 // ===========================
 // MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
@@ -45,10 +50,15 @@
   @include button.generateComponentButtonVariables();
   @include textfield.generateComponentTextfieldVariables();
   @include iconbutton.generateComponentIconButtonVariables();
+  @include menu.generateComponentMenuVariables();
+  @include checkbox.generateComponentCheckboxVariables();
+  @include radio.generateComponentRadioVariables();
+  @include select.generateComponentSelectVariables();
+  @include switch.generateComponentSwitchVariables();
   
   // TODO: Add additional component token generation mixins as they are implemented
-  // @include menu.generateComponentMenuVariables();
   // @include list.generateComponentListVariables();
-  // @include checkbox.generateComponentCheckboxVariables();
+  // @include chip.generateComponentChipVariables();
+  // @include badge.generateComponentBadgeVariables();
   // ... etc
 }
