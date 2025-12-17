@@ -53,9 +53,9 @@ This guide assumes foundation tokens are already configured and focuses on **add
 
 ```scss
 // Import foundation tokens (these provide the base values)
-@use '@coned-nmp/dp-dls-global-tokens/dist/scss/base/external-tokens/colors' as colors;
-@use '@coned-nmp/dp-dls-global-tokens/dist/scss/base/external-tokens/spacing' as spacing;
-@use '@coned-nmp/dp-dls-global-tokens/dist/scss/base/external-tokens/typography' as typography;
+@use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/colors' as colors;
+@use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/spacing' as spacing;
+@use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/typography' as typography;
 
 // Generate foundation CSS custom properties (required first!)
 @include colors.generateColorThemeVariables();
@@ -67,7 +67,7 @@ This guide assumes foundation tokens are already configured and focuses on **add
 
 ```scss
 // Import component token generation mixin
-@use '@coned-nmp/dp-dls-global-assets/src/scss/base/external-tokens/component' as component;
+@use '@jeppesen-foreflight/dp-dls-global-assets/src/scss/base/external-tokens/component' as component;
 
 // Generate all component CSS custom properties
 @include component.generateComponentVariables();
@@ -355,7 +355,7 @@ If you're using SCSS variables directly, they continue to work:
 
 ## Migration Checklist
 
-- [ ] Update `package.json` to use `@coned-nmp/dp-dls-global-assets@^4.1.0`
+- [ ] Update `package.json` to use `@jeppesen-foreflight/dp-dls-global-assets@^4.1.0`
 - [ ] Import foundation token generation mixins
 - [ ] Call foundation token generation mixins first
 - [ ] Import component token generation mixin
