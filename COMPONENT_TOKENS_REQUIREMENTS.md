@@ -88,36 +88,36 @@ $component-button-outlined-primary-enabled-border-color: $foundation-interactive
 // NEW: Add generation mixin
 @mixin generateComponentButtonVariables() {
   :root {
-    --component-button-outlined-primary-enabled-textandicon: var(--foundation-interactive-primary-textandicon-primary-default);
-    --component-button-outlined-primary-enabled-border-color: var(--foundation-interactive-primary-border-enabled);
-    --component-button-outlined-primary-hovered-textandicon: var(--foundation-interactive-primary-textandicon-selected);
-    --component-button-outlined-primary-hovered-border-color: var(--foundation-interactive-primary-border-hovered-flat);
-    --component-button-outlined-primary-pressed-textandicon: var(--foundation-interactive-primary-textandicon-selected);
-    --component-button-outlined-primary-pressed-border-color: var(--foundation-interactive-primary-border-selected);
-    --component-button-outlined-primary-disabled-textandicon: var(--foundation-interactive-primary-textandicon-disabled);
-    --component-button-outlined-primary-disabled-border-color: var(--foundation-interactive-primary-border-disabled);
+    --component-button-outlined-primary-enabled-textandicon: #{$component-button-outlined-primary-enabled-textandicon};
+    --component-button-outlined-primary-enabled-border-color: #{$component-button-outlined-primary-enabled-border-color};
+    --component-button-outlined-primary-hovered-textandicon: #{$component-button-outlined-primary-hovered-textandicon};
+    --component-button-outlined-primary-hovered-border-color: #{$component-button-outlined-primary-hovered-border-color};
+    --component-button-outlined-primary-pressed-textandicon: #{$component-button-outlined-primary-pressed-textandicon};
+    --component-button-outlined-primary-pressed-border-color: #{$component-button-outlined-primary-pressed-border-color};
+    --component-button-outlined-primary-disabled-textandicon: #{$component-button-outlined-primary-disabled-textandicon};
+    --component-button-outlined-primary-disabled-border-color: #{$component-button-outlined-primary-disabled-border-color};
     
-    --component-button-outlined-accent-enabled-textandicon: var(--foundation-interactive-accent-textandicon-default);
-    --component-button-outlined-accent-enabled-border-color: var(--foundation-interactive-accent-border-enabled);
-    --component-button-outlined-accent-hovered-textandicon: var(--foundation-interactive-accent-textandicon-selected);
-    --component-button-outlined-accent-hovered-border-color: var(--foundation-interactive-accent-border-hovered);
+    --component-button-outlined-accent-enabled-textandicon: #{$component-button-outlined-accent-enabled-textandicon};
+    --component-button-outlined-accent-enabled-border-color: #{$component-button-outlined-accent-enabled-border-color};
+    --component-button-outlined-accent-hovered-textandicon: #{$component-button-outlined-accent-hovered-textandicon};
+    --component-button-outlined-accent-hovered-border-color: #{$component-button-outlined-accent-hovered-border-color};
     
-    --component-button-filled-accent-enabled-background: var(--foundation-interactive-accent-background-enabled-filled);
-    --component-button-filled-accent-enabled-textandicon: var(--foundation-interactive-accent-textandicon-inverse);
-    --component-button-filled-accent-disabled-background: var(--foundation-interactive-primary-background-disabled);
-    --component-button-filled-accent-disabled-textandicon: var(--foundation-interactive-primary-textandicon-disabled);
+    --component-button-filled-accent-enabled-background: #{$component-button-filled-accent-enabled-background};
+    --component-button-filled-accent-enabled-textandicon: #{$component-button-filled-accent-enabled-textandicon};
+    --component-button-filled-accent-disabled-background: #{$component-button-filled-accent-disabled-background};
+    --component-button-filled-accent-disabled-textandicon: #{$component-button-filled-accent-disabled-textandicon};
     
-    --component-button-text-primary-enabled-textandicon: var(--foundation-interactive-primary-textandicon-primary-default);
-    --component-button-text-primary-hovered-textandicon: var(--foundation-interactive-primary-textandicon-selected);
-    --component-button-text-accent-enabled-textandicon: var(--foundation-interactive-accent-textandicon-default);
+    --component-button-text-primary-enabled-textandicon: #{$component-button-text-primary-enabled-textandicon};
+    --component-button-text-primary-hovered-textandicon: #{$component-button-text-primary-hovered-textandicon};
+    --component-button-text-accent-enabled-textandicon: #{$component-button-text-accent-enabled-textandicon};
     
-    --component-button-tonal-primary-enabled-background: var(--foundation-interactive-primary-background-enabled-tonal);
-    --component-button-tonal-primary-enabled-textandicon: var(--foundation-interactive-primary-textandicon-primary-default);
+    --component-button-tonal-primary-enabled-background: #{$component-button-tonal-primary-enabled-background};
+    --component-button-tonal-primary-enabled-textandicon: #{$component-button-tonal-primary-enabled-textandicon};
     
-    --component-button-height: var(--foundation-sizing-3xl);
-    --component-button-icon-size: var(--foundation-icon-xs);
-    --component-button-corner-radius: var(--foundation-radius-full);
-    --component-button-outlined-border-width: var(--foundation-border-regular-width);
+    --component-button-height: #{$component-button-height};
+    --component-button-icon-size: #{$component-button-icon-size};
+    --component-button-corner-radius: #{$component-button-corner-radius};
+    --component-button-outlined-border-width: #{$component-button-outlined-border-width};
     // ... etc for all ~60 button tokens
   }
 }
@@ -272,12 +272,12 @@ Once implemented, consuming applications will use it like this:
 Then in component styles:
 
 ```scss
-// Before (foundation tokens)
+// Before (using foundation tokens directly)
 .mat-mdc-button.mat-primary .mat-icon {
-  color: var(--foundation-interactive-primary-textandicon-primary-default);
+  color: $foundation-interactive-primary-textandicon-primary-default;
 }
 
-// After (component tokens - more semantic!)
+// After (using component tokens - more semantic!)
 .mat-mdc-button.mat-primary .mat-icon {
   color: var(--component-button-outlined-primary-enabled-textandicon);
 }
