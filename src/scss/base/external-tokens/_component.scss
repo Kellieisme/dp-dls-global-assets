@@ -43,6 +43,10 @@
 @use './component/vars-chip' as chip;
 @use './component/vars-badge' as badge;
 @use './component/vars-card' as card;
+@use './component/vars-dialog' as dialog;
+@use './component/vars-divider' as divider;
+@use './component/vars-navigation' as navigation;
+@use './component/vars-table' as table;
 
 // ===========================
 // MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
@@ -63,9 +67,13 @@
   @include chip.generateComponentChipVariables();
   @include badge.generateComponentBadgeVariables();
   @include card.generateComponentCardVariables();
+  @include dialog.generateComponentDialogVariables();
+  @include divider.generateComponentDividerVariables();
+  @include navigation.generateComponentNavigationVariables();
+  @include table.generateComponentTableVariables();
   
   // TODO: Add additional component token generation mixins as they are implemented
-  // @include dialog.generateComponentDialogVariables();
-  // @include divider.generateComponentDividerVariables();
+  // @include tabs.generateComponentTabsVariables();
+  // @include tooltip.generateComponentTooltipVariables();
   // ... etc
 }

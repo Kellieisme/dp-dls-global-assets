@@ -31,3 +31,29 @@ $component-dialog-background: $foundation-ui-background-high;
 @mixin component-dialog-content-textstyle () {
   @include typography.foundation-typography-body-low-default();
 }
+
+@mixin generateComponentDialogVariables() {
+  :root {
+    --component-dialog-padding: #{$component-dialog-padding};
+    --component-dialog-gap: #{$component-dialog-gap};
+    --component-dialog-corner-radius: #{$component-dialog-corner-radius};
+    --component-dialog-portrait-header-gap: #{$component-dialog-portrait-header-gap};
+    --component-dialog-portrait-actions-gap: #{$component-dialog-portrait-actions-gap};
+    --component-dialog-portrait-min-width: #{$component-dialog-portrait-min-width};
+    --component-dialog-portrait-max-width: #{$component-dialog-portrait-max-width};
+    --component-dialog-portrait-dismiss-height: #{$component-dialog-portrait-dismiss-height};
+    --component-dialog-portrait-dismiss-width: #{$component-dialog-portrait-dismiss-width};
+    --component-dialog-portrait-dismiss-padding-right: #{$component-dialog-portrait-dismiss-padding-right};
+    --component-dialog-landscape-header-gap: #{$component-dialog-landscape-header-gap};
+    --component-dialog-landscape-actions-gap: #{$component-dialog-landscape-actions-gap};
+    --component-dialog-landscape-min-width: #{$component-dialog-landscape-min-width};
+    --component-dialog-landscape-max-width: #{$component-dialog-landscape-max-width};
+    --component-dialog-landscape-dismiss-right: #{$component-dialog-landscape-dismiss-right};
+    --component-dialog-landscape-dismiss-top: #{$component-dialog-landscape-dismiss-top};
+    --component-dialog-header-textandicon: #{$component-dialog-header-textandicon};
+    --component-dialog-header-icon-size: #{$component-dialog-header-icon-size};
+    --component-dialog-content-gap: #{$component-dialog-content-gap};
+    --component-dialog-content-textandicon: #{$component-dialog-content-textandicon};
+    --component-dialog-background: #{$component-dialog-background};
+  }
+}
