@@ -164,3 +164,54 @@ $component-select-content-minheight: $foundation-sizing-2xl;
 @mixin component-textarea-messages-content () {
   @include typography.foundation-typography-label-low();
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentTextfieldVariables() {
+  :root {
+    // ENABLED STATE
+    --component-textfield-enabled-label: #{$component-textfield-enabeld-label};
+    --component-textfield-enabled-icon: #{$component-textfield-enabeld-icon};
+    --component-textfield-enabled-value: #{$component-textfield-enabeld-value};
+    --component-textfield-enabled-prefix: #{$component-textfield-enabeld-prefix};
+    --component-textfield-enabled-suffix: #{$component-textfield-enabeld-suffix};
+    --component-textfield-enabled-supporting-text: #{$component-textfield-enabeld-supporting-text};
+    
+    // HOVERED STATE
+    --component-textfield-hovered-label: #{$component-textfield-hovered-label};
+    --component-textfield-hovered-icon: #{$component-textfield-hovered-icon};
+    --component-textfield-hovered-value: #{$component-textfield-hovered-value};
+    --component-textfield-hovered-background: #{$component-textfield-hovered-background};
+    --component-textfield-hovered-border-color: #{$component-textfield-hovered-border-color};
+    --component-textfield-hovered-border-width: #{$component-textfield-hovered-border-width};
+    
+    // FOCUSED STATE
+    --component-textfield-focused-label: #{$component-textfield-focused-label};
+    --component-textfield-focused-icon: #{$component-textfield-focused-icon};
+    --component-textfield-focused-value: #{$component-textfield-focused-value};
+    --component-textfield-focused-background: #{$component-textfield-focused-background};
+    --component-textfield-focused-border-color: #{$component-textfield-focused-border-color};
+    --component-textfield-focused-caret: #{$component-textfield-focused-caret};
+    --component-textfield-focused-border-width: #{$component-textfield-focused-border-width};
+    
+    // ERROR STATE
+    --component-textfield-error-label: #{$component-textfield-error-label};
+    --component-textfield-error-icon: #{$component-textfield-error-icon};
+    --component-textfield-error-value: #{$component-textfield-error-value};
+    --component-textfield-error-supporting-text: #{$component-textfield-error-supporting-text};
+    --component-textfield-error-border-color: #{$component-textfield-error-border-color};
+    --component-textfield-error-border-width: #{$component-textfield-error-border-width};
+    
+    // DISABLED STATE
+    --component-textfield-disabled-label: #{$component-textfield-disabled-label};
+    --component-textfield-disabled-icon: #{$component-textfield-disabled-icon};
+    --component-textfield-disabled-value: #{$component-textfield-disabled-value};
+    --component-textfield-disabled-background: #{$component-textfield-disabled-background};
+    
+    // GENERAL
+    --component-textfield-background: #{$component-textfield-background};
+    --component-textfield-placeholder-textcolor: #{$component-textfield-placeholder-textcolor};
+    --component-textfield-padding-horizontal: #{$component-textfield-padding-horizontal};
+  }
+}

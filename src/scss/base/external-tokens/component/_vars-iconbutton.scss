@@ -177,3 +177,14 @@ $component-icon-button-toggled-tonal-accent-disabled-icon: $foundation-interacti
 @mixin component-icon-button-toggled-outlined-primary-disabled-border ($direction) {
   @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-disabled-border-color);;
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentIconButtonVariables() {
+  :root {
+    --component-iconbutton-icon-color: #{$component-icon-button-plain-primary-enabled-icon};
+    --component-iconbutton-hovered-icon-color: #{$component-icon-button-plain-primary-hovered-icon};
+    --component-iconbutton-disabled-icon-color: #{$component-icon-button-plain-primary-disabled-icon};
+  }
+}

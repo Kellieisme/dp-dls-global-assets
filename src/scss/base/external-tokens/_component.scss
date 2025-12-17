@@ -1,0 +1,54 @@
+// ===========================
+// COMPONENT TOKENS - UNIFIED IMPORT
+// ===========================
+// This file provides a single entry point for all component token generation.
+// Use this to generate CSS custom properties for component-level tokens.
+
+// Forward all component token files for variable access
+@forward './component/vars-commonbutton';
+@forward './component/vars-textfield';
+@forward './component/vars-iconbutton';
+@forward './component/vars-menu';
+@forward './component/vars-list';
+@forward './component/vars-checkbox';
+@forward './component/vars-radiobutton';
+@forward './component/vars-select';
+@forward './component/vars-switch';
+@forward './component/vars-chip';
+@forward './component/vars-badge';
+@forward './component/vars-card';
+@forward './component/vars-dialog';
+@forward './component/vars-divider';
+@forward './component/vars-navigation';
+@forward './component/vars-table';
+@forward './component/vars-tabs';
+@forward './component/vars-tooltip';
+@forward './component/vars-snackbar';
+@forward './component/vars-topappbar';
+@forward './component/vars-breadcrumb';
+@forward './component/vars-profile';
+@forward './component/vars-sidesheet';
+@forward './component/vars-date picker';
+
+// Use component token files to access mixins
+@use './component/vars-commonbutton' as button;
+@use './component/vars-textfield' as textfield;
+@use './component/vars-iconbutton' as iconbutton;
+
+// ===========================
+// MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
+// ===========================
+// Usage in consuming applications:
+// @use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/external-tokens/component' as component;
+// @include component.generateComponentVariables();
+@mixin generateComponentVariables() {
+  @include button.generateComponentButtonVariables();
+  @include textfield.generateComponentTextfieldVariables();
+  @include iconbutton.generateComponentIconButtonVariables();
+  
+  // TODO: Add additional component token generation mixins as they are implemented
+  // @include menu.generateComponentMenuVariables();
+  // @include list.generateComponentListVariables();
+  // @include checkbox.generateComponentCheckboxVariables();
+  // ... etc
+}

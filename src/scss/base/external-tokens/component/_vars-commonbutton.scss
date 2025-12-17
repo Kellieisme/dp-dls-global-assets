@@ -106,3 +106,81 @@ $component-button-tonal-text-padding: $foundation-spacing-xl;
 @mixin component-button-tonal-accent-hovered-glow () {
   @include foundation-interactive-accent-glow-backlit();
 }
+
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
+@mixin generateComponentButtonVariables() {
+  :root {
+    // OUTLINED PRIMARY VARIANT
+    --component-button-outlined-primary-enabled-textandicon: #{$component-button-outlined-primary-enabled-textandicon};
+    --component-button-outlined-primary-enabled-border-color: #{$component-button-outlined-primary-enabled-border-color};
+    --component-button-outlined-primary-hovered-textandicon: #{$component-button-outlined-primary-hovered-textandicon};
+    --component-button-outlined-primary-hovered-border-color: #{$component-button-outlined-primary-hovered-border-color};
+    --component-button-outlined-primary-pressed-textandicon: #{$component-button-outlined-primary-pressed-textandicon};
+    --component-button-outlined-primary-pressed-border-color: #{$component-button-outlined-primary-pressed-border-color};
+    --component-button-outlined-primary-disabled-textandicon: #{$component-button-outlined-primary-disabled-textandicon};
+    --component-button-outlined-primary-disabled-border-color: #{$component-button-outlined-primary-disabled-border-color};
+    
+    // OUTLINED ACCENT VARIANT
+    --component-button-outlined-accent-enabled-textandicon: #{$component-button-outlined-accent-enabled-textandicon};
+    --component-button-outlined-accent-enabled-border-color: #{$component-button-outlined-accent-enabled-border-color};
+    --component-button-outlined-accent-hovered-textandicon: #{$component-button-outlined-accent-hovered-textandicon};
+    --component-button-outlined-accent-hovered-border-color: #{$component-button-outlined-accent-hovered-border-color};
+    --component-button-outlined-accent-pressed-textandicon: #{$component-button-outlined-accent-pressed-textandicon};
+    --component-button-outlined-accent-pressed-border-color: #{$component-button-outlined-accent-pressed-border-color};
+    --component-button-outlined-accent-disabled-textandicon: #{$component-button-outlined-accent-disabled-textandicon};
+    --component-button-outlined-accent-disabled-border-color: #{$component-button-outlined-accent-disabled-border-color};
+    
+    // FILLED VARIANTS
+    --component-button-filled-accent-enabled-background: #{$component-button-filled-accent-enabled-background};
+    --component-button-filled-accent-enabled-textandicon: #{$component-button-filled-accent-enabled-textandicon};
+    --component-button-filled-accent-disabled-background: #{$component-button-filled-accent-disabled-background};
+    --component-button-filled-accent-disabled-textandicon: #{$component-button-filled-accent-disabled-textandicon};
+    
+    // TEXT VARIANTS
+    --component-button-text-primary-enabled-textandicon: #{$component-button-text-primary-enabled-textandicon};
+    --component-button-text-primary-hovered-textandicon: #{$component-button-text-primary-hovered-textandicon};
+    --component-button-text-primary-pressed-textandicon: #{$component-button-text-primary-pressed-textandicon};
+    --component-button-text-primary-disabled-textandicon: #{$component-button-text-primary-disabled-textandicon};
+    --component-button-text-accent-enabled-textandicon: #{$component-button-text-accent-enabled-textandicon};
+    --component-button-text-accent-hovered-textandicon: #{$component-button-text-accent-hovered-textandicon};
+    --component-button-text-accent-pressed-textandicon: #{$component-button-text-accent-pressed-textandicon};
+    --component-button-text-accent-disabled-textandicon: #{$component-button-text-accent-disabled-textandicon};
+    
+    // TONAL VARIANTS
+    --component-button-tonal-primary-enabled-background: #{$component-button-tonal-primary-enabled-background};
+    --component-button-tonal-primary-enabled-textandicon: #{$component-button-tonal-primary-enabled-textandicon};
+    --component-button-tonal-primary-hovered-textandicon: #{$component-button-tonal-primary-hovered-textandicon};
+    --component-button-tonal-primary-pressed-textandicon: #{$component-button-tonal-primary-pressed-textandicon};
+    --component-button-tonal-primary-disabled-background: #{$component-button-tonal-primary-disabled-background};
+    --component-button-tonal-primary-disabled-textandicon: #{$component-button-tonal-primary-disabled-textandicon};
+    --component-button-tonal-accent-enabled-background: #{$component-button-tonal-accent-enabled-background};
+    --component-button-tonal-accent-enabled-textandicon: #{$component-button-tonal-accent-enabled-textandicon};
+    --component-button-tonal-accent-hovered-textandicon: #{$component-button-tonal-accent-hovered-textandicon};
+    --component-button-tonal-accent-pressed-textandicon: #{$component-button-tonal-accent-pressed-textandicon};
+    --component-button-tonal-accent-disabled-background: #{$component-button-tonal-accent-disabled-background};
+    --component-button-tonal-accent-disabled-textandicon: #{$component-button-tonal-accent-disabled-textandicon};
+    
+    // STATE LAYERS
+    --component-button-primary-hovered: #{$component-button-primary-hovered};
+    --component-button-primary-pressed: #{$component-button-primary-pressed};
+    --component-button-accent-hovered: #{$component-button-accent-hovered};
+    --component-button-accent-pressed: #{$component-button-accent-pressed};
+    
+    // LAYOUT & SIZING
+    --component-button-height: #{$component-button-height};
+    --component-button-icon-size: #{$component-button-icon-size};
+    --component-button-corner-radius: #{$component-button-corner-radius};
+    --component-button-outlined-icon-padding: #{$component-button-outlined-icon-padding};
+    --component-button-outlined-icon-gap: #{$component-button-outlined-icon-gap};
+    --component-button-outlined-text-padding: #{$component-button-outlined-text-padding};
+    --component-button-outlined-border-width: #{$component-button-outlined-border-width};
+    --component-button-text-icon-padding: #{$component-button-text-icon-padding};
+    --component-button-text-icon-gap: #{$component-button-text-icon-gap};
+    --component-button-text-text-padding: #{$component-button-text-text-padding};
+    --component-button-tonal-icon-padding: #{$component-button-tonal-icon-padding};
+    --component-button-tonal-icon-gap: #{$component-button-tonal-icon-gap};
+    --component-button-tonal-text-padding: #{$component-button-tonal-text-padding};
+  }
+}
