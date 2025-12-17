@@ -9,8 +9,6 @@
 
 ## Feedback Requested
 
-**Review Deadline:** December 27, 2025
-
 **Please provide input on:**
 
 1. **Approach Validation**
