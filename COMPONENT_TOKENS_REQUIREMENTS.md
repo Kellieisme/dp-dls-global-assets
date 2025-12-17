@@ -52,18 +52,33 @@
 
 This document outlines the requirements for enhancing the `@jeppesen-foreflight/dls-global-assets` library to generate CSS custom properties for component-level tokens. This will enable consuming applications to use semantic component tokens while maintaining runtime theme switching capability.
 
+### Component Tokens Architecture Decision
+
+**Component tokens are maintained in dls-global-assets** (this repository), not in dp-dls-global-tokens. Here's why:
+
+1. **Web-Specific Implementation** - Component tokens are a convenience layer for web frameworks (Angular, React), not universal design tokens
+2. **CSS Custom Properties** - The generation mixins produce browser-specific outputs
+3. **Platform Separation** - iOS/Android use foundation tokens directly; they don't need component-level mappings
+4. **Single Source** - Simplifies maintenance without complex sync processes between repos
+5. **Current Reality** - Component token files already exist here without external generation
+
+**Foundation tokens** (e.g., `$foundation-*`) continue to come from dp-dls-global-tokens as the design source of truth.
+
+**Component tokens** (e.g., `$component-button-*`) are web framework semantic aliases maintained in this repo.
+
 ---
 
 ## Current State
 
 ### What Exists
-- ✅ Component token files with SCSS variables (e.g., `_vars-commonbutton.scss`)
+- ✅ Component token SCSS files with variables (e.g., `_vars-commonbutton.scss`)
 - ✅ Foundation color tokens with CSS custom property generation via `generateColorThemeVariables()`
 - ✅ 24 component token files covering buttons, textfields, menus, etc.
+- ✅ Component tokens maintained directly in dls-global-assets
 
 ### What's Missing
-- ⏸️ CSS custom property generation for remaining 20+ component token files
-- ✅ Mixins implemented for Button, Textfield, IconButton (3/24 components)
+- ⏸️ CSS custom property generation for remaining 16 component token files
+- ✅ Mixins implemented for 8 components: Button, Textfield, IconButton, Menu, Checkbox, Radio, Select, Switch
 - ✅ Unified component token import/generation mechanism created
 
 ---
@@ -77,15 +92,16 @@ Each component token file should include a mixin to generate CSS custom properti
 #### Example Implementation
 
 **File:** `src/scss/base/external-tokens/component/_vars-commonbutton.scss`
-*(compiled to `dist/scss/base/external-tokens/component/_vars-commonbutton.scss`)*
 
 ```scss
-// Existing SCSS variables remain unchanged
+// Component token SCSS variables (maintained in dls-global-assets)
 $component-button-outlined-primary-enabled-textandicon: $foundation-interactive-primary-textandicon-primary-default;
 $component-button-outlined-primary-enabled-border-color: $foundation-interactive-primary-border-enabled;
 // ... all existing variables ...
 
-// NEW: Add generation mixin
+// ===========================
+// CSS CUSTOM PROPERTY GENERATION
+// ===========================
 @mixin generateComponentButtonVariables() {
   :root {
     --component-button-outlined-primary-enabled-textandicon: #{$component-button-outlined-primary-enabled-textandicon};
@@ -125,22 +141,22 @@ $component-button-outlined-primary-enabled-border-color: $foundation-interactive
 
 ### 2. Required Component Token Mixins
 
-**Phase 1 - ✅ COMPLETE:**
+**Phase 1 - ✅ COMPLETE (8/24 = 33%):**
 | File | Mixin Name | Status |
 |------|-----------|--------|
 | `_vars-commonbutton.scss` | `generateComponentButtonVariables()` | ✅ Implemented |
 | `_vars-textfield.scss` | `generateComponentTextfieldVariables()` | ✅ Implemented |
 | `_vars-iconbutton.scss` | `generateComponentIconButtonVariables()` | ✅ Implemented |
+| `_vars-menu.scss` | `generateComponentMenuVariables()` | ✅ Implemented |
+| `_vars-checkbox.scss` | `generateComponentCheckboxVariables()` | ✅ Implemented |
+| `_vars-radiobutton.scss` | `generateComponentRadioVariables()` | ✅ Implemented |
+| `_vars-select.scss` | `generateComponentSelectVariables()` | ✅ Implemented |
+| `_vars-switch.scss` | `generateComponentSwitchVariables()` | ✅ Implemented |
 
-**Phase 2 - TODO:**
+**Phase 2 - TODO (16 remaining):**
 | File | Mixin Name | Estimated Tokens |
 |------|-----------|------------------|
-| `_vars-menu.scss` | `generateComponentMenuVariables()` | ~30 |
 | `_vars-list.scss` | `generateComponentListVariables()` | ~25 |
-| `_vars-checkbox.scss` | `generateComponentCheckboxVariables()` | ~20 |
-| `_vars-radiobutton.scss` | `generateComponentRadioVariables()` | ~20 |
-| `_vars-select.scss` | `generateComponentSelectVariables()` | ~35 |
-| `_vars-switch.scss` | `generateComponentSwitchVariables()` | ~25 |
 | `_vars-chip.scss` | `generateComponentChipVariables()` | ~30 |
 | `_vars-badge.scss` | `generateComponentBadgeVariables()` | ~15 |
 | `_vars-card.scss` | `generateComponentCardVariables()` | ~20 |
@@ -152,6 +168,10 @@ $component-button-outlined-primary-enabled-border-color: $foundation-interactive
 | `_vars-tooltip.scss` | `generateComponentTooltipVariables()` | ~15 |
 | `_vars-snackbar.scss` | `generateComponentSnackbarVariables()` | ~20 |
 | `_vars-topappbar.scss` | `generateComponentTopappbarVariables()` | ~25 |
+| `_vars-breadcrumb.scss` | `generateComponentBreadcrumbVariables()` | ~15 |
+| `_vars-profile.scss` | `generateComponentProfileVariables()` | ~10 |
+| `_vars-sidesheet.scss` | `generateComponentSidesheetVariables()` | ~20 |
+| `_vars-date picker.scss` | `generateComponentDatePickerVariables()` | ~30 |
 | **Others** | Various | ~100 |
 
 ### 3. Create Unified Component Import File
@@ -237,8 +257,21 @@ $component-button-outlined-primary-enabled-border-color: $foundation-interactive
 
 ## Usage in Consuming Applications
 
-Once implemented, consuming applications will use it like this:
+### Setup (One-Time)
 
+**1. Install the package:**
+```bash
+npm install @jeppesen-foreflight/dls-global-assets
+```
+
+**2. Import foundation tokens and initialize themes:**
+```scss
+// In your global styles file (e.g., styles.scss)
+@import '@jeppesen-foreflight/dls-global-assets/dist/scss/base/external-tokens';
+@include dls-init-themes();
+```
+
+**3. Import and generate component tokens:**
 ```scss
 // Import component tokens
 @use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/external-tokens/component' as component;
@@ -247,18 +280,50 @@ Once implemented, consuming applications will use it like this:
 @include component.generateComponentVariables();
 ```
 
-Then in component styles:
+### Usage in Component Styles
 
+**Before (using foundation tokens directly):**
 ```scss
-// Before (using foundation tokens directly)
 .mat-mdc-button.mat-primary .mat-icon {
   color: $foundation-interactive-primary-textandicon-primary-default;
 }
+```
 
-// After (using component tokens - more semantic!)
+**After (using component tokens - more semantic!):**
+```scss
 .mat-mdc-button.mat-primary .mat-icon {
   color: var(--component-button-outlined-primary-enabled-textandicon);
 }
+```
+
+### Theme Switching (Angular Example)
+
+Component tokens automatically respond to theme changes:
+
+```typescript
+// Toggle between light/dark themes
+this.themeToggle.setTheme('dark');
+
+// Toggle density
+this.themeToggle.setDensityTheme('relaxed');
+```
+
+### Available Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `npm run build` | Build the assets library (SCSS → CSS) |
+| `npm run dev` | Run development server with hot reload |
+| `npm run tokens:sync` | Sync foundation tokens from external tokens repo (if submodule configured) |
+
+### Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| CSS custom properties not updating with theme | Ensure `@include component.generateComponentVariables()` is called |
+| Variables undefined | Check that `@include dls-init-themes()` is called before using tokens |
+| Build errors | Run `npm run build` to verify SCSS compilation |
+| Component tokens not available | Verify package version includes component token mixins |
 ```
 
 ---
