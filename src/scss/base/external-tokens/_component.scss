@@ -39,6 +39,10 @@
 @use './component/vars-radiobutton' as radio;
 @use './component/vars-select' as select;
 @use './component/vars-switch' as switch;
+@use './component/vars-list' as list;
+@use './component/vars-chip' as chip;
+@use './component/vars-badge' as badge;
+@use './component/vars-card' as card;
 
 // ===========================
 // MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
@@ -55,10 +59,13 @@
   @include radio.generateComponentRadioVariables();
   @include select.generateComponentSelectVariables();
   @include switch.generateComponentSwitchVariables();
+  @include list.generateComponentListVariables();
+  @include chip.generateComponentChipVariables();
+  @include badge.generateComponentBadgeVariables();
+  @include card.generateComponentCardVariables();
   
   // TODO: Add additional component token generation mixins as they are implemented
-  // @include list.generateComponentListVariables();
-  // @include chip.generateComponentChipVariables();
-  // @include badge.generateComponentBadgeVariables();
+  // @include dialog.generateComponentDialogVariables();
+  // @include divider.generateComponentDividerVariables();
   // ... etc
 }

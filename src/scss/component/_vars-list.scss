@@ -54,3 +54,46 @@ $component-list-item-content-min-height: $foundation-sizing-3xl;
 @mixin component-list-item-content-trailing-text-textstyle () {
   @include typography.foundation-typography-label-lowest();
 }
+
+@mixin generateComponentListVariables() {
+  :root {
+    --component-list-vertical-padding: #{$component-list-vertical-padding};
+    --component-list-emphasis-none: #{$component-list-emphasis-none};
+    --component-list-emphasis-low: #{$component-list-emphasis-low};
+    --component-list-emphasis-medium: #{$component-list-emphasis-medium};
+    --component-list-emphasis-high: #{$component-list-emphasis-high};
+    --component-list-item-padding: #{$component-list-item-padding};
+    --component-list-item-enabled-background-color: #{$component-list-item-enabled-background-color};
+    --component-list-item-enabled-state-color: #{$component-list-item-enabled-state-color};
+    --component-list-item-hovered-background-color: #{$component-list-item-hovered-background-color};
+    --component-list-item-hovered-state-color: #{$component-list-item-hovered-state-color};
+    --component-list-item-focused-background-color: #{$component-list-item-focused-background-color};
+    --component-list-item-focused-state-color: #{$component-list-item-focused-state-color};
+    --component-list-item-pressed-background-color: #{$component-list-item-pressed-background-color};
+    --component-list-item-pressed-state-color: #{$component-list-item-pressed-state-color};
+    --component-list-item-dragged-background-color: #{$component-list-item-dragged-background-color};
+    --component-list-item-dragged-state-color: #{$component-list-item-dragged-state-color};
+    --component-list-item-disabled-background-color: #{$component-list-item-disabled-background-color};
+    --component-list-item-disabled-state-color: #{$component-list-item-disabled-state-color};
+    --component-list-item-min-height: #{$component-list-item-min-height};
+    --component-list-item-content-horizontal-gap: #{$component-list-item-content-horizontal-gap};
+    --component-list-item-content-overline-min-height: #{$component-list-item-content-overline-min-height};
+    --component-list-item-content-overline-enabled-text-color: #{$component-list-item-content-overline-enabled-text-color};
+    --component-list-item-content-overline-disabled-text-color: #{$component-list-item-content-overline-disabled-text-color};
+    --component-list-item-content-label-enabled-text-color: #{$component-list-item-content-label-enabled-text-color};
+    --component-list-item-content-label-disabled-text-color: #{$component-list-item-content-label-disabled-text-color};
+    --component-list-item-content-supporting-text-margin-top: #{$component-list-item-content-supporting-text-margin-top};
+    --component-list-item-content-supporting-text-enabled-text-color: #{$component-list-item-content-supporting-text-enabled-text-color};
+    --component-list-item-content-supporting-text-disabled-text-color: #{$component-list-item-content-supporting-text-disabled-text-color};
+    --component-list-item-content-leading-elements-video-height: #{$component-list-item-content-leading-elements-video-height};
+    --component-list-item-content-leading-elements-video-width: #{$component-list-item-content-leading-elements-video-width};
+    --component-list-item-content-leading-elements-image-size: #{$component-list-item-content-leading-elements-image-size};
+    --component-list-item-content-leading-elements-default-size: #{$component-list-item-content-leading-elements-default-size};
+    --component-list-item-content-leading-elements-video-container-height: #{$component-list-item-content-leading-elements-video-container-height};
+    --component-list-item-content-leading-elements-video-container-width: #{$component-list-item-content-leading-elements-video-container-width};
+    --component-list-item-content-leading-elements-icon-size: #{$component-list-item-content-leading-elements-icon-size};
+    --component-list-item-content-trailing-elements-default-size: #{$component-list-item-content-trailing-elements-default-size};
+    --component-list-item-content-trailing-elements-icon-size: #{$component-list-item-content-trailing-elements-icon-size};
+    --component-list-item-content-min-height: #{$component-list-item-content-min-height};
+  }
+}
