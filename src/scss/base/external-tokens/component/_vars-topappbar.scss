@@ -4,30 +4,30 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-top-app-bar-surface: $foundation-ui-glass-surface-thinnest;
-$component-top-app-bar-content-gap: $foundation-spacing-l-fixed;
-$component-top-app-bar-app-name-padding-horizontal: $foundation-spacing-xs-fixed;
-$component-top-app-bar-app-name-text-color: $foundation-ui-textandicon-high;
-$component-top-app-bar-icons-gap: $foundation-spacing-xs;
-$component-top-app-bar-profile-gap: $foundation-spacing-s;
-$component-top-app-bar-profile-divider-padding-left: $foundation-spacing-s-fixed;
-$component-top-app-bar-profile-user-profile-padding-left: $foundation-spacing-s-fixed;
-$component-top-app-bar-profile-user-profile-padding-right: $foundation-spacing-xs-fixed;
-$component-top-app-bar-extra-large-height: $foundation-sizing-6xl; // Apply this token to the component height for breakpoint extra-large.
-$component-top-app-bar-extra-large-padding-vertical: $foundation-spacing-xs; // Apply this token to the component vertical padding for breakpoint extra-large.
-$component-top-app-bar-extra-large-padding-horizontal: $foundation-spacing-l-fixed; // Apply this token to the component horizontal padding for breakpoint extra-large.
-$component-top-app-bar-large-height: $foundation-sizing-6xl; // Apply this token to the component height for breakpoint large.
-$component-top-app-bar-large-padding-vertical: $foundation-spacing-xs; // Apply this token to the component vertical padding for breakpoint large.
-$component-top-app-bar-large-padding-horizontal: $foundation-spacing-l-fixed; // Apply this token to the component horizontal padding for breakpoint large.
-$component-top-app-bar-expanded-height: $foundation-sizing-5xl; // Apply this token to the component height for breakpoint expanded.
-$component-top-app-bar-expanded-padding-vertical: $foundation-spacing-s; // Apply this token to the component vertical padding for breakpoint expanded.
-$component-top-app-bar-expanded-padding-horizontal: $foundation-spacing-s-fixed; // Apply this token to the component horizontal padding for breakpoint expanded.
-$component-top-app-bar-medium-height: $foundation-sizing-5xl; // Apply this token to the component height for breakpoint medium.
-$component-top-app-bar-medium-padding-vertical: $foundation-spacing-s; // Apply this token to the component vertical padding for breakpoint medium.
-$component-top-app-bar-medium-padding-horizontal: $foundation-spacing-s-fixed; // Apply this token to the component horizontal padding for breakpoint medium.
-$component-top-app-bar-compact-height: $foundation-sizing-5xl; // Apply this token to the component height for breakpoint compact.
-$component-top-app-bar-compact-padding-vertical: $foundation-spacing-s; // Apply this token to the component vertical padding for breakpoint compact.
-$component-top-app-bar-compact-padding-horizontal: $foundation-spacing-2xs-fixed; // Apply this token to the component horizontal padding for breakpoint compact.
+$component-top-app-bar-surface: $ui-glass-surface-thinnest;
+$component-top-app-bar-content-gap: $spacing-l-fixed;
+$component-top-app-bar-app-name-padding-horizontal: $spacing-xs-fixed;
+$component-top-app-bar-app-name-text-color: $ui-textandicon-high;
+$component-top-app-bar-icons-gap: $spacing-xs;
+$component-top-app-bar-profile-gap: $spacing-s;
+$component-top-app-bar-profile-divider-padding-left: $spacing-s-fixed;
+$component-top-app-bar-profile-user-profile-padding-left: $spacing-s-fixed;
+$component-top-app-bar-profile-user-profile-padding-right: $spacing-xs-fixed;
+$component-top-app-bar-extra-large-height: $sizing-6xl; // Apply this token to the component height for breakpoint extra-large.
+$component-top-app-bar-extra-large-padding-vertical: $spacing-xs; // Apply this token to the component vertical padding for breakpoint extra-large.
+$component-top-app-bar-extra-large-padding-horizontal: $spacing-l-fixed; // Apply this token to the component horizontal padding for breakpoint extra-large.
+$component-top-app-bar-large-height: $sizing-6xl; // Apply this token to the component height for breakpoint large.
+$component-top-app-bar-large-padding-vertical: $spacing-xs; // Apply this token to the component vertical padding for breakpoint large.
+$component-top-app-bar-large-padding-horizontal: $spacing-l-fixed; // Apply this token to the component horizontal padding for breakpoint large.
+$component-top-app-bar-expanded-height: $sizing-5xl; // Apply this token to the component height for breakpoint expanded.
+$component-top-app-bar-expanded-padding-vertical: $spacing-s; // Apply this token to the component vertical padding for breakpoint expanded.
+$component-top-app-bar-expanded-padding-horizontal: $spacing-s-fixed; // Apply this token to the component horizontal padding for breakpoint expanded.
+$component-top-app-bar-medium-height: $sizing-5xl; // Apply this token to the component height for breakpoint medium.
+$component-top-app-bar-medium-padding-vertical: $spacing-s; // Apply this token to the component vertical padding for breakpoint medium.
+$component-top-app-bar-medium-padding-horizontal: $spacing-s-fixed; // Apply this token to the component horizontal padding for breakpoint medium.
+$component-top-app-bar-compact-height: $sizing-5xl; // Apply this token to the component height for breakpoint compact.
+$component-top-app-bar-compact-padding-vertical: $spacing-s; // Apply this token to the component vertical padding for breakpoint compact.
+$component-top-app-bar-compact-padding-horizontal: $spacing-2xs-fixed; // Apply this token to the component horizontal padding for breakpoint compact.
 @mixin component-top-app-bar-app-name-text-style () {
-  @include typography.foundation-typography-title-low();
+  @include typography.typography-title-low();
 }

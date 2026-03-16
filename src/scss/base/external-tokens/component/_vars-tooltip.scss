@@ -4,22 +4,22 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-tooltip-title-textcolor: $foundation-ui-textandicon-high;
-$component-tooltip-description-textcolor: $foundation-ui-textandicon-medium;
-$component-tooltip-background-color: $foundation-ui-glass-surface-thick;
-$component-tooltip-background-effect: $foundation-ui-glass-background-blur;
-$component-tooltip-padding-horizontal: $foundation-spacing-xs;
-$component-tooltip-padding-vertical: $foundation-spacing-2xs;
-$component-tooltip-corner-radius: $foundation-radius-xs;
-$component-tooltip-width-min: $foundation-sizing-3xl;
+$component-tooltip-title-textcolor: $ui-textandicon-high;
+$component-tooltip-description-textcolor: $ui-textandicon-medium;
+$component-tooltip-background-color: $ui-glass-surface-thick;
+$component-tooltip-background-effect: $ui-glass-background-blur;
+$component-tooltip-padding-horizontal: $spacing-xs;
+$component-tooltip-padding-vertical: $spacing-2xs;
+$component-tooltip-corner-radius: $radius-xs;
+$component-tooltip-width-min: $sizing-3xl;
 $component-tooltip-width-max: 496px;
-$component-tooltip-height-min: $foundation-sizing-xl;
+$component-tooltip-height-min: $sizing-xl;
 @mixin component-tooltip-title-textstyle () {
-  @include typography.foundation-typography-label-lowest2();
+  @include typography.typography-label-lowest2();
 }
 @mixin component-tooltip-description-textstyle () {
-  @include typography.foundation-typography-label-lowest2();
+  @include typography.typography-label-lowest2();
 }
 @mixin component-tooltip-elevation () {
-  @include foundation-elevation-2();
+  @include elevation-2();
 }

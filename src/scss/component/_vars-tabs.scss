@@ -25,20 +25,3 @@ $component-tabitem-selected-border-width: $foundation-border-focused-width;
 @mixin component-tabitem-label-enabled () {
   @include typography.foundation-typography-label-medium();
 }
-
-@mixin generateComponentTabsVariables() {
-  :root {
-    --component-tabitem-padding-horizontal: #{$component-tabitem-padding-horizontal};
-    --component-tabitem-padding-vertical: #{$component-tabitem-padding-vertical};
-    --component-tabitem-gap: #{$component-tabitem-gap};
-    --component-tabitem-content-min-height: #{$component-tabitem-content-min-height};
-    --component-tabitem-hovered-background: #{$component-tabitem-hovered-background};
-    --component-tabitem-hovered-textandicon: #{$component-tabitem-hovered-textandicon};
-    --component-tabitem-enabled-textandicon: #{$component-tabitem-enabled-textandicon};
-    --component-tabitem-pressed-background: #{$component-tabitem-pressed-background};
-    --component-tabitem-pressed-textandicon: #{$component-tabitem-pressed-textandicon};
-    --component-tabitem-selected-border-color: #{$component-tabitem-selected-border-color};
-    --component-tabitem-selected-textandicon: #{$component-tabitem-selected-textandicon};
-    --component-tabitem-selected-border-width: #{$component-tabitem-selected-border-width};
-  }
-}

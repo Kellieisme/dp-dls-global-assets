@@ -4,11 +4,11 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-breadcrumb-gap: $foundation-sizing-2xs-fixed; // Spacing between buttons and path separators
-$component-breadcrumb-height: $foundation-sizing-4xl;
-$component-breadcrumb-slash-textandicon: $foundation-ui-divider-flat-high;
-$component-breadcrumb-current-page-height: $foundation-sizing-3xl;
-$component-breadcrumb-current-page-padding-horizontal: $foundation-spacing-s;
-$component-breadcrumb-current-page-textandicon: $foundation-ui-textandicon-low;
+$component-breadcrumb-gap: $sizing-2xs-fixed; // Spacing between buttons and path separators
+$component-breadcrumb-height: $sizing-4xl;
+$component-breadcrumb-slash-textandicon: $ui-divider-flat-high;
+$component-breadcrumb-current-page-height: $sizing-3xl;
+$component-breadcrumb-current-page-padding-horizontal: $spacing-s;
+$component-breadcrumb-current-page-textandicon: $ui-textandicon-low;
 $component-breadcrumb-level-maxwidth: 300px; // Individual component level token specifiying the maximum width of levels. Please not that this token does not reference a foundation or baselevel token.
-$component-breadcrumb-level-padding-horizontal: $foundation-spacing-s; // Override for default horizontal padding of Common Button
+$component-breadcrumb-level-padding-horizontal: $spacing-s; // Override for default horizontal padding of Common Button

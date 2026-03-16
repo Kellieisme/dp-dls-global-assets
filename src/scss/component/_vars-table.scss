@@ -33,31 +33,3 @@ $component-table-header-min-height: $foundation-sizing-5xl;
 @mixin component-table-header-textstyle () {
   @include typography.foundation-typography-body-low-highlight();
 }
-
-@mixin generateComponentTableVariables() {
-  :root {
-    --component-table-vertical-padding: #{$component-table-vertical-padding};
-    --component-table-emphasis-none: #{$component-table-emphasis-none};
-    --component-table-emphasis-low: #{$component-table-emphasis-low};
-    --component-table-emphasis-medium: #{$component-table-emphasis-medium};
-    --component-table-emphasis-high: #{$component-table-emphasis-high};
-    --component-table-cell-padding: #{$component-table-cell-padding};
-    --component-table-cell-gap: #{$component-table-cell-gap};
-    --component-table-cell-background-color: #{$component-table-cell-background-color};
-    --component-table-cell-border-color: #{$component-table-cell-border-color};
-    --component-table-cell-enabled-state-color: #{$component-table-cell-enabled-state-color};
-    --component-table-cell-enabled-textandicon-color: #{$component-table-cell-enabled-textandicon-color};
-    --component-table-cell-hovered-state-color: #{$component-table-cell-hovered-state-color};
-    --component-table-cell-hovered-textandicon-color: #{$component-table-cell-hovered-textandicon-color};
-    --component-table-cell-focused-state-color: #{$component-table-cell-focused-state-color};
-    --component-table-cell-focused-textandicon-color: #{$component-table-cell-focused-textandicon-color};
-    --component-table-cell-disabled-state-color: #{$component-table-cell-disabled-state-color};
-    --component-table-cell-disabled-textandicon-color: #{$component-table-cell-disabled-textandicon-color};
-    --component-table-cell-min-height: #{$component-table-cell-min-height};
-    --component-table-header-padding: #{$component-table-header-padding};
-    --component-table-header-gap: #{$component-table-header-gap};
-    --component-table-header-background-color: #{$component-table-header-background-color};
-    --component-table-header-textandicon-color: #{$component-table-header-textandicon-color};
-    --component-table-header-min-height: #{$component-table-header-min-height};
-  }
-}

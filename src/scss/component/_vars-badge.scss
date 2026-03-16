@@ -15,16 +15,3 @@ $component-badge-small-size: 6px;
 @mixin textstyle () {
   @include typography.foundation-typography-label-lowest();
 }
-
-@mixin generateComponentBadgeVariables() {
-  :root {
-    --component-badge-large-height: #{$component-badge-large-height};
-    --component-badge-large-min-width: #{$component-badge-large-min-width};
-    --component-badge-large-max-width: #{$component-badge-large-max-width};
-    --component-badge-padding-horizontal: #{$component-badge-padding-horizontal};
-    --component-badge-textcolor: #{$component-badge-textcolor};
-    --component-badge-corner-radius: #{$component-badge-corner-radius};
-    --component-badge-background: #{$component-badge-background};
-    --component-badge-small-size: #{$component-badge-small-size};
-  }
-}

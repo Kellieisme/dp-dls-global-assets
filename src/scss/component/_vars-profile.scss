@@ -23,15 +23,3 @@ $component-profile-unpadded: $foundation-spacing-none;
 @mixin component-profile-extra-large-textstyle () {
   @include typography.foundation-typography-title-medium();
 }
-
-@mixin generateComponentProfileVariables() {
-  :root {
-    --component-profile-small-size: #{$component-profile-small-size};
-    --component-profile-medium-size: #{$component-profile-medium-size};
-    --component-profile-large-size: #{$component-profile-large-size};
-    --component-profile-extra-large-size: #{$component-profile-extra-large-size};
-    --component-profile-corner-radius: #{$component-profile-corner-radius};
-    --component-profile-padded: #{$component-profile-padded};
-    --component-profile-unpadded: #{$component-profile-unpadded};
-  }
-}

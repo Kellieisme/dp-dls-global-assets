@@ -4,52 +4,25 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-radio-button-label-gap: $foundation-spacing-2xs-fixed;
-$component-radio-button-label-enabled: $foundation-ui-textandicon-high;
-$component-radio-button-label-disabled: $foundation-interactive-primary-textandicon-disabled;
-$component-radio-button-unselected-icon-resting: $foundation-interactive-primary-textandicon-primary-default;
-$component-radio-button-unselected-icon-hovered: $foundation-interactive-primary-textandicon-selected;
-$component-radio-button-unselected-icon-pressed: $foundation-interactive-primary-textandicon-selected;
-$component-radio-button-selected-icon-resting: $foundation-interactive-accent-textandicon-default;
-$component-radio-button-selected-icon-hovered: $foundation-interactive-accent-textandicon-selected;
-$component-radio-button-selected-icon-pressed: $foundation-interactive-accent-textandicon-selected;
-$component-radio-button-error-icon-resting: $foundation-semantic-border-error;
-$component-radio-button-error-icon-hovered: $foundation-semantic-textandicon-error;
-$component-radio-button-error-icon-pressed: $foundation-semantic-textandicon-error;
-$component-radio-button-disabled-icon-resting: $foundation-interactive-primary-textandicon-disabled;
-$component-radio-button-hovered: $foundation-interactive-primary-glow-surface-small-hovered;
-$component-radio-button-pressed: $foundation-interactive-primary-background-selected;
-$component-radio-button-target-size: $foundation-sizing-4xl;
-$component-radio-button-state-layer-size: $foundation-sizing-3xl;
-$component-radio-button-icon-size: $foundation-icon-sm;
-$component-radio-button-corner-radius: $foundation-radius-full;
+$component-radio-button-label-gap: $spacing-2xs-fixed;
+$component-radio-button-label-enabled: $ui-textandicon-high;
+$component-radio-button-label-disabled: $interactive-primary-textandicon-disabled;
+$component-radio-button-unselected-icon-resting: $interactive-primary-textandicon-primary-default;
+$component-radio-button-unselected-icon-hovered: $interactive-primary-textandicon-selected;
+$component-radio-button-unselected-icon-pressed: $interactive-primary-textandicon-selected;
+$component-radio-button-selected-icon-resting: $interactive-accent-textandicon-default;
+$component-radio-button-selected-icon-hovered: $interactive-accent-textandicon-selected;
+$component-radio-button-selected-icon-pressed: $interactive-accent-textandicon-selected;
+$component-radio-button-error-icon-resting: $semantic-border-error;
+$component-radio-button-error-icon-hovered: $semantic-textandicon-error;
+$component-radio-button-error-icon-pressed: $semantic-textandicon-error;
+$component-radio-button-disabled-icon-resting: $interactive-primary-textandicon-disabled;
+$component-radio-button-hovered: $interactive-primary-glow-surface-small-hovered;
+$component-radio-button-pressed: $interactive-primary-background-selected;
+$component-radio-button-target-size: $sizing-4xl;
+$component-radio-button-state-layer-size: $sizing-3xl;
+$component-radio-button-icon-size: $icon-sm;
+$component-radio-button-corner-radius: $radius-full;
 @mixin component-radio-button-label-textstyle () {
-  @include typography.foundation-typography-label-medium();
-}
-
-// ===========================
-// CSS CUSTOM PROPERTY GENERATION
-// ===========================
-@mixin generateComponentRadioVariables() {
-  :root {
-    --component-radio-button-label-gap: #{$component-radio-button-label-gap};
-    --component-radio-button-label-enabled: #{$component-radio-button-label-enabled};
-    --component-radio-button-label-disabled: #{$component-radio-button-label-disabled};
-    --component-radio-button-unselected-icon-resting: #{$component-radio-button-unselected-icon-resting};
-    --component-radio-button-unselected-icon-hovered: #{$component-radio-button-unselected-icon-hovered};
-    --component-radio-button-unselected-icon-pressed: #{$component-radio-button-unselected-icon-pressed};
-    --component-radio-button-selected-icon-resting: #{$component-radio-button-selected-icon-resting};
-    --component-radio-button-selected-icon-hovered: #{$component-radio-button-selected-icon-hovered};
-    --component-radio-button-selected-icon-pressed: #{$component-radio-button-selected-icon-pressed};
-    --component-radio-button-error-icon-resting: #{$component-radio-button-error-icon-resting};
-    --component-radio-button-error-icon-hovered: #{$component-radio-button-error-icon-hovered};
-    --component-radio-button-error-icon-pressed: #{$component-radio-button-error-icon-pressed};
-    --component-radio-button-disabled-icon-resting: #{$component-radio-button-disabled-icon-resting};
-    --component-radio-button-hovered: #{$component-radio-button-hovered};
-    --component-radio-button-pressed: #{$component-radio-button-pressed};
-    --component-radio-button-target-size: #{$component-radio-button-target-size};
-    --component-radio-button-state-layer-size: #{$component-radio-button-state-layer-size};
-    --component-radio-button-icon-size: #{$component-radio-button-icon-size};
-    --component-radio-button-corner-radius: #{$component-radio-button-corner-radius};
-  }
+  @include typography.typography-label-medium();
 }

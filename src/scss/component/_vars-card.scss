@@ -29,24 +29,3 @@ $component-cardmedia-padding: $foundation-inverted-xs;
 @mixin component-card-elevation-hovered () {
   @include foundation-elevation-2();
 }
-
-@mixin generateComponentCardVariables() {
-  :root {
-    --component-card-corner-radius: #{$component-card-corner-radius};
-    --component-card-hovered: #{$component-card-hovered};
-    --component-card-focused: #{$component-card-focused};
-    --component-card-pressed: #{$component-card-pressed};
-    --component-card-dragged: #{$component-card-dragged};
-    --component-card-disabled: #{$component-card-disabled};
-    --component-card-flat-medium: #{$component-card-flat-medium};
-    --component-card-flat-high: #{$component-card-flat-high};
-    --component-card-glass-borders-color: #{$component-card-glass-borders-color};
-    --component-card-glass-borders-stroke: #{$component-card-glass-borders-stroke};
-    --component-card-glass-specular: #{$component-card-glass-specular};
-    --component-card-glass-medium: #{$component-card-glass-medium};
-    --component-card-glass-high: #{$component-card-glass-high};
-    --component-card-padding: #{$component-card-padding};
-    --component-card-media-corner-radius: #{$component-card-media-corner-radius};
-    --component-cardmedia-padding: #{$component-cardmedia-padding};
-  }
-}

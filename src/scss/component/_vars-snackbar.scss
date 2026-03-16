@@ -18,16 +18,3 @@ $component-snackbar-singleline-height: $foundation-sizing-4xl;
 @mixin component-snackbar-elevation () {
   @include foundation-elevation-3();
 }
-
-@mixin generateComponentSnackbarVariables() {
-  :root {
-    --component-snackbar-description-textcolor: #{$component-snackbar-description-textcolor};
-    --component-snackbar-background-color: #{$component-snackbar-background-color};
-    --component-snackbar-background-effect: #{$component-snackbar-background-effect};
-    --component-snackbar-content-padding: #{$component-snackbar-content-padding};
-    --component-snackbar-content-maxheight-singleline: #{$component-snackbar-content-maxheight-singleline};
-    --component-snackbar-content-maxheight-multiline: #{$component-snackbar-content-maxheight-multiline};
-    --component-snackbar-corner-radius: #{$component-snackbar-corner-radius};
-    --component-snackbar-singleline-height: #{$component-snackbar-singleline-height};
-  }
-}

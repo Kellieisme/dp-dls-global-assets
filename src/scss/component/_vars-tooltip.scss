@@ -23,18 +23,3 @@ $component-tooltip-height-min: $foundation-sizing-xl;
 @mixin component-tooltip-elevation () {
   @include foundation-elevation-2();
 }
-
-@mixin generateComponentTooltipVariables() {
-  :root {
-    --component-tooltip-title-textcolor: #{$component-tooltip-title-textcolor};
-    --component-tooltip-description-textcolor: #{$component-tooltip-description-textcolor};
-    --component-tooltip-background-color: #{$component-tooltip-background-color};
-    --component-tooltip-background-effect: #{$component-tooltip-background-effect};
-    --component-tooltip-padding-horizontal: #{$component-tooltip-padding-horizontal};
-    --component-tooltip-padding-vertical: #{$component-tooltip-padding-vertical};
-    --component-tooltip-corner-radius: #{$component-tooltip-corner-radius};
-    --component-tooltip-width-min: #{$component-tooltip-width-min};
-    --component-tooltip-width-max: #{$component-tooltip-width-max};
-    --component-tooltip-height-min: #{$component-tooltip-height-min};
-  }
-}

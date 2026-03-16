@@ -12,16 +12,3 @@ $component-breadcrumb-current-page-padding-horizontal: $foundation-spacing-s;
 $component-breadcrumb-current-page-textandicon: $foundation-ui-textandicon-low;
 $component-breadcrumb-level-maxwidth: 300px; // Individual component level token specifiying the maximum width of levels. Please not that this token does not reference a foundation or baselevel token.
 $component-breadcrumb-level-padding-horizontal: $foundation-spacing-s; // Override for default horizontal padding of Common Button
-
-@mixin generateComponentBreadcrumbVariables() {
-  :root {
-    --component-breadcrumb-gap: #{$component-breadcrumb-gap};
-    --component-breadcrumb-height: #{$component-breadcrumb-height};
-    --component-breadcrumb-slash-textandicon: #{$component-breadcrumb-slash-textandicon};
-    --component-breadcrumb-current-page-height: #{$component-breadcrumb-current-page-height};
-    --component-breadcrumb-current-page-padding-horizontal: #{$component-breadcrumb-current-page-padding-horizontal};
-    --component-breadcrumb-current-page-textandicon: #{$component-breadcrumb-current-page-textandicon};
-    --component-breadcrumb-level-maxwidth: #{$component-breadcrumb-level-maxwidth};
-    --component-breadcrumb-level-padding-horizontal: #{$component-breadcrumb-level-padding-horizontal};
-  }
-}

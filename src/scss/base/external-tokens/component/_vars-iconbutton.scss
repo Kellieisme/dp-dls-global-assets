@@ -4,187 +4,176 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-icon-button-size: $foundation-sizing-3xl;
-$component-icon-button-area: $foundation-sizing-4xl;
-$component-icon-button-icon-size: $foundation-icon-md;
-$component-icon-button-corner-radius: $foundation-radius-full;
-$component-icon-button-primary-hovered: $foundation-interactive-primary-background-hovered;
-$component-icon-button-primary-pressed: $foundation-interactive-primary-background-selected;
-$component-icon-button-accent-hovered: $foundation-interactive-accent-background-hovered;
-$component-icon-button-accent-pressed: $foundation-interactive-accent-background-selected;
-$component-icon-button-plain-primary-hovered-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-plain-primary-pressed-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-plain-primary-enabled-icon: $foundation-interactive-primary-textandicon-primary-default;
-$component-icon-button-plain-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-plain-accent-hovered-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-plain-accent-pressed-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-plain-accent-enabled-icon: $foundation-interactive-accent-textandicon-default;
-$component-icon-button-plain-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-filled-primary-enabled-background: $foundation-interactive-primary-background-enabled-filled;
-$component-icon-button-filled-primary-enabled-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-filled-primary-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-filled-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-filled-accent-enabled-background: $foundation-interactive-accent-background-enabled-filled;
-$component-icon-button-filled-accent-enabled-icon: $foundation-interactive-accent-textandicon-inverse;
-$component-icon-button-filled-accent-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-filled-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-tonal-primary-hovered-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-tonal-primary-enabled-background: $foundation-interactive-primary-background-enabled-tonal;
-$component-icon-button-tonal-primary-enabled-icon: $foundation-interactive-primary-textandicon-primary-default;
-$component-icon-button-tonal-primary-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-tonal-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-tonal-primary-pressed-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-tonal-accent-hovered-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-tonal-accent-enabled-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-tonal-accent-enabled-icon: $foundation-interactive-accent-textandicon-default;
-$component-icon-button-tonal-accent-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-tonal-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-tonal-accent-pressed-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-outlined-primary-enabled-border-color: $foundation-interactive-primary-border-enabled;
-$component-icon-button-outlined-primary-enabled-icon: $foundation-interactive-primary-textandicon-primary-default;
-$component-icon-button-outlined-primary-hovered-border-color: $foundation-interactive-primary-border-hovered-flat;
-$component-icon-button-outlined-primary-hovered-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-outlined-primary-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-icon-button-outlined-primary-pressed-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-outlined-primary-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-icon-button-outlined-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-outlined-accent-enabled-border-color: $foundation-interactive-accent-border-enabled;
-$component-icon-button-outlined-accent-enabled-icon: $foundation-interactive-accent-textandicon-default;
-$component-icon-button-outlined-accent-hovered-border-color: $foundation-interactive-accent-border-hovered;
-$component-icon-button-outlined-accent-hovered-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-outlined-accent-pressed-border-color: $foundation-interactive-accent-border-selected;
-$component-icon-button-outlined-accent-pressed-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-outlined-accent-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-icon-button-outlined-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-outlined-border-width: $foundation-border-regular-width;
-$component-icon-button-badge-position-padding: $foundation-spacing-m;
-$component-icon-button-toggled-outlined-accent-enabled-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-outlined-accent-enabled-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-outlined-accent-enabled-border-color: $foundation-interactive-accent-border-selected;
-$component-icon-button-toggled-outlined-accent-hovered-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-outlined-accent-hovered-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-outlined-accent-hovered-border-color: $foundation-interactive-accent-border-selected;
-$component-icon-button-toggled-outlined-accent-pressed-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-outlined-accent-pressed-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-outlined-accent-pressed-border-color: $foundation-interactive-accent-border-selected;
-$component-icon-button-toggled-outlined-accent-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-toggled-outlined-accent-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-icon-button-toggled-outlined-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-toggled-outlined-primary-enabled-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-outlined-primary-enabled-border-color: $foundation-interactive-primary-border-selected;
-$component-icon-button-toggled-outlined-primary-hovered-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-outlined-primary-hovered-border-color: $foundation-interactive-primary-border-selected;
-$component-icon-button-toggled-outlined-primary-pressed-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-outlined-primary-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-icon-button-toggled-outlined-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-toggled-outlined-primary-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-icon-button-toggled-outlined-border-width: $foundation-border-regular-width;
-$component-icon-button-toggled-plain-accent-enabled-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-plain-accent-enabled-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-plain-accent-hovered-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-plain-accent-hovered-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-plain-accent-pressed-background: $foundation-interactive-accent-background-enabled-tonal;
-$component-icon-button-toggled-plain-accent-pressed-icon: $foundation-interactive-accent-textandicon-selected;
-$component-icon-button-toggled-plain-accent-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-toggled-plain-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-toggled-plain-primary-enabled-background: $foundation-interactive-primary-background-enabled-tonal;
-$component-icon-button-toggled-plain-primary-enabled-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-plain-primary-hovered-background: $foundation-interactive-primary-background-enabled-tonal;
-$component-icon-button-toggled-plain-primary-hovered-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-plain-primary-pressed-background: $foundation-interactive-primary-background-enabled-tonal;
-$component-icon-button-toggled-plain-primary-pressed-icon: $foundation-interactive-primary-textandicon-selected;
-$component-icon-button-toggled-plain-primary-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-toggled-plain-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-toggled-tonal-primary-enabled-background: $foundation-interactive-primary-background-enabled-filled;
-$component-icon-button-toggled-tonal-primary-enabled-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-primary-hovered-background: $foundation-interactive-primary-background-enabled-filled;
-$component-icon-button-toggled-tonal-primary-hovered-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-primary-pressed-background: $foundation-interactive-primary-background-enabled-filled;
-$component-icon-button-toggled-tonal-primary-pressed-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-primary-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-toggled-tonal-primary-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
-$component-icon-button-toggled-tonal-accent-enabled-background: $foundation-interactive-accent-background-enabled-filled;
-$component-icon-button-toggled-tonal-accent-enabled-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-accent-hovered-background: $foundation-interactive-accent-background-enabled-filled;
-$component-icon-button-toggled-tonal-accent-hovered-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-accent-pressed-background: $foundation-interactive-accent-background-enabled-filled;
-$component-icon-button-toggled-tonal-accent-pressed-icon: $foundation-interactive-primary-textandicon-inverse;
-$component-icon-button-toggled-tonal-accent-disabled-background: $foundation-interactive-primary-background-disabled;
-$component-icon-button-toggled-tonal-accent-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-icon-button-size: $sizing-3xl;
+$component-icon-button-area: $sizing-4xl;
+$component-icon-button-icon-size: $icon-md;
+$component-icon-button-corner-radius: $radius-full;
+$component-icon-button-primary-hovered: $interactive-primary-background-hovered;
+$component-icon-button-primary-pressed: $interactive-primary-background-selected;
+$component-icon-button-accent-hovered: $interactive-accent-background-hovered;
+$component-icon-button-accent-pressed: $interactive-accent-background-selected;
+$component-icon-button-plain-primary-hovered-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-plain-primary-pressed-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-plain-primary-enabled-icon: $interactive-primary-textandicon-primary-default;
+$component-icon-button-plain-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-plain-accent-hovered-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-plain-accent-pressed-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-plain-accent-enabled-icon: $interactive-accent-textandicon-default;
+$component-icon-button-plain-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-filled-primary-enabled-background: $interactive-primary-background-enabled-filled;
+$component-icon-button-filled-primary-enabled-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-filled-primary-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-filled-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-filled-accent-enabled-background: $interactive-accent-background-enabled-filled;
+$component-icon-button-filled-accent-enabled-icon: $interactive-accent-textandicon-inverse;
+$component-icon-button-filled-accent-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-filled-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-tonal-primary-hovered-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-tonal-primary-enabled-background: $interactive-primary-background-enabled-tonal;
+$component-icon-button-tonal-primary-enabled-icon: $interactive-primary-textandicon-primary-default;
+$component-icon-button-tonal-primary-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-tonal-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-tonal-primary-pressed-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-tonal-accent-hovered-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-tonal-accent-enabled-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-tonal-accent-enabled-icon: $interactive-accent-textandicon-default;
+$component-icon-button-tonal-accent-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-tonal-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-tonal-accent-pressed-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-outlined-primary-enabled-border-color: $interactive-primary-border-enabled;
+$component-icon-button-outlined-primary-enabled-icon: $interactive-primary-textandicon-primary-default;
+$component-icon-button-outlined-primary-hovered-border-color: $interactive-primary-border-hovered-flat;
+$component-icon-button-outlined-primary-hovered-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-outlined-primary-pressed-border-color: $interactive-primary-border-selected;
+$component-icon-button-outlined-primary-pressed-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-outlined-primary-disabled-border-color: $interactive-primary-border-disabled;
+$component-icon-button-outlined-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-outlined-accent-enabled-border-color: $interactive-accent-border-enabled;
+$component-icon-button-outlined-accent-enabled-icon: $interactive-accent-textandicon-default;
+$component-icon-button-outlined-accent-hovered-border-color: $interactive-accent-border-hovered;
+$component-icon-button-outlined-accent-hovered-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-outlined-accent-pressed-border-color: $interactive-accent-border-selected;
+$component-icon-button-outlined-accent-pressed-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-outlined-accent-disabled-border-color: $interactive-primary-border-disabled;
+$component-icon-button-outlined-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-outlined-border-width: $border-regular-width;
+$component-icon-button-badge-position-padding: $spacing-m;
+$component-icon-button-toggled-outlined-accent-enabled-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-outlined-accent-enabled-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-outlined-accent-enabled-border-color: $interactive-accent-border-selected;
+$component-icon-button-toggled-outlined-accent-hovered-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-outlined-accent-hovered-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-outlined-accent-hovered-border-color: $interactive-accent-border-selected;
+$component-icon-button-toggled-outlined-accent-pressed-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-outlined-accent-pressed-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-outlined-accent-pressed-border-color: $interactive-accent-border-selected;
+$component-icon-button-toggled-outlined-accent-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-toggled-outlined-accent-disabled-border-color: $interactive-primary-border-disabled;
+$component-icon-button-toggled-outlined-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-toggled-outlined-primary-enabled-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-outlined-primary-enabled-border-color: $interactive-primary-border-selected;
+$component-icon-button-toggled-outlined-primary-hovered-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-outlined-primary-hovered-border-color: $interactive-primary-border-selected;
+$component-icon-button-toggled-outlined-primary-pressed-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-outlined-primary-pressed-border-color: $interactive-primary-border-selected;
+$component-icon-button-toggled-outlined-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-toggled-outlined-primary-disabled-border-color: $interactive-primary-border-disabled;
+$component-icon-button-toggled-outlined-border-width: $border-regular-width;
+$component-icon-button-toggled-plain-accent-enabled-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-plain-accent-enabled-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-plain-accent-hovered-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-plain-accent-hovered-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-plain-accent-pressed-background: $interactive-accent-background-enabled-tonal;
+$component-icon-button-toggled-plain-accent-pressed-icon: $interactive-accent-textandicon-selected;
+$component-icon-button-toggled-plain-accent-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-toggled-plain-accent-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-toggled-plain-primary-enabled-background: $interactive-primary-background-enabled-tonal;
+$component-icon-button-toggled-plain-primary-enabled-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-plain-primary-hovered-background: $interactive-primary-background-enabled-tonal;
+$component-icon-button-toggled-plain-primary-hovered-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-plain-primary-pressed-background: $interactive-primary-background-enabled-tonal;
+$component-icon-button-toggled-plain-primary-pressed-icon: $interactive-primary-textandicon-selected;
+$component-icon-button-toggled-plain-primary-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-toggled-plain-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-toggled-tonal-primary-enabled-background: $interactive-primary-background-enabled-filled;
+$component-icon-button-toggled-tonal-primary-enabled-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-primary-hovered-background: $interactive-primary-background-enabled-filled;
+$component-icon-button-toggled-tonal-primary-hovered-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-primary-pressed-background: $interactive-primary-background-enabled-filled;
+$component-icon-button-toggled-tonal-primary-pressed-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-primary-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-toggled-tonal-primary-disabled-icon: $interactive-primary-textandicon-disabled;
+$component-icon-button-toggled-tonal-accent-enabled-background: $interactive-accent-background-enabled-filled;
+$component-icon-button-toggled-tonal-accent-enabled-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-accent-hovered-background: $interactive-accent-background-enabled-filled;
+$component-icon-button-toggled-tonal-accent-hovered-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-accent-pressed-background: $interactive-accent-background-enabled-filled;
+$component-icon-button-toggled-tonal-accent-pressed-icon: $interactive-primary-textandicon-inverse;
+$component-icon-button-toggled-tonal-accent-disabled-background: $interactive-primary-background-disabled;
+$component-icon-button-toggled-tonal-accent-disabled-icon: $interactive-primary-textandicon-disabled;
 @mixin component-icon-button-plain-primary-hovered-glow () {
-  @include foundation-interactive-primary-glow-backlit();
+  @include interactive-primary-glow-backlit();
 }
 @mixin component-icon-button-plain-accent-hovered-glow () {
-  @include foundation-interactive-accent-glow-backlit();
+  @include interactive-accent-glow-backlit();
 }
 @mixin component-icon-button-tonal-primary-hovered-glow () {
-  @include foundation-interactive-primary-glow-backlit();
+  @include interactive-primary-glow-backlit();
 }
 @mixin component-icon-button-tonal-accent-hovered-glow () {
-  @include foundation-interactive-accent-glow-backlit();
+  @include interactive-accent-glow-backlit();
 }
 @mixin component-icon-button-outlined-primary-enabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-primary-enabled-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-primary-enabled-border-color);;
 }
 @mixin component-icon-button-outlined-primary-hovered-glow () {
-  @include foundation-interactive-primary-glow-backlit();
+  @include interactive-primary-glow-backlit();
 }
 @mixin component-icon-button-outlined-primary-hovered-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-primary-hovered-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-primary-hovered-border-color);;
 }
 @mixin component-icon-button-outlined-primary-pressed-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-primary-pressed-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-primary-pressed-border-color);;
 }
 @mixin component-icon-button-outlined-primary-disabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-disabled-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-primary-disabled-border-color);;
 }
 @mixin component-icon-button-outlined-accent-enabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-accent-enabled-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-accent-enabled-border-color);;
 }
 @mixin component-icon-button-outlined-accent-hovered-glow () {
-  @include foundation-interactive-accent-glow-backlit();
+  @include interactive-accent-glow-backlit();
 }
 @mixin component-icon-button-outlined-accent-hovered-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-accent-hovered-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-accent-hovered-border-color);;
 }
 @mixin component-icon-button-outlined-accent-pressed-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-accent-pressed-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-accent-pressed-border-color);;
 }
 @mixin component-icon-button-outlined-accent-disabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-outlined-border-width, $foundation-border-regular-style, $component-icon-button-outlined-accent-disabled-border-color);;
+  @include utils.border($direction, $component-icon-button-outlined-border-width, $border-regular-style, $component-icon-button-outlined-accent-disabled-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-accent-enabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-accent-enabled-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-accent-enabled-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-accent-hovered-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-accent-hovered-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-accent-hovered-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-accent-pressed-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-accent-pressed-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-accent-pressed-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-accent-disabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-accent-disabled-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-accent-disabled-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-primary-enabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-enabled-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-primary-enabled-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-primary-hovered-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-hovered-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-primary-hovered-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-primary-pressed-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-pressed-border-color);;
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-primary-pressed-border-color);;
 }
 @mixin component-icon-button-toggled-outlined-primary-disabled-border ($direction) {
-  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $foundation-border-regular-style, $component-icon-button-toggled-outlined-primary-disabled-border-color);;
-}
-
-// ===========================
-// CSS CUSTOM PROPERTY GENERATION
-// ===========================
-@mixin generateComponentIconButtonVariables() {
-  :root {
-    --component-iconbutton-icon-color: #{$component-icon-button-plain-primary-enabled-icon};
-    --component-iconbutton-hovered-icon-color: #{$component-icon-button-plain-primary-hovered-icon};
-    --component-iconbutton-disabled-icon-color: #{$component-icon-button-plain-primary-disabled-icon};
-  }
+  @include utils.border($direction, $component-icon-button-toggled-outlined-border-width, $border-regular-style, $component-icon-button-toggled-outlined-primary-disabled-border-color);;
 }

@@ -4,24 +4,24 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-tabitem-padding-horizontal: $foundation-spacing-l;
-$component-tabitem-padding-vertical: $foundation-spacing-s;
-$component-tabitem-gap: $foundation-spacing-xs;
-$component-tabitem-content-min-height: $foundation-sizing-xl-fixed;
-$component-tabitem-hovered-background: $foundation-interactive-primary-background-hovered;
-$component-tabitem-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-tabitem-enabled-textandicon: $foundation-interactive-primary-textandicon-primary-default;
-$component-tabitem-pressed-background: $foundation-interactive-primary-background-selected;
-$component-tabitem-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-tabitem-selected-border-color: $foundation-ui-embellishment;
-$component-tabitem-selected-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-tabitem-selected-border-width: $foundation-border-focused-width;
+$component-tabitem-padding-horizontal: $spacing-l;
+$component-tabitem-padding-vertical: $spacing-s;
+$component-tabitem-gap: $spacing-xs;
+$component-tabitem-content-min-height: $sizing-xl-fixed;
+$component-tabitem-hovered-background: $interactive-primary-background-hovered;
+$component-tabitem-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-tabitem-enabled-textandicon: $interactive-primary-textandicon-primary-default;
+$component-tabitem-pressed-background: $interactive-primary-background-selected;
+$component-tabitem-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-tabitem-selected-border-color: $ui-embellishment;
+$component-tabitem-selected-textandicon: $interactive-primary-textandicon-selected;
+$component-tabitem-selected-border-width: $border-focused-width;
 @mixin component-tabitem-selected-border ($direction) {
-  @include utils.border($direction, $component-tabitem-selected-border-width, $foundation-border-regular-style, $component-tabitem-selected-border-color);;
+  @include utils.border($direction, $component-tabitem-selected-border-width, $border-regular-style, $component-tabitem-selected-border-color);;
 }
 @mixin component-tabitem-label-selected () {
-  @include typography.foundation-typography-label-high();
+  @include typography.typography-label-high();
 }
 @mixin component-tabitem-label-enabled () {
-  @include typography.foundation-typography-label-medium();
+  @include typography.typography-label-medium();
 }

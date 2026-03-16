@@ -4,130 +4,130 @@
 @use '../base' as *;
 @use '../foundation' as *;
 
-$foundation-opacity-medium: $base-opacity-67; // Medium emphasis opacity
-$foundation-opacity-low: $base-opacity-37; // Low emphasis opacity
-$foundation-opacity-border: $base-opacity-50; // Border opacity mainly used for semantic border colors
-$foundation-opacity-semantic-tonal: $base-opacity-5; // Tonal opacity for semantic tonal colors
-$foundation-elevation-shadow-1-color: rgba($base-color-solids-black,0.1);
-$foundation-elevation-shadow-2-color: rgba($base-color-solids-black,0.09);
-$foundation-elevation-shadow-3-color: rgba($base-color-solids-black,0.2);
-$foundation-effect-primary-glow-backlit-color: $base-color-solids-space-95;
-$foundation-effect-primary-glow-backlit-x: $base-shadow-x-0;
-$foundation-effect-primary-glow-backlit-y: $base-shadow-y-0;
-$foundation-effect-primary-glow-backlit-spread: $base-shadow-spread-0;
-$foundation-effect-primary-glow-backlit-blur: $base-shadow-blur-10;
-$foundation-effect-accent-glow-backlit-color: $base-color-solids-space-95;
-$foundation-effect-accent-glow-backlit-x: $base-shadow-x-0;
-$foundation-effect-accent-glow-backlit-y: $base-shadow-y-0;
-$foundation-effect-accent-glow-backlit-spread: $base-shadow-spread-0;
-$foundation-effect-accent-glow-backlit-blur: $base-shadow-blur-10;
-$foundation-ui-textandicon-high: $base-color-solids-space-90; // Heading, titles or high-emphasis text and icons
-$foundation-ui-textandicon-medium: rgba($base-color-solids-space-98,$foundation-opacity-medium); // Default body text or medium emphasis text and icons
-$foundation-ui-textandicon-low: rgba($base-color-solids-space-98,$foundation-opacity-low); // Low emphasis body text and icons
-$foundation-ui-textandicon-inverse: $base-color-solids-neutral-10; // Body or label text and icons on inverse background
-$foundation-ui-background-high: $base-color-solids-space-15; // High contrast component level opaque background
-$foundation-ui-background-medium: $base-color-solids-space-20; // Medium contrast component level opaque background
-$foundation-ui-background-low: $base-color-solids-space-10; // Low contrast component level opaque background
-$foundation-ui-background-page: $base-color-solids-space-10; // Default page level background
-$foundation-ui-glass-surface-thickest: rgba($base-color-solids-space-60,$base-opacity-30); // Background for glass component with highest contrast
-$foundation-ui-glass-surface-thick: rgba($base-color-solids-space-40,$base-opacity-30); // Background for glass component with higher contrast
-$foundation-ui-glass-surface-regular: rgba($base-color-solids-space-30,$base-opacity-30); // Background for glass component with medium contrast
-$foundation-ui-glass-surface-thin: rgba($base-color-solids-space-20,$base-opacity-30); // Background for glass component with less contrast
-$foundation-ui-glass-surface-thinnest: rgba($base-color-solids-space-10,$base-opacity-40); // Background for glass component with least contrast
-$foundation-ui-divider-flat-high: rgba($base-color-solids-space-80,$base-opacity-16); // Default flat divider color
-$foundation-ui-divider-flat-low: rgba($base-color-solids-space-80,$base-opacity-12); // Low emphasis flat divider color
-$foundation-ui-embellishment: $base-color-solids-flight-70; // Used on non-interactive 37° embellishment
-$foundation-interactive-primary-textandicon-selected: $base-color-solids-space-98; // Hover & selected state of interactive text and icons
-$foundation-interactive-primary-textandicon-primary-default: $base-color-solids-space-90; // Default state for primary interactive text and icons
-$foundation-interactive-primary-textandicon-secondary-default: $base-color-solids-space-70; // Default state for secondary interactive text and icons
-$foundation-interactive-primary-textandicon-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-layer-disabled); // Disabled state for interactive text and icons
-$foundation-interactive-primary-textandicon-inverse: $base-color-solids-space-20; // Default, hovered and selected state of interactive text and icons on solid filled inverse background
-$foundation-interactive-primary-background-enabled-filled: $base-color-solids-space-95; // Default background for emphasised primary buttons
-$foundation-interactive-primary-background-enabled-tonal: rgba($base-color-solids-space-80,$foundation-opacity-fill-tonal); // Default background for secondary buttons
-$foundation-interactive-primary-background-hovered: rgba($base-color-solids-space-80,$foundation-opacity-fill-hovered); // Additional state-layer background for hover state
-$foundation-interactive-primary-background-selected: rgba($base-color-solids-space-80,$foundation-opacity-fill-pressed); // Additional state-layer background for selected state
-$foundation-interactive-primary-background-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-fill-disabled); // Disabled state background
-$foundation-interactive-primary-background-ripple: rgba($base-color-solids-flight-80,$foundation-opacity-fill-ripple); // Additional layer for ripple effect
-$foundation-interactive-primary-background-hovered-blendmode: $base-color-blending-mode-plus-lighter; // Bendmode for <foundation.interactive.primary.background.hovered>
-$foundation-interactive-primary-background-selected-blendmode: $base-color-blending-mode-plus-lighter; // Bendmode for <foundation.interactive.primary.background.selected>
-$foundation-interactive-primary-border-hovered-flat: $base-color-solids-space-95; // Hover state of primary enabled buttons
-$foundation-interactive-primary-border-selected: $base-color-solids-space-95; // Selected state of primary enabled buttons
-$foundation-interactive-primary-border-enabled: rgba($base-color-solids-space-95,$base-opacity-70); // Default state of primary enabled buttons
-$foundation-interactive-primary-border-focused: rgba($base-color-solids-flight-80,$base-opacity-50); // Selected and focused state of form fields
-$foundation-interactive-primary-border-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-fill-disabled); // Disabled state of interactive elements
-$foundation-interactive-primary-glow-surface-small-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.primary.glow.surface.small>
-$foundation-interactive-primary-glow-surface-small-hovered-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.primary.glow.surface.small-hovered>
-$foundation-interactive-primary-glow-surface-medium-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.primary.glow.surface.medium>
-$foundation-interactive-accent-textandicon-default: $base-color-solids-flight-80; // Default state of accent interactive text and icons
-$foundation-interactive-accent-textandicon-selected: $base-color-solids-flight-90; // Hover & selected state of accent interactive text and icons
-$foundation-interactive-accent-textandicon-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-layer-disabled); // Disabled state of interactive text and icons
-$foundation-interactive-accent-textandicon-inverse: $base-color-solids-flight-20; // Default, hover and selected state of interactive text and icons on inverted accent solid fill background
-$foundation-interactive-accent-textandicon-visited: $base-color-solids-electric-70; // Visited state of interactive text
-$foundation-interactive-accent-background-enabled-filled: $base-color-solids-flight-80; // Default background for emphasised accent buttons
-$foundation-interactive-accent-background-enabled-tonal: rgba($base-color-solids-flight-90,$foundation-opacity-fill-tonal); // Default background for secondary accent buttons
-$foundation-interactive-accent-background-hovered: rgba($base-color-solids-space-80,$foundation-opacity-fill-hovered); // Additional state-layer background for accent hover state. Please note the additional blendmode provided by <foundation.interactive.accent.background.hovered-blendmode>
-$foundation-interactive-accent-background-selected: rgba($base-color-solids-space-80,$foundation-opacity-fill-selected); // Additional state-layer background for accent selected state
-$foundation-interactive-accent-background-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-fill-disabled); // Disabled state background
-$foundation-interactive-accent-background-hovered-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.background.hovered>
-$foundation-interactive-accent-background-selected-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.background.selected>
-$foundation-interactive-accent-border-enabled: rgba($base-color-solids-flight-80,$base-opacity-70); // Default state of accent enabled buttons
-$foundation-interactive-accent-border-hovered: $base-color-solids-flight-80; // Hover state of accent enabled buttons
-$foundation-interactive-accent-border-selected: $base-color-solids-flight-80; // Selected state of accent enabled buttons
-$foundation-interactive-accent-border-disabled: rgba($base-color-solids-neutral-90,$foundation-opacity-fill-disabled); // Disabled state of accent enabled buttons
-$foundation-interactive-accent-glow-backlit-color: $base-color-solids-flight-80; // Backlit glow color used respective effect
-$foundation-interactive-accent-glow-surface-small-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.accent.glow.surface.small>
-$foundation-interactive-accent-glow-surface-small-hovered-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.accent.glow.surface.small-hovered>
-$foundation-interactive-accent-glow-surface-medium-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.glow.surface.medium>
-$foundation-semantic-border-error: rgba($base-color-solids-red-70,$foundation-opacity-border); // Used as border to indicate error state
-$foundation-semantic-border-warning: rgba($base-color-solids-yellow-80,$foundation-opacity-border); // Used as border to indicate warning state
-$foundation-semantic-border-success: rgba($base-color-solids-green-80,$foundation-opacity-border); // Used as border to indicate success state
-$foundation-semantic-border-info: rgba($base-color-solids-flight-80,$foundation-opacity-border); // Used as border to indicate info state
-$foundation-semantic-textandicon-error: $base-color-solids-red-70; // Used for error messaging on text and icons
-$foundation-semantic-textandicon-warning: $base-color-solids-yellow-80; // Used for warning messaging on text and icons
-$foundation-semantic-textandicon-success: $base-color-solids-green-80; // Used for success messaging on text and icons
-$foundation-semantic-textandicon-info: $base-color-solids-flight-80; // Used for notifications or new information on text and icons
-$foundation-semantic-background-error-filled: $base-color-solids-red-70; // Used as filled background to indicate error state
-$foundation-semantic-background-error-tonal: rgba($base-color-solids-red-80,$foundation-opacity-semantic-tonal); // Used as tonal background to indicate error state
-$foundation-semantic-background-error-ripple: rgba($base-color-solids-red-70,$foundation-opacity-fill-ripple); // Used as ripple effect on error state
-$foundation-semantic-background-warning-filled: $base-color-solids-yellow-80; // Used as filled background to indicate warning state
-$foundation-semantic-background-warning-tonal: rgba($base-color-solids-yellow-80,$foundation-opacity-semantic-tonal); // Used as tonal background to indicate warning state
-$foundation-semantic-background-warning-ripple: rgba($base-color-solids-yellow-80,$foundation-opacity-fill-ripple); // Used as ripple effect on warning state
-$foundation-semantic-background-success-filled: $base-color-solids-green-80; // Used as filled background to indicate success state
-$foundation-semantic-background-success-tonal: rgba($base-color-solids-green-80,$foundation-opacity-semantic-tonal); // Used as tonal background to indicate success state
-$foundation-semantic-background-success-ripple: rgba($base-color-solids-green-80,$foundation-opacity-fill-ripple); // Used as ripple effect on success state
-$foundation-semantic-background-info-filled: $base-color-solids-flight-90; // Used as filled background for new notifications
-$foundation-semantic-background-info-tonal: rgba($base-color-solids-flight-90,$foundation-opacity-semantic-tonal); // Used as tonal background for new notifications
-$foundation-semantic-background-info-ripple: rgba($base-color-solids-flight-90,$foundation-opacity-fill-ripple); // Used as ripple effect on new notifications
-$foundation-gradient-glass-specular-surface-0: rgba($base-color-solids-white,0); // Gradient position 0% color
-$foundation-gradient-glass-specular-surface-100: rgba($base-color-solids-white,0.02); // Gradient position 100% color
-$foundation-gradient-glass-specular-border-0: rgba($base-color-solids-white,0.22); // Gradient position 0% color
-$foundation-gradient-glass-specular-border-45: rgba($base-color-solids-white,0.02); // Gradient position 10% color
-$foundation-gradient-glass-specular-border-60: rgba($base-color-solids-white,0.02); // Gradient position 60% color
-$foundation-gradient-glass-specular-border-89: rgba($base-color-solids-white,0.0925); // Gradient position 89% color
-$foundation-gradient-glass-specular-border-100: rgba($base-color-solids-white,0.12); // Gradient position 100% color
-$foundation-gradient-glass-specular-divider-0: rgba($base-color-solids-white,0.02); // Gradient position 0% color
-$foundation-gradient-glass-specular-divider-10: rgba($base-color-solids-white,0.12); // Gradient position 45% color
-$foundation-gradient-glass-specular-divider-44: rgba($base-color-solids-white,0.08); // Gradient position 44% color
-$foundation-gradient-glass-specular-divider-100: rgba($base-color-solids-white,0.02); // Gradient position 100% color
-$foundation-gradient-primary-glow-surface-base-0: rgba($base-color-solids-white,0.06); // Gradient position 0% color
-$foundation-gradient-primary-glow-surface-base-56: rgba($base-color-solids-white,0); // Gradient position 56% color
-$foundation-gradient-primary-glow-surface-base-100: rgba($base-color-solids-white,0); // Gradient position 100% color
-$foundation-gradient-primary-glow-surface-small-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
-$foundation-gradient-primary-glow-surface-small-74: rgba($base-color-solids-space-40,0); // Gradient position 74% color
-$foundation-gradient-primary-glow-surface-medium-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
-$foundation-gradient-primary-glow-surface-medium-100: rgba($base-color-solids-space-40,0); // Gradient position 100% color
-$foundation-gradient-primary-border-hovered-specular-0: rgba($base-color-solids-white,0.22); // Gradient position 0% color
-$foundation-gradient-primary-border-hovered-specular-11: rgba($base-color-solids-white,0.17); // Gradient position 11% color
-$foundation-gradient-primary-border-hovered-specular-45: rgba($base-color-solids-white,0.02); // Gradient position 10% color
-$foundation-gradient-primary-border-hovered-specular-60: rgba($base-color-solids-white,0.02); // Gradient position 60% color
-$foundation-gradient-primary-border-hovered-specular-100: rgba($base-color-solids-white,0.12); // Gradient position 100% color
-$foundation-gradient-accent-glow-surface-small-0: rgba($base-color-solids-space-40, 0.12); // Gradient position 0% color
-$foundation-gradient-accent-glow-surface-small-74: rgba($base-color-solids-space-40, 0.00); // Gradient position 74% color
-$foundation-gradient-accent-glow-surface-base-0: rgba($base-color-solids-white, 0.06); // Gradient position 0% color
-$foundation-gradient-accent-glow-surface-base-56: rgba($base-color-solids-white, 0.00); // Gradient position 56% color
-$foundation-gradient-accent-glow-surface-base-100: rgba($base-color-solids-white, 0.00); // Gradient position 100% color
-$foundation-gradient-accent-glow-surface-medium-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
-$foundation-gradient-accent-glow-surface-medium-100: rgba($base-color-solids-space-40,0); // Gradient position 100% color
-$foundation-static-white: $base-color-solids-neutral-98;
-$foundation-static-black: $base-color-solids-neutral-15;
-$foundation-static-gray: $base-color-solids-space-50;
+$opacity-medium: $base-opacity-67; // Medium emphasis opacity
+$opacity-low: $base-opacity-37; // Low emphasis opacity
+$opacity-border: $base-opacity-50; // Border opacity mainly used for semantic border colors
+$opacity-semantic-tonal: $base-opacity-5; // Tonal opacity for semantic tonal colors
+$elevation-shadow-1-color: rgba($base-color-solids-black,0.1);
+$elevation-shadow-2-color: rgba($base-color-solids-black,0.09);
+$elevation-shadow-3-color: rgba($base-color-solids-black,0.2);
+$effect-primary-glow-backlit-color: $base-color-solids-space-95;
+$effect-primary-glow-backlit-x: $base-shadow-x-0;
+$effect-primary-glow-backlit-y: $base-shadow-y-0;
+$effect-primary-glow-backlit-spread: $base-shadow-spread-0;
+$effect-primary-glow-backlit-blur: $base-shadow-blur-10;
+$effect-accent-glow-backlit-color: $base-color-solids-space-95;
+$effect-accent-glow-backlit-x: $base-shadow-x-0;
+$effect-accent-glow-backlit-y: $base-shadow-y-0;
+$effect-accent-glow-backlit-spread: $base-shadow-spread-0;
+$effect-accent-glow-backlit-blur: $base-shadow-blur-10;
+$ui-textandicon-high: $base-color-solids-space-90; // Heading, titles or high-emphasis text and icons
+$ui-textandicon-medium: rgba($base-color-solids-space-98,$opacity-medium); // Default body text or medium emphasis text and icons
+$ui-textandicon-low: rgba($base-color-solids-space-98,$opacity-low); // Low emphasis body text and icons
+$ui-textandicon-inverse: $base-color-solids-neutral-10; // Body or label text and icons on inverse background
+$ui-background-high: $base-color-solids-space-15; // High contrast component level opaque background
+$ui-background-medium: $base-color-solids-space-20; // Medium contrast component level opaque background
+$ui-background-low: $base-color-solids-space-10; // Low contrast component level opaque background
+$ui-background-page: $base-color-solids-space-10; // Default page level background
+$ui-glass-surface-thickest: rgba($base-color-solids-space-60,$base-opacity-30); // Background for glass component with highest contrast
+$ui-glass-surface-thick: rgba($base-color-solids-space-40,$base-opacity-30); // Background for glass component with higher contrast
+$ui-glass-surface-regular: rgba($base-color-solids-space-30,$base-opacity-30); // Background for glass component with medium contrast
+$ui-glass-surface-thin: rgba($base-color-solids-space-20,$base-opacity-30); // Background for glass component with less contrast
+$ui-glass-surface-thinnest: rgba($base-color-solids-space-10,$base-opacity-40); // Background for glass component with least contrast
+$ui-divider-flat-high: rgba($base-color-solids-space-80,$base-opacity-16); // Default flat divider color
+$ui-divider-flat-low: rgba($base-color-solids-space-80,$base-opacity-12); // Low emphasis flat divider color
+$ui-embellishment: $base-color-solids-flight-70; // Used on non-interactive 37° embellishment
+$interactive-primary-textandicon-selected: $base-color-solids-space-98; // Hover & selected state of interactive text and icons
+$interactive-primary-textandicon-primary-default: $base-color-solids-space-90; // Default state for primary interactive text and icons
+$interactive-primary-textandicon-secondary-default: $base-color-solids-space-70; // Default state for secondary interactive text and icons
+$interactive-primary-textandicon-disabled: rgba($base-color-solids-neutral-90,$opacity-layer-disabled); // Disabled state for interactive text and icons
+$interactive-primary-textandicon-inverse: $base-color-solids-space-20; // Default, hovered and selected state of interactive text and icons on solid filled inverse background
+$interactive-primary-background-enabled-filled: $base-color-solids-space-95; // Default background for emphasised primary buttons
+$interactive-primary-background-enabled-tonal: rgba($base-color-solids-space-80,$opacity-fill-tonal); // Default background for secondary buttons
+$interactive-primary-background-hovered: rgba($base-color-solids-space-80,$opacity-fill-hovered); // Additional state-layer background for hover state
+$interactive-primary-background-selected: rgba($base-color-solids-space-80,$opacity-fill-pressed); // Additional state-layer background for selected state
+$interactive-primary-background-disabled: rgba($base-color-solids-neutral-90,$opacity-fill-disabled); // Disabled state background
+$interactive-primary-background-ripple: rgba($base-color-solids-flight-80,$opacity-fill-ripple); // Additional layer for ripple effect
+$interactive-primary-background-hovered-blendmode: $base-color-blending-mode-plus-lighter; // Bendmode for <foundation.interactive.primary.background.hovered>
+$interactive-primary-background-selected-blendmode: $base-color-blending-mode-plus-lighter; // Bendmode for <foundation.interactive.primary.background.selected>
+$interactive-primary-border-hovered-flat: $base-color-solids-space-95; // Hover state of primary enabled buttons
+$interactive-primary-border-selected: $base-color-solids-space-95; // Selected state of primary enabled buttons
+$interactive-primary-border-enabled: rgba($base-color-solids-space-95,$base-opacity-70); // Default state of primary enabled buttons
+$interactive-primary-border-focused: rgba($base-color-solids-flight-80,$base-opacity-50); // Selected and focused state of form fields
+$interactive-primary-border-disabled: rgba($base-color-solids-neutral-90,$opacity-fill-disabled); // Disabled state of interactive elements
+$interactive-primary-glow-surface-small-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.primary.glow.surface.small>
+$interactive-primary-glow-surface-small-hovered-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.primary.glow.surface.small-hovered>
+$interactive-primary-glow-surface-medium-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.primary.glow.surface.medium>
+$interactive-accent-textandicon-default: $base-color-solids-flight-80; // Default state of accent interactive text and icons
+$interactive-accent-textandicon-selected: $base-color-solids-flight-90; // Hover & selected state of accent interactive text and icons
+$interactive-accent-textandicon-disabled: rgba($base-color-solids-neutral-90,$opacity-layer-disabled); // Disabled state of interactive text and icons
+$interactive-accent-textandicon-inverse: $base-color-solids-flight-20; // Default, hover and selected state of interactive text and icons on inverted accent solid fill background
+$interactive-accent-textandicon-visited: $base-color-solids-electric-70; // Visited state of interactive text
+$interactive-accent-background-enabled-filled: $base-color-solids-flight-80; // Default background for emphasised accent buttons
+$interactive-accent-background-enabled-tonal: rgba($base-color-solids-flight-90,$opacity-fill-tonal); // Default background for secondary accent buttons
+$interactive-accent-background-hovered: rgba($base-color-solids-space-80,$opacity-fill-hovered); // Additional state-layer background for accent hover state. Please note the additional blendmode provided by <foundation.interactive.accent.background.hovered-blendmode>
+$interactive-accent-background-selected: rgba($base-color-solids-space-80,$opacity-fill-selected); // Additional state-layer background for accent selected state
+$interactive-accent-background-disabled: rgba($base-color-solids-neutral-90,$opacity-fill-disabled); // Disabled state background
+$interactive-accent-background-hovered-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.background.hovered>
+$interactive-accent-background-selected-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.background.selected>
+$interactive-accent-border-enabled: rgba($base-color-solids-flight-80,$base-opacity-70); // Default state of accent enabled buttons
+$interactive-accent-border-hovered: $base-color-solids-flight-80; // Hover state of accent enabled buttons
+$interactive-accent-border-selected: $base-color-solids-flight-80; // Selected state of accent enabled buttons
+$interactive-accent-border-disabled: rgba($base-color-solids-neutral-90,$opacity-fill-disabled); // Disabled state of accent enabled buttons
+$interactive-accent-glow-backlit-color: $base-color-solids-flight-80; // Backlit glow color used respective effect
+$interactive-accent-glow-surface-small-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.accent.glow.surface.small>
+$interactive-accent-glow-surface-small-hovered-blendmode: $base-color-blending-mode-color-dodge; // Bendmode for <foundation.interactive.accent.glow.surface.small-hovered>
+$interactive-accent-glow-surface-medium-blendmode: $base-color-blending-mode-color-dodge; // Blendmode for <foundation.interactive.accent.glow.surface.medium>
+$semantic-border-error: rgba($base-color-solids-red-70,$opacity-border); // Used as border to indicate error state
+$semantic-border-warning: rgba($base-color-solids-yellow-80,$opacity-border); // Used as border to indicate warning state
+$semantic-border-success: rgba($base-color-solids-green-80,$opacity-border); // Used as border to indicate success state
+$semantic-border-info: rgba($base-color-solids-flight-80,$opacity-border); // Used as border to indicate info state
+$semantic-textandicon-error: $base-color-solids-red-70; // Used for error messaging on text and icons
+$semantic-textandicon-warning: $base-color-solids-yellow-80; // Used for warning messaging on text and icons
+$semantic-textandicon-success: $base-color-solids-green-80; // Used for success messaging on text and icons
+$semantic-textandicon-info: $base-color-solids-flight-80; // Used for notifications or new information on text and icons
+$semantic-background-error-filled: $base-color-solids-red-70; // Used as filled background to indicate error state
+$semantic-background-error-tonal: rgba($base-color-solids-red-80,$opacity-semantic-tonal); // Used as tonal background to indicate error state
+$semantic-background-error-ripple: rgba($base-color-solids-red-70,$opacity-fill-ripple); // Used as ripple effect on error state
+$semantic-background-warning-filled: $base-color-solids-yellow-80; // Used as filled background to indicate warning state
+$semantic-background-warning-tonal: rgba($base-color-solids-yellow-80,$opacity-semantic-tonal); // Used as tonal background to indicate warning state
+$semantic-background-warning-ripple: rgba($base-color-solids-yellow-80,$opacity-fill-ripple); // Used as ripple effect on warning state
+$semantic-background-success-filled: $base-color-solids-green-80; // Used as filled background to indicate success state
+$semantic-background-success-tonal: rgba($base-color-solids-green-80,$opacity-semantic-tonal); // Used as tonal background to indicate success state
+$semantic-background-success-ripple: rgba($base-color-solids-green-80,$opacity-fill-ripple); // Used as ripple effect on success state
+$semantic-background-info-filled: $base-color-solids-flight-90; // Used as filled background for new notifications
+$semantic-background-info-tonal: rgba($base-color-solids-flight-90,$opacity-semantic-tonal); // Used as tonal background for new notifications
+$semantic-background-info-ripple: rgba($base-color-solids-flight-90,$opacity-fill-ripple); // Used as ripple effect on new notifications
+$gradient-glass-specular-surface-0: rgba($base-color-solids-white,0); // Gradient position 0% color
+$gradient-glass-specular-surface-100: rgba($base-color-solids-white,0.02); // Gradient position 100% color
+$gradient-glass-specular-border-0: rgba($base-color-solids-white,0.22); // Gradient position 0% color
+$gradient-glass-specular-border-45: rgba($base-color-solids-white,0.02); // Gradient position 10% color
+$gradient-glass-specular-border-60: rgba($base-color-solids-white,0.02); // Gradient position 60% color
+$gradient-glass-specular-border-89: rgba($base-color-solids-white,0.0925); // Gradient position 89% color
+$gradient-glass-specular-border-100: rgba($base-color-solids-white,0.12); // Gradient position 100% color
+$gradient-glass-specular-divider-0: rgba($base-color-solids-white,0.02); // Gradient position 0% color
+$gradient-glass-specular-divider-10: rgba($base-color-solids-white,0.12); // Gradient position 45% color
+$gradient-glass-specular-divider-44: rgba($base-color-solids-white,0.08); // Gradient position 44% color
+$gradient-glass-specular-divider-100: rgba($base-color-solids-white,0.02); // Gradient position 100% color
+$gradient-primary-glow-surface-base-0: rgba($base-color-solids-white,0.06); // Gradient position 0% color
+$gradient-primary-glow-surface-base-56: rgba($base-color-solids-white,0); // Gradient position 56% color
+$gradient-primary-glow-surface-base-100: rgba($base-color-solids-white,0); // Gradient position 100% color
+$gradient-primary-glow-surface-small-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
+$gradient-primary-glow-surface-small-74: rgba($base-color-solids-space-40,0); // Gradient position 74% color
+$gradient-primary-glow-surface-medium-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
+$gradient-primary-glow-surface-medium-100: rgba($base-color-solids-space-40,0); // Gradient position 100% color
+$gradient-primary-border-hovered-specular-0: rgba($base-color-solids-white,0.22); // Gradient position 0% color
+$gradient-primary-border-hovered-specular-11: rgba($base-color-solids-white,0.17); // Gradient position 11% color
+$gradient-primary-border-hovered-specular-45: rgba($base-color-solids-white,0.02); // Gradient position 10% color
+$gradient-primary-border-hovered-specular-60: rgba($base-color-solids-white,0.02); // Gradient position 60% color
+$gradient-primary-border-hovered-specular-100: rgba($base-color-solids-white,0.12); // Gradient position 100% color
+$gradient-accent-glow-surface-small-0: rgba($base-color-solids-space-40, 0.12); // Gradient position 0% color
+$gradient-accent-glow-surface-small-74: rgba($base-color-solids-space-40, 0.00); // Gradient position 74% color
+$gradient-accent-glow-surface-base-0: rgba($base-color-solids-white, 0.06); // Gradient position 0% color
+$gradient-accent-glow-surface-base-56: rgba($base-color-solids-white, 0.00); // Gradient position 56% color
+$gradient-accent-glow-surface-base-100: rgba($base-color-solids-white, 0.00); // Gradient position 100% color
+$gradient-accent-glow-surface-medium-0: rgba($base-color-solids-space-40,0.12); // Gradient position 0% color
+$gradient-accent-glow-surface-medium-100: rgba($base-color-solids-space-40,0); // Gradient position 100% color
+$static-white: $base-color-solids-neutral-98;
+$static-black: $base-color-solids-neutral-15;
+$static-gray: $base-color-solids-space-50;

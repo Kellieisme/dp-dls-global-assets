@@ -58,11 +58,11 @@ This document outlines the requirements for enhancing the `@jeppesen-foreflight/
 
 1. **Web-Specific Implementation** - Component tokens are a convenience layer for web frameworks (Angular, React), not universal design tokens
 2. **CSS Custom Properties** - The generation mixins produce browser-specific outputs
-3. **Platform Separation** - iOS/Android use foundation tokens directly; they don't need component-level mappings
+3. **Platform Separation** - iOS/Android use foundational tokens directly; they don't need component-level mappings
 4. **Single Source** - Simplifies maintenance without complex sync processes between repos
 5. **Current Reality** - Component token files already exist here without external generation
 
-**Foundation tokens** (e.g., `--color-primary-500`, `--spacing-md`) continue to come from dp-dls-global-tokens as the design source of truth.
+**Foundational tokens** (e.g., `--color-primary-500`, `--spacing-md`) continue to come from dp-dls-global-tokens as the design source of truth.
 
 **Component tokens** (e.g., `$component-button-*`) are web framework semantic aliases maintained in this repo.
 
@@ -84,7 +84,7 @@ This document outlines the requirements for enhancing the `@jeppesen-foreflight/
 - ⏸️ Integration testing with consuming applications (dp-dls-global-angular)
 - ⏸️ Version bump and release planning
 - ⏸️ Documentation updates for consuming teams
-- ⏸️ Migration guide for teams using foundation tokens directly
+- ⏸️ Migration guide for teams using foundational tokens directly
 
 ---
 
@@ -271,7 +271,7 @@ $component-button-outlined-primary-enabled-border-color: $button-outlined-primar
 npm install @jeppesen-foreflight/dls-global-assets
 ```
 
-**2. Import foundation tokens and initialize themes:**
+**2. Import foundational tokens and initialize themes:**
 ```scss
 // In your global styles file (e.g., styles.scss)
 @import '@jeppesen-foreflight/dls-global-assets/dist/scss/base/external-tokens';
@@ -289,7 +289,7 @@ npm install @jeppesen-foreflight/dls-global-assets
 
 ### Usage in Component Styles
 
-**Before (using foundation tokens directly):**
+**Before (using foundational tokens directly):**
 ```scss
 .mat-mdc-button.mat-primary .mat-icon {
   color: var(--color-interactive-primary-textandicon-primary-default);
@@ -321,7 +321,7 @@ this.themeToggle.setDensityTheme('relaxed');
 |--------|---------|
 | `npm run build` | Build the assets library (SCSS → CSS) |
 | `npm run dev` | Run development server with hot reload |
-| `npm run tokens:sync` | Sync foundation tokens from external tokens repo (if submodule configured) |
+| `npm run tokens:sync` | Sync foundational tokens from external tokens repo (if submodule configured) |
 
 ### Troubleshooting
 
@@ -362,7 +362,7 @@ generateMixin('generateComponentButtonVariables', cssCustomProperties);
 
 **None!** This is purely additive:
 - ✅ Existing SCSS variables unchanged
-- ✅ Foundation tokens still work
+- ✅ Foundational tokens still work
 - ✅ Backward compatible
 - ✅ Optional adoption (apps can migrate gradually)
 

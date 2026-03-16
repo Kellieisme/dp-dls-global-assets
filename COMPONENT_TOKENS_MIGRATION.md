@@ -8,24 +8,24 @@
 
 ## Overview
 
-This guide helps teams migrate from using foundation tokens directly to using semantic component tokens. Component tokens provide better abstraction, clearer intent, and easier theming capabilities.
+This guide helps teams migrate from using foundational tokens directly to using semantic component tokens. Component tokens provide better abstraction, clearer intent, and easier theming capabilities.
 
 ### Prerequisites
 
-**Foundation tokens must be set up first.** Component tokens are built on top of foundation tokens (colors, spacing, typography, etc.) from the `dp-dls-global-tokens` repository.
+**Foundation tokens must be set up first.** Component tokens are built on top of foundational tokens (colors, spacing, typography, etc.) from the `dp-dls-global-tokens` repository.
 
-If you need to set up foundation tokens (compile, install, sync):
+If you need to set up foundational tokens (compile, install, sync):
 - Refer to the `dp-dls-global-tokens` repository documentation
 - See the token-service setup guide for compiling tokens from Figma
-- Ensure foundation token CSS custom properties are available before using component tokens
+- Ensure foundational token CSS custom properties are available before using component tokens
 
-This guide assumes foundation tokens are already configured and focuses on **adding component token support** to your application.
+This guide assumes foundational tokens are already configured and focuses on **adding component token support** to your application.
 
 ---
 
 ## What Changed?
 
-### Before (Foundation Tokens Direct Usage)
+### Before (Foundational Tokens Direct Usage)
 ```scss
 .mat-mdc-button.mat-primary .mat-icon {
   color: var(--color-interactive-primary-textandicon-primary-default);
@@ -49,10 +49,10 @@ This guide assumes foundation tokens are already configured and focuses on **add
 
 ## How to Import Component Tokens
 
-### Step 1: Import Foundation Tokens and Initialize Themes
+### Step 1: Import Foundational Tokens and Initialize Themes
 
 ```scss
-// Import foundation tokens (these provide the base values)
+// Import foundational tokens (these provide the base values)
 @use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/colors' as colors;
 @use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/spacing' as spacing;
 @use '@jeppesen-foreflight/dp-dls-global-tokens/dist/scss/base/external-tokens/typography' as typography;
@@ -128,7 +128,7 @@ This guide assumes foundation tokens are already configured and focuses on **add
 
 #### Outlined Button
 ```scss
-// ❌ Old (foundation tokens)
+// ❌ Old (foundational tokens)
 .button-outlined {
   color: var(--color-interactive-primary-textandicon-primary-default);
   border: 1px solid var(--color-interactive-primary-textandicon-primary-default);
@@ -249,7 +249,7 @@ This guide assumes foundation tokens are already configured and focuses on **add
 
 ## Best Practices
 
-### 1. Always Generate Component Tokens After Foundation Tokens
+### 1. Always Generate Component Tokens After Foundational Tokens
 
 ```scss
 // ✅ Correct order
@@ -262,7 +262,7 @@ This guide assumes foundation tokens are already configured and focuses on **add
 @include colors.generateColorThemeVariables(); // Too late!
 ```
 
-### 2. Use Semantic Component Tokens Instead of Foundation Tokens
+### 2. Use Semantic Component Tokens Instead of Foundational Tokens
 
 ```scss
 // ❌ Avoid - too generic, unclear intent
@@ -356,8 +356,8 @@ If you're using SCSS variables directly, they continue to work:
 ## Migration Checklist
 
 - [ ] Update `package.json` to use `@jeppesen-foreflight/dp-dls-global-assets@^4.1.0`
-- [ ] Import foundation token generation mixins
-- [ ] Call foundation token generation mixins first
+- [ ] Import foundational token generation mixins
+- [ ] Call foundational token generation mixins first
 - [ ] Import component token generation mixin
 - [ ] Call `component.generateComponentVariables()`
 - [ ] Update component styles to use `var(--component-*)` tokens
@@ -373,7 +373,7 @@ If you're using SCSS variables directly, they continue to work:
 ### Component Tokens Not Applying?
 
 **Check:**
-1. Did you generate foundation tokens first?
+1. Did you generate foundational tokens first?
 2. Did you call `@include component.generateComponentVariables()`?
 3. Are you using `var(--component-*)` syntax (not just `$component-*`)?
 
