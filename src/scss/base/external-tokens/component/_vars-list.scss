@@ -5,23 +5,23 @@
 @use '../global' as *;
 
 $component-list-vertical-padding: $spacing-s;
-$component-list-emphasis-none: $base-color-solids-transparent;
+$component-list-emphasis-none: transparent;
 $component-list-emphasis-low: $ui-background-low;
 $component-list-emphasis-medium: $ui-background-medium;
 $component-list-emphasis-high: $ui-background-high;
 $component-list-item-padding: $spacing-m;
-$component-list-item-enabled-background-color: $base-color-solids-transparent;
-$component-list-item-enabled-state-color: $base-color-solids-transparent;
-$component-list-item-hovered-background-color: $base-color-solids-transparent;
+$component-list-item-enabled-background-color: transparent;
+$component-list-item-enabled-state-color: transparent;
+$component-list-item-hovered-background-color: transparent;
 $component-list-item-hovered-state-color: $interactive-primary-background-hovered;
-$component-list-item-focused-background-color: $base-color-solids-transparent;
+$component-list-item-focused-background-color: transparent;
 $component-list-item-focused-state-color: $interactive-primary-background-selected;
-$component-list-item-pressed-background-color: $base-color-solids-transparent;
+$component-list-item-pressed-background-color: transparent;
 $component-list-item-pressed-state-color: $interactive-primary-background-selected;
 $component-list-item-dragged-background-color: $interactive-primary-background-enabled-tonal;
 $component-list-item-dragged-state-color: $interactive-primary-background-selected;
 $component-list-item-disabled-background-color: $interactive-primary-background-disabled;
-$component-list-item-disabled-state-color: $base-color-solids-transparent;
+$component-list-item-disabled-state-color: transparent;
 $component-list-item-min-height: $sizing-4xl;
 $component-list-item-content-horizontal-gap: $spacing-m;
 $component-list-item-content-overline-min-height: $sizing-xs+$sizing-3xs; // Applicable for development only. figma reqires a workaround using xs as a size variable and 3xs as a spacing

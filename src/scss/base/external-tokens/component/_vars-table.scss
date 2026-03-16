@@ -5,26 +5,26 @@
 @use '../global' as *;
 
 $component-table-vertical-padding: $spacing-s;
-$component-table-emphasis-none: $base-color-solids-transparent;
+$component-table-emphasis-none: transparent;
 $component-table-emphasis-low: $ui-background-low;
 $component-table-emphasis-medium: $ui-background-medium;
 $component-table-emphasis-high: $ui-background-high;
 $component-table-cell-padding: $spacing-m;
 $component-table-cell-gap: $spacing-m;
-$component-table-cell-background-color: $base-color-solids-transparent;
-$component-table-cell-border-color: $base-color-solids-transparent;
-$component-table-cell-enabled-state-color: $base-color-solids-transparent;
+$component-table-cell-background-color: transparent;
+$component-table-cell-border-color: transparent;
+$component-table-cell-enabled-state-color: transparent;
 $component-table-cell-enabled-textandicon-color: $interactive-primary-textandicon-primary-default;
 $component-table-cell-hovered-state-color: $interactive-primary-background-hovered;
 $component-table-cell-hovered-textandicon-color: $interactive-primary-textandicon-selected;
 $component-table-cell-focused-state-color: $interactive-primary-background-selected;
 $component-table-cell-focused-textandicon-color: $interactive-primary-textandicon-selected;
-$component-table-cell-disabled-state-color: $base-color-solids-transparent;
+$component-table-cell-disabled-state-color: transparent;
 $component-table-cell-disabled-textandicon-color: $interactive-primary-textandicon-disabled;
 $component-table-cell-min-height: $sizing-4xl;
 $component-table-header-padding: $spacing-m;
 $component-table-header-gap: $spacing-m;
-$component-table-header-background-color: $base-color-solids-transparent;
+$component-table-header-background-color: transparent;
 $component-table-header-textandicon-color: $ui-textandicon-high;
 $component-table-header-min-height: $sizing-5xl;
 @mixin component-table-cell-textstyle () {

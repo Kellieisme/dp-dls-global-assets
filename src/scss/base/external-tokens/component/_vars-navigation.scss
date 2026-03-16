@@ -21,7 +21,7 @@ $component-navitem-drawer-indent-level3: calc($sizing-6xl-fixed - $component-nav
 $component-navitem-drawer-icon-size: $icon-md;
 $component-navitem-drawer-label-margin-horizontal: $spacing-xs;
 $component-navitem-drawer-badge-margin-right: $spacing-xs;
-$component-navitem-background-enabled: $base-color-solids-transparent;
+$component-navitem-background-enabled: transparent;
 $component-navitem-background-selected: $interactive-primary-background-enabled-tonal;
 $component-navitem-resting-enabled-textandicon: $interactive-primary-textandicon-secondary-default; // Used for leading icon, label and trailing icon
 $component-navitem-resting-selected-textandicon: $interactive-primary-textandicon-primary-default; // Used for leading icon, label and trailing icon
