@@ -4,267 +4,267 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-chip-input-corner-radius-avatar: $foundation-radius-full;
-$component-chip-input-corner-radius-default: $foundation-radius-s;
-$component-chip-input-border-width: $foundation-border-regular-width;
-$component-chip-input-height: $foundation-sizing-2xl;
+$component-chip-input-corner-radius-avatar: $radius-full;
+$component-chip-input-corner-radius-default: $radius-s;
+$component-chip-input-border-width: $border-regular-width;
+$component-chip-input-height: $sizing-2xl;
 $component-chip-input-min-height: 28px;
-$component-chip-input-gap: $foundation-spacing-none;
-$component-chip-input-padding-horizontal: $foundation-spacing-2xs-fixed;
-$component-chip-input-padding-avatar: $foundation-spacing-2xs;
-$component-chip-input-leadimng-item-margin-left: $foundation-spacing-2xs-fixed;
-$component-chip-input-label-margin: $foundation-spacing-xs;
-$component-chip-input-enabled-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-input-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default;
-$component-chip-input-hovered-border-color: $foundation-interactive-primary-border-hovered-flat;
-$component-chip-input-hovered-state: $foundation-interactive-primary-background-hovered;
-$component-chip-input-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-input-focused-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-input-focused-state: $foundation-interactive-primary-background-selected;
-$component-chip-input-focused-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-input-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-input-pressed-state: $foundation-interactive-primary-background-selected;
-$component-chip-input-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-input-dragged-background-color: $foundation-ui-glass-surface-regular;
-$component-chip-input-dragged-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-input-dragged-state: $foundation-interactive-primary-background-selected;
-$component-chip-input-dragged-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-input-dragged-background-blur: $foundation-ui-glass-background-blur;
-$component-chip-input-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-chip-input-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
-$component-chip-assistive-corner-radius: $foundation-radius-s;
-$component-chip-assistive-border-width: $foundation-border-regular-width;
-$component-chip-assistive-height: $foundation-sizing-2xl;
+$component-chip-input-gap: $spacing-none;
+$component-chip-input-padding-horizontal: $spacing-2xs-fixed;
+$component-chip-input-padding-avatar: $spacing-2xs;
+$component-chip-input-leadimng-item-margin-left: $spacing-2xs-fixed;
+$component-chip-input-label-margin: $spacing-xs;
+$component-chip-input-enabled-border-color: $interactive-primary-border-enabled;
+$component-chip-input-enabled-textandicon: $interactive-primary-textandicon-secondary-default;
+$component-chip-input-hovered-border-color: $interactive-primary-border-hovered-flat;
+$component-chip-input-hovered-state: $interactive-primary-background-hovered;
+$component-chip-input-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-input-focused-border-color: $interactive-primary-border-selected;
+$component-chip-input-focused-state: $interactive-primary-background-selected;
+$component-chip-input-focused-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-input-pressed-border-color: $interactive-primary-border-selected;
+$component-chip-input-pressed-state: $interactive-primary-background-selected;
+$component-chip-input-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-input-dragged-background-color: $ui-glass-surface-regular;
+$component-chip-input-dragged-border-color: $interactive-primary-border-enabled;
+$component-chip-input-dragged-state: $interactive-primary-background-selected;
+$component-chip-input-dragged-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-input-dragged-background-blur: $ui-glass-background-blur;
+$component-chip-input-disabled-border-color: $interactive-primary-border-disabled;
+$component-chip-input-disabled-textandicon: $interactive-primary-textandicon-disabled;
+$component-chip-assistive-corner-radius: $radius-s;
+$component-chip-assistive-border-width: $border-regular-width;
+$component-chip-assistive-height: $sizing-2xl;
 $component-chip-assistive-min-height: 28px;
-$component-chip-assistive-gap: $foundation-spacing-none;
-$component-chip-assistive-padding-horizontal: $foundation-spacing-xs-fixed;
-$component-chip-assistive-label-margin: $foundation-spacing-xs;
-$component-chip-assistive-enabled-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-assistive-enabled-elevated: $foundation-ui-background-high;
-$component-chip-assistive-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default;
-$component-chip-assistive-hovered-border-color: $foundation-interactive-primary-border-hovered-flat;
-$component-chip-assistive-hovered-elevated: $foundation-ui-background-high;
-$component-chip-assistive-hovered-state: $foundation-interactive-primary-background-hovered;
-$component-chip-assistive-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-assistive-focused-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-assistive-focused-elevated: $foundation-ui-background-high;
-$component-chip-assistive-focused-state: $foundation-interactive-primary-background-selected;
-$component-chip-assistive-focused-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-assistive-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-assistive-pressed-elevated: $foundation-ui-background-high;
-$component-chip-assistive-pressed-state: $foundation-interactive-primary-background-selected;
-$component-chip-assistive-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-assistive-dragged-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-assistive-dragged-elevated: $foundation-ui-background-high;
-$component-chip-assistive-dragged-outlined: $foundation-ui-glass-surface-regular;
-$component-chip-assistive-dragged-state: $foundation-interactive-primary-background-selected;
-$component-chip-assistive-dragged-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-assistive-dragged-background-blur: $foundation-ui-glass-background-blur;
-$component-chip-assistive-disabled-elevated: $foundation-interactive-primary-background-disabled;
-$component-chip-assistive-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-chip-assistive-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
-$component-chip-filter-corner-radius: $foundation-radius-s;
-$component-chip-filter-border-width: $foundation-border-regular-width;
-$component-chip-filter-height: $foundation-sizing-2xl;
+$component-chip-assistive-gap: $spacing-none;
+$component-chip-assistive-padding-horizontal: $spacing-xs-fixed;
+$component-chip-assistive-label-margin: $spacing-xs;
+$component-chip-assistive-enabled-border-color: $interactive-primary-border-enabled;
+$component-chip-assistive-enabled-elevated: $ui-background-high;
+$component-chip-assistive-enabled-textandicon: $interactive-primary-textandicon-secondary-default;
+$component-chip-assistive-hovered-border-color: $interactive-primary-border-hovered-flat;
+$component-chip-assistive-hovered-elevated: $ui-background-high;
+$component-chip-assistive-hovered-state: $interactive-primary-background-hovered;
+$component-chip-assistive-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-assistive-focused-border-color: $interactive-primary-border-selected;
+$component-chip-assistive-focused-elevated: $ui-background-high;
+$component-chip-assistive-focused-state: $interactive-primary-background-selected;
+$component-chip-assistive-focused-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-assistive-pressed-border-color: $interactive-primary-border-selected;
+$component-chip-assistive-pressed-elevated: $ui-background-high;
+$component-chip-assistive-pressed-state: $interactive-primary-background-selected;
+$component-chip-assistive-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-assistive-dragged-border-color: $interactive-primary-border-enabled;
+$component-chip-assistive-dragged-elevated: $ui-background-high;
+$component-chip-assistive-dragged-outlined: $ui-glass-surface-regular;
+$component-chip-assistive-dragged-state: $interactive-primary-background-selected;
+$component-chip-assistive-dragged-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-assistive-dragged-background-blur: $ui-glass-background-blur;
+$component-chip-assistive-disabled-elevated: $interactive-primary-background-disabled;
+$component-chip-assistive-disabled-border-color: $interactive-primary-border-disabled;
+$component-chip-assistive-disabled-textandicon: $interactive-primary-textandicon-disabled;
+$component-chip-filter-corner-radius: $radius-s;
+$component-chip-filter-border-width: $border-regular-width;
+$component-chip-filter-height: $sizing-2xl;
 $component-chip-filter-min-height: 28px;
-$component-chip-filter-gap: $foundation-spacing-none;
-$component-chip-filter-padding-horizontal: $foundation-spacing-2xs-fixed;
-$component-chip-filter-label-margin: $foundation-spacing-xs;
-$component-chip-filter-enabled-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-filter-enabled-elevated: $foundation-ui-background-high;
-$component-chip-filter-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default;
-$component-chip-filter-selected-background-color: $foundation-interactive-accent-background-enabled-filled;
-$component-chip-filter-selected-textandicon: $foundation-interactive-accent-textandicon-inverse;
-$component-chip-filter-selected-hovered: $foundation-interactive-accent-background-hovered;
-$component-chip-filter-selected-focused: $foundation-interactive-accent-background-selected;
-$component-chip-filter-selected-pressed: $foundation-interactive-accent-background-selected;
-$component-chip-filter-selected-dragged: $foundation-interactive-accent-background-selected;
-$component-chip-filter-hovered-border-color: $foundation-interactive-primary-border-hovered-flat;
-$component-chip-filter-hovered-elevated: $foundation-ui-background-high;
-$component-chip-filter-hovered-state: $foundation-interactive-primary-background-hovered;
-$component-chip-filter-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-filter-focused-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-filter-focused-elevated: $foundation-ui-background-high;
-$component-chip-filter-focused-state: $foundation-interactive-primary-background-selected;
-$component-chip-filter-focused-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-filter-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-filter-pressed-elevated: $foundation-ui-background-high;
-$component-chip-filter-pressed-state: $foundation-interactive-primary-background-selected;
-$component-chip-filter-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-filter-dragged-background-blur: $foundation-ui-glass-background-blur;
-$component-chip-filter-dragged-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-filter-dragged-elevated: $foundation-ui-background-high;
-$component-chip-filter-dragged-outlined: $foundation-ui-glass-surface-regular;
-$component-chip-filter-dragged-state: $foundation-interactive-primary-background-selected;
-$component-chip-filter-dragged-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-filter-disabled-elevated: $foundation-interactive-primary-background-disabled;
-$component-chip-filter-disabled-selected: $foundation-interactive-primary-background-disabled;
-$component-chip-filter-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-chip-filter-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
-$component-chip-suggestion-corner-radius: $foundation-radius-s;
-$component-chip-suggestion-border-width: $foundation-border-regular-width;
-$component-chip-suggestion-height: $foundation-sizing-2xl;
+$component-chip-filter-gap: $spacing-none;
+$component-chip-filter-padding-horizontal: $spacing-2xs-fixed;
+$component-chip-filter-label-margin: $spacing-xs;
+$component-chip-filter-enabled-border-color: $interactive-primary-border-enabled;
+$component-chip-filter-enabled-elevated: $ui-background-high;
+$component-chip-filter-enabled-textandicon: $interactive-primary-textandicon-secondary-default;
+$component-chip-filter-selected-background-color: $interactive-accent-background-enabled-filled;
+$component-chip-filter-selected-textandicon: $interactive-accent-textandicon-inverse;
+$component-chip-filter-selected-hovered: $interactive-accent-background-hovered;
+$component-chip-filter-selected-focused: $interactive-accent-background-selected;
+$component-chip-filter-selected-pressed: $interactive-accent-background-selected;
+$component-chip-filter-selected-dragged: $interactive-accent-background-selected;
+$component-chip-filter-hovered-border-color: $interactive-primary-border-hovered-flat;
+$component-chip-filter-hovered-elevated: $ui-background-high;
+$component-chip-filter-hovered-state: $interactive-primary-background-hovered;
+$component-chip-filter-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-filter-focused-border-color: $interactive-primary-border-selected;
+$component-chip-filter-focused-elevated: $ui-background-high;
+$component-chip-filter-focused-state: $interactive-primary-background-selected;
+$component-chip-filter-focused-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-filter-pressed-border-color: $interactive-primary-border-selected;
+$component-chip-filter-pressed-elevated: $ui-background-high;
+$component-chip-filter-pressed-state: $interactive-primary-background-selected;
+$component-chip-filter-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-filter-dragged-background-blur: $ui-glass-background-blur;
+$component-chip-filter-dragged-border-color: $interactive-primary-border-enabled;
+$component-chip-filter-dragged-elevated: $ui-background-high;
+$component-chip-filter-dragged-outlined: $ui-glass-surface-regular;
+$component-chip-filter-dragged-state: $interactive-primary-background-selected;
+$component-chip-filter-dragged-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-filter-disabled-elevated: $interactive-primary-background-disabled;
+$component-chip-filter-disabled-selected: $interactive-primary-background-disabled;
+$component-chip-filter-disabled-border-color: $interactive-primary-border-disabled;
+$component-chip-filter-disabled-textandicon: $interactive-primary-textandicon-disabled;
+$component-chip-suggestion-corner-radius: $radius-s;
+$component-chip-suggestion-border-width: $border-regular-width;
+$component-chip-suggestion-height: $sizing-2xl;
 $component-chip-suggestion-min-height: 28px;
-$component-chip-suggestion-gap: $foundation-spacing-none;
-$component-chip-suggestion-padding-horizontal: $foundation-spacing-2xs-fixed;
-$component-chip-suggestion-label-margin: $foundation-spacing-xs;
-$component-chip-suggestion-enabled-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-suggestion-enabled-elevated: $foundation-ui-background-high;
-$component-chip-suggestion-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default;
-$component-chip-suggestion-selected-background-color: $foundation-interactive-accent-background-enabled-filled;
-$component-chip-suggestion-selected-textandicon: $foundation-interactive-accent-textandicon-inverse;
-$component-chip-suggestion-selected-hovered: $foundation-interactive-accent-background-hovered;
-$component-chip-suggestion-selected-focused: $foundation-interactive-accent-background-selected;
-$component-chip-suggestion-selected-pressed: $foundation-interactive-accent-background-selected;
-$component-chip-suggestion-selected-dragged: $foundation-interactive-accent-background-selected;
-$component-chip-suggestion-hovered-border-color: $foundation-interactive-primary-border-hovered-flat;
-$component-chip-suggestion-hovered-elevated: $foundation-ui-background-high;
-$component-chip-suggestion-hovered-state: $foundation-interactive-primary-background-hovered;
-$component-chip-suggestion-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-suggestion-focused-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-suggestion-focused-elevated: $foundation-ui-background-high;
-$component-chip-suggestion-focused-state: $foundation-interactive-primary-background-selected;
-$component-chip-suggestion-focused-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-suggestion-pressed-border-color: $foundation-interactive-primary-border-selected;
-$component-chip-suggestion-pressed-elevated: $foundation-ui-background-high;
-$component-chip-suggestion-pressed-state: $foundation-interactive-primary-background-selected;
-$component-chip-suggestion-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-suggestion-dragged-background-blur: $foundation-ui-glass-background-blur;
-$component-chip-suggestion-dragged-border-color: $foundation-interactive-primary-border-enabled;
-$component-chip-suggestion-dragged-elevated: $foundation-ui-background-high;
-$component-chip-suggestion-dragged-outlined: $foundation-ui-glass-surface-regular;
-$component-chip-suggestion-dragged-state: $foundation-interactive-primary-background-selected;
-$component-chip-suggestion-dragged-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-suggestion-disabled-elevated: $foundation-interactive-primary-background-disabled;
-$component-chip-suggestion-disabled-selected: $foundation-interactive-primary-background-disabled;
-$component-chip-suggestion-disabled-border-color: $foundation-interactive-primary-border-disabled;
-$component-chip-suggestion-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
-$component-chip-icon-size: $foundation-icon-xs;
-$component-chip-avatar-size: $foundation-icon-md;
-$component-chip-avatar-margin-left: -$foundation-spacing-2xs-fixed; // Code-only layout fix
-$component-chip-avatar-wrapper: $foundation-sizing-l-fixed; // The wrapper is a Figma-only layout fix
-$component-chip-leadimng-item-margin-left: $foundation-spacing-2xs;
-$component-chip-trailing-item-margin-right: $foundation-spacing-2xs;
-$component-chip-remove-button-padding: $foundation-spacing-2xs;
+$component-chip-suggestion-gap: $spacing-none;
+$component-chip-suggestion-padding-horizontal: $spacing-2xs-fixed;
+$component-chip-suggestion-label-margin: $spacing-xs;
+$component-chip-suggestion-enabled-border-color: $interactive-primary-border-enabled;
+$component-chip-suggestion-enabled-elevated: $ui-background-high;
+$component-chip-suggestion-enabled-textandicon: $interactive-primary-textandicon-secondary-default;
+$component-chip-suggestion-selected-background-color: $interactive-accent-background-enabled-filled;
+$component-chip-suggestion-selected-textandicon: $interactive-accent-textandicon-inverse;
+$component-chip-suggestion-selected-hovered: $interactive-accent-background-hovered;
+$component-chip-suggestion-selected-focused: $interactive-accent-background-selected;
+$component-chip-suggestion-selected-pressed: $interactive-accent-background-selected;
+$component-chip-suggestion-selected-dragged: $interactive-accent-background-selected;
+$component-chip-suggestion-hovered-border-color: $interactive-primary-border-hovered-flat;
+$component-chip-suggestion-hovered-elevated: $ui-background-high;
+$component-chip-suggestion-hovered-state: $interactive-primary-background-hovered;
+$component-chip-suggestion-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-suggestion-focused-border-color: $interactive-primary-border-selected;
+$component-chip-suggestion-focused-elevated: $ui-background-high;
+$component-chip-suggestion-focused-state: $interactive-primary-background-selected;
+$component-chip-suggestion-focused-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-suggestion-pressed-border-color: $interactive-primary-border-selected;
+$component-chip-suggestion-pressed-elevated: $ui-background-high;
+$component-chip-suggestion-pressed-state: $interactive-primary-background-selected;
+$component-chip-suggestion-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-suggestion-dragged-background-blur: $ui-glass-background-blur;
+$component-chip-suggestion-dragged-border-color: $interactive-primary-border-enabled;
+$component-chip-suggestion-dragged-elevated: $ui-background-high;
+$component-chip-suggestion-dragged-outlined: $ui-glass-surface-regular;
+$component-chip-suggestion-dragged-state: $interactive-primary-background-selected;
+$component-chip-suggestion-dragged-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-suggestion-disabled-elevated: $interactive-primary-background-disabled;
+$component-chip-suggestion-disabled-selected: $interactive-primary-background-disabled;
+$component-chip-suggestion-disabled-border-color: $interactive-primary-border-disabled;
+$component-chip-suggestion-disabled-textandicon: $interactive-primary-textandicon-disabled;
+$component-chip-icon-size: $icon-xs;
+$component-chip-avatar-size: $icon-md;
+$component-chip-avatar-margin-left: -$spacing-2xs-fixed; // Code-only layout fix
+$component-chip-avatar-wrapper: $sizing-l-fixed; // The wrapper is a Figma-only layout fix
+$component-chip-leadimng-item-margin-left: $spacing-2xs;
+$component-chip-trailing-item-margin-right: $spacing-2xs;
+$component-chip-remove-button-padding: $spacing-2xs;
 $component-chip-remove-button-size: 18px;
-$component-chip-remove-button-corner-radius: $foundation-radius-full;
-$component-chip-remove-button-primary-hovered-background: $foundation-interactive-primary-background-hovered;
-$component-chip-remove-button-primary-hovered-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-remove-button-primary-pressed-background: $foundation-interactive-primary-background-selected;
-$component-chip-remove-button-primary-pressed-textandicon: $foundation-interactive-primary-textandicon-selected;
-$component-chip-remove-button-primary-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default;
-$component-chip-remove-button-primary-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
-$component-chip-remove-button-accent-hovered-background: $foundation-interactive-accent-background-hovered;
-$component-chip-remove-button-accent-hovered-textandicon: $foundation-interactive-accent-textandicon-inverse;
-$component-chip-remove-button-accent-pressed-background: $foundation-interactive-accent-background-selected;
-$component-chip-remove-button-accent-pressed-textandicon: $foundation-interactive-accent-textandicon-inverse;
-$component-chip-remove-button-accent-enabled-textandicon: $foundation-interactive-accent-textandicon-inverse;
-$component-chip-remove-button-accent-disabled-textandicon: $foundation-interactive-primary-textandicon-disabled;
+$component-chip-remove-button-corner-radius: $radius-full;
+$component-chip-remove-button-primary-hovered-background: $interactive-primary-background-hovered;
+$component-chip-remove-button-primary-hovered-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-remove-button-primary-pressed-background: $interactive-primary-background-selected;
+$component-chip-remove-button-primary-pressed-textandicon: $interactive-primary-textandicon-selected;
+$component-chip-remove-button-primary-enabled-textandicon: $interactive-primary-textandicon-secondary-default;
+$component-chip-remove-button-primary-disabled-textandicon: $interactive-primary-textandicon-disabled;
+$component-chip-remove-button-accent-hovered-background: $interactive-accent-background-hovered;
+$component-chip-remove-button-accent-hovered-textandicon: $interactive-accent-textandicon-inverse;
+$component-chip-remove-button-accent-pressed-background: $interactive-accent-background-selected;
+$component-chip-remove-button-accent-pressed-textandicon: $interactive-accent-textandicon-inverse;
+$component-chip-remove-button-accent-enabled-textandicon: $interactive-accent-textandicon-inverse;
+$component-chip-remove-button-accent-disabled-textandicon: $interactive-primary-textandicon-disabled;
 @mixin component-chip-input-label-textstyle () {
-  @include typography.foundation-typography-label-medium();
+  @include typography.typography-label-medium();
 }
 @mixin component-chip-input-enabled-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-enabled-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-enabled-border-color);;
 }
 @mixin component-chip-input-hovered-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-hovered-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-hovered-border-color);;
 }
 @mixin component-chip-input-focused-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-focused-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-focused-border-color);;
 }
 @mixin component-chip-input-pressed-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-pressed-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-pressed-border-color);;
 }
 @mixin component-chip-input-dragged-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-dragged-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-dragged-border-color);;
 }
 @mixin component-chip-input-disabled-border ($direction) {
-  @include utils.border($direction, $component-chip-input-border-width, $foundation-border-regular-style, $component-chip-input-disabled-border-color);;
+  @include utils.border($direction, $component-chip-input-border-width, $border-regular-style, $component-chip-input-disabled-border-color);;
 }
 @mixin component-chip-input-elevation-dragged () {
-  @include foundation-elevation-2();
+  @include elevation-2();
 }
 @mixin component-chip-input-elevation-hovered () {
-  @include foundation-elevation-1();
+  @include elevation-1();
 }
 @mixin component-chip-assistive-elevation-dragged () {
-  @include foundation-elevation-2();
+  @include elevation-2();
 }
 @mixin component-chip-assistive-elevation-hovered () {
-  @include foundation-elevation-1();
+  @include elevation-1();
 }
 @mixin component-chip-assistive-label-textstyle () {
-  @include typography.foundation-typography-label-medium();
+  @include typography.typography-label-medium();
 }
 @mixin component-chip-assistive-enabled-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-enabled-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-enabled-border-color);;
 }
 @mixin component-chip-assistive-hovered-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-hovered-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-hovered-border-color);;
 }
 @mixin component-chip-assistive-focused-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-focused-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-focused-border-color);;
 }
 @mixin component-chip-assistive-pressed-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-pressed-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-pressed-border-color);;
 }
 @mixin component-chip-assistive-dragged-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-dragged-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-dragged-border-color);;
 }
 @mixin component-chip-assistive-disabled-border ($direction) {
-  @include utils.border($direction, $component-chip-assistive-border-width, $foundation-border-regular-style, $component-chip-assistive-disabled-border-color);;
+  @include utils.border($direction, $component-chip-assistive-border-width, $border-regular-style, $component-chip-assistive-disabled-border-color);;
 }
 @mixin component-chip-filter-label-textstyle () {
-  @include typography.foundation-typography-label-medium();
+  @include typography.typography-label-medium();
 }
 @mixin component-chip-filter-elevation-dragged () {
-  @include foundation-elevation-2();
+  @include elevation-2();
 }
 @mixin component-chip-filter-elevation-hovered () {
-  @include foundation-elevation-1();
+  @include elevation-1();
 }
 @mixin component-chip-filter-enabled-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-enabled-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-enabled-border-color);;
 }
 @mixin component-chip-filter-hovered-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-hovered-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-hovered-border-color);;
 }
 @mixin component-chip-filter-focused-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-focused-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-focused-border-color);;
 }
 @mixin component-chip-filter-pressed-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-pressed-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-pressed-border-color);;
 }
 @mixin component-chip-filter-dragged-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-dragged-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-dragged-border-color);;
 }
 @mixin component-chip-filter-disabled-border ($direction) {
-  @include utils.border($direction, $component-chip-filter-border-width, $foundation-border-regular-style, $component-chip-filter-disabled-border-color);;
+  @include utils.border($direction, $component-chip-filter-border-width, $border-regular-style, $component-chip-filter-disabled-border-color);;
 }
 @mixin component-chip-suggestion-label-textstyle () {
-  @include typography.foundation-typography-label-medium();
+  @include typography.typography-label-medium();
 }
 @mixin component-chip-suggestion-elevation-dragged () {
-  @include foundation-elevation-2();
+  @include elevation-2();
 }
 @mixin component-chip-suggestion-elevation-hovered () {
-  @include foundation-elevation-1();
+  @include elevation-1();
 }
 @mixin component-chip-suggestion-enabled-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-enabled-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-enabled-border-color);;
 }
 @mixin component-chip-suggestion-hovered-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-hovered-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-hovered-border-color);;
 }
 @mixin component-chip-suggestion-focused-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-focused-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-focused-border-color);;
 }
 @mixin component-chip-suggestion-pressed-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-pressed-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-pressed-border-color);;
 }
 @mixin component-chip-suggestion-dragged-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-dragged-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-dragged-border-color);;
 }
 @mixin component-chip-suggestion-disabled-border ($direction) {
-  @include utils.border($direction, $component-chip-suggestion-border-width, $foundation-border-regular-style, $component-chip-suggestion-disabled-border-color);;
+  @include utils.border($direction, $component-chip-suggestion-border-width, $border-regular-style, $component-chip-suggestion-disabled-border-color);;
 }

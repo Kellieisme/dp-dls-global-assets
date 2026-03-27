@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(curl -s \"http://localhost:4200/chunk-6DJ2WMDV.js\")"
+    ]
+  }
+}

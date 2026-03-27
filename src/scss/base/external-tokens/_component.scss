@@ -1,0 +1,90 @@
+// ===========================
+// COMPONENT TOKENS - UNIFIED IMPORT
+// ===========================
+// This file provides a single entry point for all component token generation.
+// Use this to generate CSS custom properties for component-level tokens.
+
+// Forward all component token files for variable access
+@forward './component/vars-commonbutton';
+@forward './component/vars-textfield';
+@forward './component/vars-iconbutton';
+@forward './component/vars-menu';
+@forward './component/vars-list';
+@forward './component/vars-checkbox';
+@forward './component/vars-radiobutton';
+@forward './component/vars-select';
+@forward './component/vars-switch';
+@forward './component/vars-chip';
+@forward './component/vars-badge';
+@forward './component/vars-card';
+@forward './component/vars-dialog';
+@forward './component/vars-divider';
+@forward './component/vars-navigation';
+@forward './component/vars-table';
+@forward './component/vars-tabs';
+@forward './component/vars-tooltip';
+@forward './component/vars-snackbar';
+@forward './component/vars-topappbar';
+@forward './component/vars-breadcrumb';
+@forward './component/vars-profile';
+@forward './component/vars-sidesheet';
+@forward './component/vars-date picker';
+
+// Use component token files to access mixins
+@use './component/vars-commonbutton' as button;
+@use './component/vars-textfield' as textfield;
+@use './component/vars-iconbutton' as iconbutton;
+@use './component/vars-menu' as menu;
+@use './component/vars-checkbox' as checkbox;
+@use './component/vars-radiobutton' as radio;
+@use './component/vars-select' as select;
+@use './component/vars-switch' as switch;
+@use './component/vars-list' as list;
+@use './component/vars-chip' as chip;
+@use './component/vars-badge' as badge;
+@use './component/vars-card' as card;
+@use './component/vars-dialog' as dialog;
+@use './component/vars-divider' as divider;
+@use './component/vars-navigation' as navigation;
+@use './component/vars-table' as table;
+@use './component/vars-tabs' as tabs;
+@use './component/vars-tooltip' as tooltip;
+@use './component/vars-snackbar' as snackbar;
+@use './component/vars-topappbar' as topappbar;
+@use './component/vars-breadcrumb' as breadcrumb;
+@use './component/vars-profile' as profile;
+@use './component/vars-sidesheet' as sidesheet;
+@use './component/vars-date picker' as datepicker;
+
+// ===========================
+// MASTER MIXIN - GENERATES ALL COMPONENT TOKENS
+// ===========================
+// Usage in consuming applications:
+// @use '@jeppesen-foreflight/dls-global-assets/dist/scss/base/external-tokens/component' as component;
+// @include component.generateComponentVariables();
+@mixin generateComponentVariables() {
+  @include button.generateComponentButtonVariables();
+  @include textfield.generateComponentTextfieldVariables();
+  @include iconbutton.generateComponentIconButtonVariables();
+  @include menu.generateComponentMenuVariables();
+  @include checkbox.generateComponentCheckboxVariables();
+  @include radio.generateComponentRadioVariables();
+  @include select.generateComponentSelectVariables();
+  @include switch.generateComponentSwitchVariables();
+  @include list.generateComponentListVariables();
+  @include chip.generateComponentChipVariables();
+  @include badge.generateComponentBadgeVariables();
+  @include card.generateComponentCardVariables();
+  @include dialog.generateComponentDialogVariables();
+  @include divider.generateComponentDividerVariables();
+  @include navigation.generateComponentNavigationVariables();
+  @include table.generateComponentTableVariables();
+  @include tabs.generateComponentTabsVariables();
+  @include tooltip.generateComponentTooltipVariables();
+  @include snackbar.generateComponentSnackbarVariables();
+  @include topappbar.generateComponentTopappbarVariables();
+  @include breadcrumb.generateComponentBreadcrumbVariables();
+  @include profile.generateComponentProfileVariables();
+  @include sidesheet.generateComponentSidesheetVariables();
+  @include datepicker.generateComponentDatePickerVariables();
+}

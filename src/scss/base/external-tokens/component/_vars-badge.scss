@@ -4,14 +4,14 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-badge-large-height: $foundation-sizing-m-fixed;
-$component-badge-large-min-width: $foundation-sizing-m-fixed;
-$component-badge-large-max-width: $foundation-sizing-2xl-fixed;
-$component-badge-padding-horizontal: $foundation-spacing-2xs-fixed;
-$component-badge-textcolor: $foundation-ui-textandicon-inverse;
-$component-badge-corner-radius: $foundation-radius-full;
-$component-badge-background: $foundation-semantic-background-error-filled;
+$component-badge-large-height: $sizing-m-fixed;
+$component-badge-large-min-width: $sizing-m-fixed;
+$component-badge-large-max-width: $sizing-2xl-fixed;
+$component-badge-padding-horizontal: $spacing-2xs-fixed;
+$component-badge-textcolor: $ui-textandicon-inverse;
+$component-badge-corner-radius: $radius-full;
+$component-badge-background: $semantic-background-error-filled;
 $component-badge-small-size: 6px;
 @mixin textstyle () {
-  @include typography.foundation-typography-label-lowest();
+  @include typography.typography-label-lowest();
 }

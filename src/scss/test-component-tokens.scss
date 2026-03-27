@@ -1,0 +1,40 @@
+// ===========================
+// TEST FILE - Component Token Mixin
+// ===========================
+// This file tests that the component token generation mixin works correctly
+// Compile with: sass src/scss/test-component-tokens.scss dist/test-component-tokens.css
+
+// Import only the components we've implemented (to avoid errors in other files)
+@use 'base/external-tokens/component/vars-commonbutton' as button;
+@use 'base/external-tokens/component/vars-textfield' as textfield;
+@use 'base/external-tokens/component/vars-iconbutton' as iconbutton;
+
+// Generate CSS custom properties for the 3 implemented components
+@include button.generateComponentButtonVariables();
+@include textfield.generateComponentTextfieldVariables();
+@include iconbutton.generateComponentIconButtonVariables();
+
+// Test usage: verify we can reference the generated custom properties
+.test-button {
+  color: var(--component-button-outlined-primary-enabled-textandicon);
+  border-color: var(--component-button-outlined-primary-enabled-border-color);
+  height: var(--component-button-height);
+}
+
+.test-textfield {
+  background: var(--component-textfield-background);
+  color: var(--component-textfield-enabled-value);
+  padding: var(--component-textfield-padding-horizontal);
+}
+
+.test-iconbutton {
+  color: var(--component-iconbutton-icon-color);
+  
+  &:hover {
+    color: var(--component-iconbutton-hovered-icon-color);
+  }
+  
+  &:disabled {
+    color: var(--component-iconbutton-disabled-icon-color);
+  }
+}
