@@ -66,17 +66,30 @@ git commit -m "Update external-tokens submodule"
 
 ```bash
 # Compile external tokens
-cd ~/Documents/jeppffy/dp-dls-global-tokens/packages/tokens && npm run compile
+cd ../dp-dls-global-tokens/packages/tokens && npm run compile
 
-# Sync to assets
-rsync -av --delete ~/Documents/jeppffy/dp-dls-global-tokens/packages/tokens/dist/scss/ \
-  ~/Documents/jeppffy/dp-dls-global-assets/src/scss/base/external-tokens/
+# Sync to assets (run from jeppffy/ root)
+rsync -av --delete ../dp-dls-global-tokens/packages/tokens/dist/scss/ \
+  ../dp-dls-global-assets/src/scss/base/external-tokens/
 
 # Build assets
-cd ~/Documents/jeppffy/dp-dls-global-assets && npm run build
+cd ../dp-dls-global-assets && npm run build
 
 # Compile Figma tokens (legacy)
-cd ~/Documents/jeppffy/dp-dls-global-assets/token-service && npm run ts
+cd ../dp-dls-global-assets/token-service && npm run ts
+```
+
+## ⚠️ Token Sync Warning
+
+**Do NOT let the rsync overwrite `_breakpoints.scss`.**
+
+The tokens repo generates a broken `_breakpoints.scss` (mixin with no name). The assets repo has a hand-crafted version with `generateBreakpointVariables()` and `media-breakpoint()` mixins that the Angular library depends on.
+
+If you accidentally overwrite it, restore with:
+
+```bash
+cd ../dp-dls-global-assets
+git checkout HEAD -- src/scss/base/external-tokens/_breakpoints.scss
 ```
 
 ## Dependencies
