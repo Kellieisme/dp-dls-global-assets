@@ -10,7 +10,7 @@ This repo uses **external tokens** from the `dp-dls-global-tokens` package. The 
 
 ```bash
 # Navigate to standalone tokens repo
-cd /Users/kellieverne/Documents/jeppffy/dp-dls-global-tokens/packages/tokens
+cd ../dp-dls-global-tokens/packages/tokens
 
 # Make your changes to token definitions in tokens/ folder
 
@@ -28,11 +28,11 @@ git push origin develop
 ```bash
 # Copy compiled SCSS from external tokens to assets repo
 rsync -av --delete \
-  /Users/kellieverne/Documents/jeppffy/dp-dls-global-tokens/packages/tokens/dist/scss/ \
-  /Users/kellieverne/Documents/jeppffy/dp-dls-global-assets/src/scss/base/external-tokens/
+  ../dp-dls-global-tokens/packages/tokens/dist/scss/ \
+  ../dp-dls-global-assets/src/scss/base/external-tokens/
 
 # Build the main assets
-cd /Users/kellieverne/Documents/jeppffy/dp-dls-global-assets
+cd ../dp-dls-global-assets
 npm run build
 ```
 
@@ -41,7 +41,7 @@ npm run build
 If you want to update the submodule pointer:
 
 ```bash
-cd /Users/kellieverne/Documents/jeppffy/dp-dls-global-assets/token-service/external-tokens
+cd ../dp-dls-global-assets/token-service/external-tokens
 git fetch origin
 git checkout origin/develop
 cd ../..
@@ -52,8 +52,9 @@ git commit -m "Update external-tokens submodule"
 ## File Locations
 
 ### External Tokens Repo
-- **Source**: `/Users/kellieverne/Documents/jeppffy/dp-dls-global-tokens/packages/tokens/tokens/`
-- **Output**: `/Users/kellieverne/Documents/jeppffy/dp-dls-global-tokens/packages/tokens/dist/`
+
+- **Source**: `../dp-dls-global-tokens/packages/tokens/tokens/`
+- **Output**: `../dp-dls-global-tokens/packages/tokens/dist/`
 - **Style Dictionary**: v4.4.0
 
 ### Main Assets Repo
