@@ -1,7 +1,7 @@
-@use './breakpoints' as *;
+@use './Breakpoints' as *;
 @use './fonts';
 
-// @include fonts.boeing-meso('../fonts'); // font-face loading handled by app global styles
+@include fonts.boeing-meso('../fonts');
 
 @mixin foundation-typography-display-high () {
   font-family: $foundation-typography-display-high-font-family;

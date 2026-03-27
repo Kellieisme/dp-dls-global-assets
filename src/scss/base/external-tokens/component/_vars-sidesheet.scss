@@ -4,25 +4,25 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-sidesheet-docked-margin: $spacing-none;
-$component-sidesheet-docked-background: $ui-background-medium;
-$component-sidesheet-docked-corner-radius: $radius-none;
-$component-sidesheet-floating-margin: $spacing-m;
-$component-sidesheet-floating-background: $ui-glass-surface-thick;
-$component-sidesheet-floating-background-effect: $effect-glass-background-blur;
-$component-sidesheet-floating-corner-radius: $radius-l;
-$component-sidesheet-floating-specular: $ui-glass-specular-surface;
-$component-sidesheet-padding-horizontal: $spacing-m;
-$component-sidesheet-padding-top: $spacing-s;
-$component-sidesheet-gap: $spacing-s;
-$component-sidesheet-header-action-size: $icon-md;
-$component-sidesheet-header-gap: $spacing-s;
-$component-sidesheet-header-padding-vertical: $spacing-s;
-$component-sidesheet-header-textandicon: $ui-textandicon-high;
-$component-sidesheet-footer-gap: $spacing-s;
-$component-sidesheet-footer-padding-top: $spacing-m;
-$component-sidesheet-footer-padding-bottom: $spacing-xl;
-$component-sidesheet-footer-padding-horizontal: $spacing-xs;
+$component-sidesheet-docked-margin: $foundation-spacing-none;
+$component-sidesheet-docked-background: $foundation-ui-background-medium;
+$component-sidesheet-docked-corner-radius: $foundation-radius-none;
+$component-sidesheet-floating-margin: $foundation-spacing-m;
+$component-sidesheet-floating-background: $foundation-ui-glass-surface-thick;
+$component-sidesheet-floating-background-effect: $foundation-effect-glass-background-blur;
+$component-sidesheet-floating-corner-radius: $foundation-radius-l;
+$component-sidesheet-floating-specular: $foundation-ui-glass-specular-surface;
+$component-sidesheet-padding-horizontal: $foundation-spacing-m;
+$component-sidesheet-padding-top: $foundation-spacing-s;
+$component-sidesheet-gap: $foundation-spacing-s;
+$component-sidesheet-header-action-size: $foundation-icon-md;
+$component-sidesheet-header-gap: $foundation-spacing-s;
+$component-sidesheet-header-padding-vertical: $foundation-spacing-s;
+$component-sidesheet-header-textandicon: $foundation-ui-textandicon-high;
+$component-sidesheet-footer-gap: $foundation-spacing-s;
+$component-sidesheet-footer-padding-top: $foundation-spacing-m;
+$component-sidesheet-footer-padding-bottom: $foundation-spacing-xl;
+$component-sidesheet-footer-padding-horizontal: $foundation-spacing-xs;
 @mixin component-sidesheet-header-textstyle () {
-  @include typography.typography-title-low();
+  @include typography.foundation-typography-title-low();
 }

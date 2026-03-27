@@ -4,28 +4,28 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-card-corner-radius: $radius-l;
-$component-card-hovered: $interactive-primary-background-hovered;
-$component-card-focused: $interactive-primary-background-selected;
-$component-card-pressed: $interactive-primary-background-selected;
-$component-card-dragged: $interactive-primary-background-selected;
-$component-card-disabled: $interactive-primary-background-disabled;
-$component-card-flat-medium: $ui-background-medium;
-$component-card-flat-high: $ui-background-high;
-$component-card-glass-borders-color: $ui-glass-specular-border;
-$component-card-glass-borders-stroke: $border-regular-width;
-$component-card-glass-specular: $ui-glass-specular-surface;
-$component-card-glass-medium: $ui-glass-surface-regular;
-$component-card-glass-high: $ui-glass-surface-thick;
-$component-card-padding: $spacing-m;
-$component-card-media-corner-radius: $radius-s;
-$component-cardmedia-padding: $inverted-xs;
+$component-card-corner-radius: $foundation-radius-l;
+$component-card-hovered: $foundation-interactive-primary-background-hovered;
+$component-card-focused: $foundation-interactive-primary-background-selected;
+$component-card-pressed: $foundation-interactive-primary-background-selected;
+$component-card-dragged: $foundation-interactive-primary-background-selected;
+$component-card-disabled: $foundation-interactive-primary-background-disabled;
+$component-card-flat-medium: $foundation-ui-background-medium;
+$component-card-flat-high: $foundation-ui-background-high;
+$component-card-glass-borders-color: $foundation-ui-glass-specular-border;
+$component-card-glass-borders-stroke: $foundation-border-regular-width;
+$component-card-glass-specular: $foundation-ui-glass-specular-surface;
+$component-card-glass-medium: $foundation-ui-glass-surface-regular;
+$component-card-glass-high: $foundation-ui-glass-surface-thick;
+$component-card-padding: $foundation-spacing-m;
+$component-card-media-corner-radius: $foundation-radius-s;
+$component-cardmedia-padding: $foundation-inverted-xs;
 @mixin component-card-glass-border ($direction) {
-  @include utils.border($direction, $component-card-glass-borders-stroke, $border-regular-style, $component-card-glass-borders-color);;
+  @include utils.border($direction, $component-card-glass-borders-stroke, $foundation-border-regular-style, $component-card-glass-borders-color);;
 }
 @mixin component-card-elevation-dragged () {
-  @include elevation-3();
+  @include foundation-elevation-3();
 }
 @mixin component-card-elevation-hovered () {
-  @include elevation-2();
+  @include foundation-elevation-2();
 }

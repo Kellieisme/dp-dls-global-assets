@@ -4,22 +4,22 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-profile-small-size: $sizing-xl-fixed;
-$component-profile-medium-size: $sizing-2xl-fixed;
-$component-profile-large-size: $sizing-3xl-fixed;
-$component-profile-extra-large-size: $sizing-4xl-fixed;
-$component-profile-corner-radius: $radius-full;
-$component-profile-padded: $spacing-2xs;
-$component-profile-unpadded: $spacing-none;
+$component-profile-small-size: $foundation-sizing-xl-fixed;
+$component-profile-medium-size: $foundation-sizing-2xl-fixed;
+$component-profile-large-size: $foundation-sizing-3xl-fixed;
+$component-profile-extra-large-size: $foundation-sizing-4xl-fixed;
+$component-profile-corner-radius: $foundation-radius-full;
+$component-profile-padded: $foundation-spacing-2xs;
+$component-profile-unpadded: $foundation-spacing-none;
 @mixin component-profile-small-textstyle () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-profile-medium-textstyle () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-profile-large-textstyle () {
-  @include typography.typography-title-low();
+  @include typography.foundation-typography-title-low();
 }
 @mixin component-profile-extra-large-textstyle () {
-  @include typography.typography-title-medium();
+  @include typography.foundation-typography-title-medium();
 }

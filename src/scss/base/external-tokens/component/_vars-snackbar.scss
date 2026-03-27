@@ -4,17 +4,17 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-snackbar-description-textcolor: $ui-textandicon-high;
-$component-snackbar-background-color: $ui-glass-surface-thickest;
-$component-snackbar-background-effect: $ui-glass-background-blur;
-$component-snackbar-content-padding: $spacing-m;
-$component-snackbar-content-maxheight-singleline: $sizing-3xl;
-$component-snackbar-content-maxheight-multiline: $sizing-5xl;
-$component-snackbar-corner-radius: $radius-xs;
-$component-snackbar-singleline-height: $sizing-4xl;
+$component-snackbar-description-textcolor: $foundation-ui-textandicon-high;
+$component-snackbar-background-color: $foundation-ui-glass-surface-thickest;
+$component-snackbar-background-effect: $foundation-ui-glass-background-blur;
+$component-snackbar-content-padding: $foundation-spacing-m;
+$component-snackbar-content-maxheight-singleline: $foundation-sizing-3xl;
+$component-snackbar-content-maxheight-multiline: $foundation-sizing-5xl;
+$component-snackbar-corner-radius: $foundation-radius-xs;
+$component-snackbar-singleline-height: $foundation-sizing-4xl;
 @mixin component-snackbar-description-textstyle () {
-  @include typography.typography-label-low();
+  @include typography.foundation-typography-label-low();
 }
 @mixin component-snackbar-elevation () {
-  @include elevation-3();
+  @include foundation-elevation-3();
 }

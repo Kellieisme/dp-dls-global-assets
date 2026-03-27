@@ -4,53 +4,53 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-list-vertical-padding: $spacing-s;
-$component-list-emphasis-none: transparent;
-$component-list-emphasis-low: $ui-background-low;
-$component-list-emphasis-medium: $ui-background-medium;
-$component-list-emphasis-high: $ui-background-high;
-$component-list-item-padding: $spacing-m;
-$component-list-item-enabled-background-color: transparent;
-$component-list-item-enabled-state-color: transparent;
-$component-list-item-hovered-background-color: transparent;
-$component-list-item-hovered-state-color: $interactive-primary-background-hovered;
-$component-list-item-focused-background-color: transparent;
-$component-list-item-focused-state-color: $interactive-primary-background-selected;
-$component-list-item-pressed-background-color: transparent;
-$component-list-item-pressed-state-color: $interactive-primary-background-selected;
-$component-list-item-dragged-background-color: $interactive-primary-background-enabled-tonal;
-$component-list-item-dragged-state-color: $interactive-primary-background-selected;
-$component-list-item-disabled-background-color: $interactive-primary-background-disabled;
-$component-list-item-disabled-state-color: transparent;
-$component-list-item-min-height: $sizing-4xl;
-$component-list-item-content-horizontal-gap: $spacing-m;
-$component-list-item-content-overline-min-height: $sizing-xs+$sizing-3xs; // Applicable for development only. figma reqires a workaround using xs as a size variable and 3xs as a spacing
-$component-list-item-content-overline-enabled-text-color: $ui-textandicon-low;
-$component-list-item-content-overline-disabled-text-color: $interactive-primary-textandicon-disabled;
-$component-list-item-content-label-enabled-text-color: $ui-textandicon-high;
-$component-list-item-content-label-disabled-text-color: $interactive-primary-textandicon-disabled;
-$component-list-item-content-supporting-text-margin-top: $spacing-2xs;
-$component-list-item-content-supporting-text-enabled-text-color: $ui-textandicon-medium;
-$component-list-item-content-supporting-text-disabled-text-color: $interactive-primary-textandicon-disabled;
-$component-list-item-content-leading-elements-video-height: $sizing-6xl;
-$component-list-item-content-leading-elements-video-width: $sizing-10xl;
-$component-list-item-content-leading-elements-image-size: $sizing-5xl;
-$component-list-item-content-leading-elements-default-size: $sizing-3xl;
-$component-list-item-content-leading-elements-video-container-height: $sizing-6xl;
-$component-list-item-content-leading-elements-video-container-width: $sizing-9xl;
-$component-list-item-content-leading-elements-icon-size: $icon-md;
-$component-list-item-content-trailing-elements-default-size: $sizing-3xl;
-$component-list-item-content-trailing-elements-icon-size: $icon-md;
-$component-list-item-content-min-height: $sizing-3xl;
+$component-list-vertical-padding: $foundation-spacing-s;
+$component-list-emphasis-none: $base-color-solids-transparent;
+$component-list-emphasis-low: $foundation-ui-background-low;
+$component-list-emphasis-medium: $foundation-ui-background-medium;
+$component-list-emphasis-high: $foundation-ui-background-high;
+$component-list-item-padding: $foundation-spacing-m;
+$component-list-item-enabled-background-color: $base-color-solids-transparent;
+$component-list-item-enabled-state-color: $base-color-solids-transparent;
+$component-list-item-hovered-background-color: $base-color-solids-transparent;
+$component-list-item-hovered-state-color: $foundation-interactive-primary-background-hovered;
+$component-list-item-focused-background-color: $base-color-solids-transparent;
+$component-list-item-focused-state-color: $foundation-interactive-primary-background-selected;
+$component-list-item-pressed-background-color: $base-color-solids-transparent;
+$component-list-item-pressed-state-color: $foundation-interactive-primary-background-selected;
+$component-list-item-dragged-background-color: $foundation-interactive-primary-background-enabled-tonal;
+$component-list-item-dragged-state-color: $foundation-interactive-primary-background-selected;
+$component-list-item-disabled-background-color: $foundation-interactive-primary-background-disabled;
+$component-list-item-disabled-state-color: $base-color-solids-transparent;
+$component-list-item-min-height: $foundation-sizing-4xl;
+$component-list-item-content-horizontal-gap: $foundation-spacing-m;
+$component-list-item-content-overline-min-height: $foundation-sizing-xs+$foundation-sizing-3xs; // Applicable for development only. figma reqires a workaround using xs as a size variable and 3xs as a spacing
+$component-list-item-content-overline-enabled-text-color: $foundation-ui-textandicon-low;
+$component-list-item-content-overline-disabled-text-color: $foundation-interactive-primary-textandicon-disabled;
+$component-list-item-content-label-enabled-text-color: $foundation-ui-textandicon-high;
+$component-list-item-content-label-disabled-text-color: $foundation-interactive-primary-textandicon-disabled;
+$component-list-item-content-supporting-text-margin-top: $foundation-spacing-2xs;
+$component-list-item-content-supporting-text-enabled-text-color: $foundation-ui-textandicon-medium;
+$component-list-item-content-supporting-text-disabled-text-color: $foundation-interactive-primary-textandicon-disabled;
+$component-list-item-content-leading-elements-video-height: $foundation-sizing-6xl;
+$component-list-item-content-leading-elements-video-width: $foundation-sizing-10xl;
+$component-list-item-content-leading-elements-image-size: $foundation-sizing-5xl;
+$component-list-item-content-leading-elements-default-size: $foundation-sizing-3xl;
+$component-list-item-content-leading-elements-video-container-height: $foundation-sizing-6xl;
+$component-list-item-content-leading-elements-video-container-width: $foundation-sizing-9xl;
+$component-list-item-content-leading-elements-icon-size: $foundation-icon-md;
+$component-list-item-content-trailing-elements-default-size: $foundation-sizing-3xl;
+$component-list-item-content-trailing-elements-icon-size: $foundation-icon-md;
+$component-list-item-content-min-height: $foundation-sizing-3xl;
 @mixin component-list-item-content-overline-textstyle () {
-  @include typography.typography-label-low();
+  @include typography.foundation-typography-label-low();
 }
 @mixin component-list-item-content-label-textstyle () {
-  @include typography.typography-label-high();
+  @include typography.foundation-typography-label-high();
 }
 @mixin component-list-item-content-supporting-text-textstyle () {
-  @include typography.typography-body-lowest-default();
+  @include typography.foundation-typography-body-lowest-default();
 }
 @mixin component-list-item-content-trailing-text-textstyle () {
-  @include typography.typography-label-lowest();
+  @include typography.foundation-typography-label-lowest();
 }

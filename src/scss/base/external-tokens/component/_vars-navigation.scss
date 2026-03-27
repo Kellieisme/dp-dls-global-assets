@@ -4,48 +4,48 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-navitem-rail-minwidth: $sizing-5xl;
-$component-navitem-rail-minheight: $sizing-5xl;
-$component-navitem-rail-corner-radius: $radius-full;
-$component-navitem-rail-icon-size: $icon-md;
-$component-navitem-rail-padding: $spacing-m;
-$component-navitem-rail-label-padding-horizontal: $spacing-2xs;
-$component-navitem-rail-label-padding-bottom: $spacing-2xs;
-$component-navitem-minheight: $sizing-5xl;
-$component-navitem-drawer-corner-radius: $radius-full;
-$component-navitem-drawer-padding: $spacing-m;
-$component-navitem-drawer-gap: $spacing-2xs-fixed;
-$component-navitem-drawer-indent-level1: $sizing-none;
-$component-navitem-drawer-indent-level2: calc($sizing-2xl-fixed - $component-navitem-drawer-gap);
-$component-navitem-drawer-indent-level3: calc($sizing-6xl-fixed - $component-navitem-drawer-gap);
-$component-navitem-drawer-icon-size: $icon-md;
-$component-navitem-drawer-label-margin-horizontal: $spacing-xs;
-$component-navitem-drawer-badge-margin-right: $spacing-xs;
-$component-navitem-background-enabled: transparent;
-$component-navitem-background-selected: $interactive-primary-background-enabled-tonal;
-$component-navitem-resting-enabled-textandicon: $interactive-primary-textandicon-secondary-default; // Used for leading icon, label and trailing icon
-$component-navitem-resting-selected-textandicon: $interactive-primary-textandicon-primary-default; // Used for leading icon, label and trailing icon
-$component-navitem-hovered-textandicon: $interactive-primary-textandicon-selected; // Used for leading icon, label and trailing icon
-$component-navitem-hovered-background: $interactive-primary-background-hovered; // Addon color to enabled or selected background
-$component-navitem-pressed-textandicon: $interactive-primary-textandicon-selected; // Used for leading icon, label and trailing icon
-$component-navitem-pressed-background: $interactive-primary-background-selected; // Addon color to enabled or selected background
-$component-navitem-minwidth: $sizing-5xl;
-$component-navdrawer-padding-top: $spacing-l;
-$component-navdrawer-padding-horizontal: $spacing-s;
-$component-navdrawer-padding-bottom: $spacing-xl;
-$component-navdrawer-gap: $spacing-l;
-$component-navdrawer-trailing-items-gap: $spacing-xs;
-$component-navdrawer-background: $ui-glass-surface-thinnest;
-$component-navdrawer-minwidth: $layout-8xl; // Minimum width of the collaped Navigatopn Drawer
-$component-navrail-minwidth: $layout-8xl; // Minimum width of the Navigatopn Rail
-$component-navrail-maxwidth: $layout-10xl; // Maximum width of the Navigatopn Rail
-$component-navrail-trailing-items-gap: $spacing-xs;
+$component-navitem-rail-minwidth: $foundation-sizing-5xl;
+$component-navitem-rail-minheight: $foundation-sizing-5xl;
+$component-navitem-rail-corner-radius: $foundation-radius-full;
+$component-navitem-rail-icon-size: $foundation-icon-md;
+$component-navitem-rail-padding: $foundation-spacing-m;
+$component-navitem-rail-label-padding-horizontal: $foundation-spacing-2xs;
+$component-navitem-rail-label-padding-bottom: $foundation-spacing-2xs;
+$component-navitem-minheight: $foundation-sizing-5xl;
+$component-navitem-drawer-corner-radius: $foundation-radius-full;
+$component-navitem-drawer-padding: $foundation-spacing-m;
+$component-navitem-drawer-gap: $foundation-spacing-2xs-fixed;
+$component-navitem-drawer-indent-level1: $foundation-sizing-none;
+$component-navitem-drawer-indent-level2: calc($foundation-sizing-2xl-fixed - $component-navitem-drawer-gap);
+$component-navitem-drawer-indent-level3: calc($foundation-sizing-6xl-fixed - $component-navitem-drawer-gap);
+$component-navitem-drawer-icon-size: $foundation-icon-md;
+$component-navitem-drawer-label-margin-horizontal: $foundation-spacing-xs;
+$component-navitem-drawer-badge-margin-right: $foundation-spacing-xs;
+$component-navitem-background-enabled: $base-color-solids-transparent;
+$component-navitem-background-selected: $foundation-interactive-primary-background-enabled-tonal;
+$component-navitem-resting-enabled-textandicon: $foundation-interactive-primary-textandicon-secondary-default; // Used for leading icon, label and trailing icon
+$component-navitem-resting-selected-textandicon: $foundation-interactive-primary-textandicon-primary-default; // Used for leading icon, label and trailing icon
+$component-navitem-hovered-textandicon: $foundation-interactive-primary-textandicon-selected; // Used for leading icon, label and trailing icon
+$component-navitem-hovered-background: $foundation-interactive-primary-background-hovered; // Addon color to enabled or selected background
+$component-navitem-pressed-textandicon: $foundation-interactive-primary-textandicon-selected; // Used for leading icon, label and trailing icon
+$component-navitem-pressed-background: $foundation-interactive-primary-background-selected; // Addon color to enabled or selected background
+$component-navitem-minwidth: $foundation-sizing-5xl;
+$component-navdrawer-padding-top: $foundation-spacing-l;
+$component-navdrawer-padding-horizontal: $foundation-spacing-s;
+$component-navdrawer-padding-bottom: $foundation-spacing-xl;
+$component-navdrawer-gap: $foundation-spacing-l;
+$component-navdrawer-trailing-items-gap: $foundation-spacing-xs;
+$component-navdrawer-background: $foundation-ui-glass-surface-thinnest;
+$component-navdrawer-minwidth: $foundation-layout-8xl; // Minimum width of the collaped Navigatopn Drawer
+$component-navrail-minwidth: $foundation-layout-8xl; // Minimum width of the Navigatopn Rail
+$component-navrail-maxwidth: $foundation-layout-10xl; // Maximum width of the Navigatopn Rail
+$component-navrail-trailing-items-gap: $foundation-spacing-xs;
 @mixin component-navitem-drawer-label-textstyle () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-navitem-drawer-badge-textstyle () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-navitem-hovered-glow () {
-  @include interactive-primary-glow-backlit();
+  @include foundation-interactive-primary-glow-backlit();
 }

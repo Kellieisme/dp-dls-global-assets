@@ -4,149 +4,149 @@
 @forward '../global';
 @use '../global' as *;
 
-$component-datepicker-padding-horizontal: $spacing-s;
-$component-datepicker-padding-vertical: $spacing-xs;
-$component-datepicker-gap-vertical: $spacing-3xs;
-$component-datepicker-top-label-padding-top: $spacing-3xs;
-$component-datepicker-top-label-maxheight: $sizing-s;
-$component-datepicker-label-only-padding-top: $spacing-xs;
-$component-datepicker-background: $ui-glass-surface-thick;
-$component-datepicker-enabeld-label: $interactive-primary-textandicon-secondary-default;
-$component-datepicker-enabeld-icon: $interactive-primary-textandicon-primary-default;
-$component-datepicker-enabeld-value: $interactive-primary-textandicon-primary-default;
-$component-datepicker-enabeld-supporting-text: $interactive-primary-textandicon-secondary-default;
-$component-datepicker-hovered-label: $interactive-primary-textandicon-secondary-default;
-$component-datepicker-hovered-icon: $interactive-primary-textandicon-primary-default;
-$component-datepicker-hovered-value: $interactive-primary-textandicon-primary-default;
-$component-datepicker-hovered-supporting-text: $interactive-primary-textandicon-secondary-default;
-$component-datepicker-hovered-background: $interactive-primary-background-hovered;
-$component-datepicker-hovered-background-glow: $interactive-primary-glow-surface-medium;
-$component-datepicker-hovered-border-color: $ui-glass-specular-border;
-$component-datepicker-hovered-border-width: $border-regular-width;
-$component-datepicker-focused-label: $interactive-accent-textandicon-default;
-$component-datepicker-focused-icon: $interactive-primary-textandicon-primary-default;
-$component-datepicker-focused-value: $interactive-primary-textandicon-primary-default;
-$component-datepicker-focused-supporting-text: $interactive-primary-textandicon-secondary-default;
-$component-datepicker-focused-background: $interactive-primary-background-selected;
-$component-datepicker-focused-border-color: $interactive-primary-border-focused;
-$component-datepicker-focused-caret: $interactive-accent-textandicon-default;
-$component-datepicker-focused-top-corner-radius: $radius-s;
-$component-datepicker-focused-bottom-corner-radius: $radius-none;
-$component-datepicker-focused-border-width: $border-regular-width;
-$component-datepicker-error-label: $semantic-textandicon-error;
-$component-datepicker-error-icon: $interactive-primary-textandicon-primary-default;
-$component-datepicker-error-value: $interactive-primary-textandicon-primary-default;
-$component-datepicker-error-supporting-text: $semantic-textandicon-error;
-$component-datepicker-error-border-color: $semantic-border-error;
-$component-datepicker-error-border-width: $border-regular-width;
-$component-datepicker-disabled-label: $interactive-primary-textandicon-disabled;
-$component-datepicker-disabled-icon: $interactive-primary-textandicon-disabled;
-$component-datepicker-disabled-value: $interactive-primary-textandicon-disabled;
-$component-datepicker-disabled-supporting-text: $interactive-primary-textandicon-disabled;
-$component-datepicker-disabled-background: $interactive-primary-background-disabled;
-$component-datepicker-placeholder-textcolor: $interactive-primary-textandicon-disabled;
-$component-datepicker-supporting-text-padding-horizontal: $spacing-m;
-$component-datepicker-supporting-text-padding-vertical: $spacing-2xs;
-$component-datepicker-supporting-text-gap: $spacing-m;
-$component-datepicker-background-blur: $ui-glass-background-blur;
-$component-datepicker-leading-icon-size: $icon-md;
-$component-datepicker-leading-icon-margin-right: $spacing-xs;
-$component-datepicker-trailing-item-size: $icon-md;
-$component-datepicker-trailing-item-margin-left: $spacing-xs;
-$component-datepicker-minwidth: $sizing-10xl;
-$component-datepicker-content-margin-horizontal: $spacing-2xs;
-$component-datepicker-content-gap-vertical: $spacing-3xs;
-$component-datepicker-content-minheight: $sizing-2xl;
-$component-datepicker-corner-radius: $radius-s;
-$component-calendar-view-border-color: $interactive-primary-border-hovered-specular;
-$component-calendar-view-background-blur: $ui-glass-background-blur;
-$component-calendar-view-corner-radius: $radius-s;
-$component-calendar-view-background: $ui-glass-surface-regular;
-$component-calendar-view-border-width: $border-regular-width;
-$component-calendar-view-specular: $ui-glass-specular-surface;
-$component-calendar-header-date-text-color: $ui-textandicon-high;
-$component-calendar-header-date-padding-horizontal: $spacing-m;
-$component-calendar-header-date-height: $sizing-3xl;
-$component-calendar-header-weekday-text-color: $ui-textandicon-medium;
-$component-calendar-header-weekday-width: $sizing-3xl;
-$component-calendar-header-weekday-height: $sizing-2xl;
-$component-calendar-cell-resting-high-text-color: $interactive-primary-textandicon-primary-default;
-$component-calendar-cell-resting-low-text-color: $interactive-primary-textandicon-secondary-default;
-$component-calendar-cell-hovered-state: $interactive-primary-background-hovered;
-$component-calendar-cell-hovered-high-text-color: $interactive-primary-textandicon-selected;
-$component-calendar-cell-hovered-low-text-color: $interactive-primary-textandicon-primary-default;
-$component-calendar-cell-pressed-state: $interactive-primary-background-selected;
-$component-calendar-cell-pressed-high-text-color: $interactive-primary-textandicon-selected;
-$component-calendar-cell-pressed-low-text-color: $interactive-primary-textandicon-primary-default;
-$component-calendar-cell-disabled-background: $interactive-primary-background-disabled;
-$component-calendar-cell-disabled-text-color: $interactive-primary-textandicon-disabled;
-$component-calendar-cell-today-disabled-border-color: $interactive-primary-border-disabled;
-$component-calendar-cell-today-enabled-border-color: $interactive-primary-border-focused;
-$component-calendar-cell-today-border-width: $border-regular-width;
-$component-calendar-cell-selected-text-color: $interactive-primary-textandicon-inverse;
-$component-calendar-cell-selected-background: $interactive-accent-background-enabled-filled;
-$component-calendar-cell-corner-radius: $radius-full;
-$component-calendar-cell-width-small: $sizing-3xl;
-$component-calendar-cell-width-large: $sizing-6xl;
-$component-calendar-cell-height: $sizing-3xl;
-$component-calendar-cell-padding: $spacing-3xs;
-$component-calendar-cell-label-padding: $spacing-m;
-$component-calendar-range-background-disabled: $interactive-primary-background-disabled;
-$component-calendar-range-background-enabled: $interactive-primary-background-enabled-tonal;
-$component-calendar-range-overflow-3xs: $sizing-3xs;
-$component-calendar-range-overflow-2xs: $sizing-2xs;
-$component-calendar-range-overflow-xs: $sizing-xs;
-$component-calendar-range-corner-radius-outer: $radius-full;
-$component-calendar-range-corner-radius-inner: $radius-none;
-$component-calendar-padding: $spacing-xs;
-$component-calendar-year-padding-vertical: $spacing-l;
-$component-calendar-gap: $spacing-xs;
-$component-calendar-month-padding-vertical: $spacing-l;
+$component-datepicker-padding-horizontal: $foundation-spacing-s;
+$component-datepicker-padding-vertical: $foundation-spacing-xs;
+$component-datepicker-gap-vertical: $foundation-spacing-3xs;
+$component-datepicker-top-label-padding-top: $foundation-spacing-3xs;
+$component-datepicker-top-label-maxheight: $foundation-sizing-s;
+$component-datepicker-label-only-padding-top: $foundation-spacing-xs;
+$component-datepicker-background: $foundation-ui-glass-surface-thick;
+$component-datepicker-enabeld-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-datepicker-enabeld-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-enabeld-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-enabeld-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-datepicker-hovered-label: $foundation-interactive-primary-textandicon-secondary-default;
+$component-datepicker-hovered-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-hovered-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-hovered-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-datepicker-hovered-background: $foundation-interactive-primary-background-hovered;
+$component-datepicker-hovered-background-glow: $foundation-interactive-primary-glow-surface-medium;
+$component-datepicker-hovered-border-color: $foundation-ui-glass-specular-border;
+$component-datepicker-hovered-border-width: $foundation-border-regular-width;
+$component-datepicker-focused-label: $foundation-interactive-accent-textandicon-default;
+$component-datepicker-focused-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-focused-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-focused-supporting-text: $foundation-interactive-primary-textandicon-secondary-default;
+$component-datepicker-focused-background: $foundation-interactive-primary-background-selected;
+$component-datepicker-focused-border-color: $foundation-interactive-primary-border-focused;
+$component-datepicker-focused-caret: $foundation-interactive-accent-textandicon-default;
+$component-datepicker-focused-top-corner-radius: $foundation-radius-s;
+$component-datepicker-focused-bottom-corner-radius: $foundation-radius-none;
+$component-datepicker-focused-border-width: $foundation-border-regular-width;
+$component-datepicker-error-label: $foundation-semantic-textandicon-error;
+$component-datepicker-error-icon: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-error-value: $foundation-interactive-primary-textandicon-primary-default;
+$component-datepicker-error-supporting-text: $foundation-semantic-textandicon-error;
+$component-datepicker-error-border-color: $foundation-semantic-border-error;
+$component-datepicker-error-border-width: $foundation-border-regular-width;
+$component-datepicker-disabled-label: $foundation-interactive-primary-textandicon-disabled;
+$component-datepicker-disabled-icon: $foundation-interactive-primary-textandicon-disabled;
+$component-datepicker-disabled-value: $foundation-interactive-primary-textandicon-disabled;
+$component-datepicker-disabled-supporting-text: $foundation-interactive-primary-textandicon-disabled;
+$component-datepicker-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-datepicker-placeholder-textcolor: $foundation-interactive-primary-textandicon-disabled;
+$component-datepicker-supporting-text-padding-horizontal: $foundation-spacing-m;
+$component-datepicker-supporting-text-padding-vertical: $foundation-spacing-2xs;
+$component-datepicker-supporting-text-gap: $foundation-spacing-m;
+$component-datepicker-background-blur: $foundation-ui-glass-background-blur;
+$component-datepicker-leading-icon-size: $foundation-icon-md;
+$component-datepicker-leading-icon-margin-right: $foundation-spacing-xs;
+$component-datepicker-trailing-item-size: $foundation-icon-md;
+$component-datepicker-trailing-item-margin-left: $foundation-spacing-xs;
+$component-datepicker-minwidth: $foundation-sizing-10xl;
+$component-datepicker-content-margin-horizontal: $foundation-spacing-2xs;
+$component-datepicker-content-gap-vertical: $foundation-spacing-3xs;
+$component-datepicker-content-minheight: $foundation-sizing-2xl;
+$component-datepicker-corner-radius: $foundation-radius-s;
+$component-calendar-view-border-color: $foundation-interactive-primary-border-hovered-specular;
+$component-calendar-view-background-blur: $foundation-ui-glass-background-blur;
+$component-calendar-view-corner-radius: $foundation-radius-s;
+$component-calendar-view-background: $foundation-ui-glass-surface-regular;
+$component-calendar-view-border-width: $foundation-border-regular-width;
+$component-calendar-view-specular: $foundation-ui-glass-specular-surface;
+$component-calendar-header-date-text-color: $foundation-ui-textandicon-high;
+$component-calendar-header-date-padding-horizontal: $foundation-spacing-m;
+$component-calendar-header-date-height: $foundation-sizing-3xl;
+$component-calendar-header-weekday-text-color: $foundation-ui-textandicon-medium;
+$component-calendar-header-weekday-width: $foundation-sizing-3xl;
+$component-calendar-header-weekday-height: $foundation-sizing-2xl;
+$component-calendar-cell-resting-high-text-color: $foundation-interactive-primary-textandicon-primary-default;
+$component-calendar-cell-resting-low-text-color: $foundation-interactive-primary-textandicon-secondary-default;
+$component-calendar-cell-hovered-state: $foundation-interactive-primary-background-hovered;
+$component-calendar-cell-hovered-high-text-color: $foundation-interactive-primary-textandicon-selected;
+$component-calendar-cell-hovered-low-text-color: $foundation-interactive-primary-textandicon-primary-default;
+$component-calendar-cell-pressed-state: $foundation-interactive-primary-background-selected;
+$component-calendar-cell-pressed-high-text-color: $foundation-interactive-primary-textandicon-selected;
+$component-calendar-cell-pressed-low-text-color: $foundation-interactive-primary-textandicon-primary-default;
+$component-calendar-cell-disabled-background: $foundation-interactive-primary-background-disabled;
+$component-calendar-cell-disabled-text-color: $foundation-interactive-primary-textandicon-disabled;
+$component-calendar-cell-today-disabled-border-color: $foundation-interactive-primary-border-disabled;
+$component-calendar-cell-today-enabled-border-color: $foundation-interactive-primary-border-focused;
+$component-calendar-cell-today-border-width: $foundation-border-regular-width;
+$component-calendar-cell-selected-text-color: $foundation-interactive-primary-textandicon-inverse;
+$component-calendar-cell-selected-background: $foundation-interactive-accent-background-enabled-filled;
+$component-calendar-cell-corner-radius: $foundation-radius-full;
+$component-calendar-cell-width-small: $foundation-sizing-3xl;
+$component-calendar-cell-width-large: $foundation-sizing-6xl;
+$component-calendar-cell-height: $foundation-sizing-3xl;
+$component-calendar-cell-padding: $foundation-spacing-3xs;
+$component-calendar-cell-label-padding: $foundation-spacing-m;
+$component-calendar-range-background-disabled: $foundation-interactive-primary-background-disabled;
+$component-calendar-range-background-enabled: $foundation-interactive-primary-background-enabled-tonal;
+$component-calendar-range-overflow-3xs: $foundation-sizing-3xs;
+$component-calendar-range-overflow-2xs: $foundation-sizing-2xs;
+$component-calendar-range-overflow-xs: $foundation-sizing-xs;
+$component-calendar-range-corner-radius-outer: $foundation-radius-full;
+$component-calendar-range-corner-radius-inner: $foundation-radius-none;
+$component-calendar-padding: $foundation-spacing-xs;
+$component-calendar-year-padding-vertical: $foundation-spacing-l;
+$component-calendar-gap: $foundation-spacing-xs;
+$component-calendar-month-padding-vertical: $foundation-spacing-l;
 @mixin component-datepicker-hovered-border ($direction) {
-  @include utils.border($direction, $component-datepicker-hovered-border-width, $border-regular-style, $component-datepicker-hovered-border-color);;
+  @include utils.border($direction, $component-datepicker-hovered-border-width, $foundation-border-regular-style, $component-datepicker-hovered-border-color);;
 }
 @mixin component-datepicker-focused-border ($direction) {
-  @include utils.border($direction, $component-datepicker-focused-border-width, $border-regular-style, $component-datepicker-focused-border-color);;
+  @include utils.border($direction, $component-datepicker-focused-border-width, $foundation-border-regular-style, $component-datepicker-focused-border-color);;
 }
 @mixin component-datepicker-error-border ($direction) {
-  @include utils.border($direction, $component-datepicker-error-border-width, $border-regular-style, $component-datepicker-error-border-color);;
+  @include utils.border($direction, $component-datepicker-error-border-width, $foundation-border-regular-style, $component-datepicker-error-border-color);;
 }
 @mixin component-datepicker-placeholder-content () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-datepicker-label-top () {
-  @include typography.typography-label-lowest2();
+  @include typography.foundation-typography-label-lowest2();
 }
 @mixin component-datepicker-label-content () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-datepicker-value-content () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-datepicker-messages-content () {
-  @include typography.typography-label-low();
+  @include typography.foundation-typography-label-low();
 }
 @mixin component-datepicker-prefix-content () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-datepicker-suffix-content () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-calendar-view-border ($direction) {
-  @include utils.border($direction, $component-calendar-view-border-width, $border-regular-style, $component-calendar-view-border-color);;
+  @include utils.border($direction, $component-calendar-view-border-width, $foundation-border-regular-style, $component-calendar-view-border-color);;
 }
 @mixin component-calendar-header-date-text-style () {
-  @include typography.typography-label-medium();
+  @include typography.foundation-typography-label-medium();
 }
 @mixin component-calendar-header-weekday-text-style () {
-  @include typography.typography-body-lowest-default();
+  @include typography.foundation-typography-body-lowest-default();
 }
 @mixin component-calendar-cell-text-style () {
-  @include typography.typography-body-lowest-default();
+  @include typography.foundation-typography-body-lowest-default();
 }
 @mixin component-calendar-cell-today-disabled-border ($direction) {
-  @include utils.border($direction, $component-calendar-cell-today-border-width, $border-regular-style, $component-calendar-cell-today-disabled-border-color);;
+  @include utils.border($direction, $component-calendar-cell-today-border-width, $foundation-border-regular-style, $component-calendar-cell-today-disabled-border-color);;
 }
 @mixin component-calendar-cell-today-enabled-border ($direction) {
-  @include utils.border($direction, $component-calendar-cell-today-border-width, $border-regular-style, $component-calendar-cell-today-enabled-border-color);;
+  @include utils.border($direction, $component-calendar-cell-today-border-width, $foundation-border-regular-style, $component-calendar-cell-today-enabled-border-color);;
 }
