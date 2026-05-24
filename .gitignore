@@ -3,15 +3,6 @@
 .env
 .npmrc
 
-#Token service generated files
-src/css/variables.css
-src/css/variablesBase.css
-src/js/variables.js
-src/js/variablesBase.js
-src/js/variables.module.js
-src/js/variablesBase.module.js
-src/json/variables.json
-src/json/variablesBase.json
 #Token service generated icons
 src/images/icons/*
 #Including the svgSet.svg until the CI can access Figma API

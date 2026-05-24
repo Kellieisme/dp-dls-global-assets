@@ -9,6 +9,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const environment = require('./configuration/environment');
 
@@ -111,6 +112,9 @@ module.exports = {
   //   ],
   // },
   plugins: [
+    new webpack.IgnorePlugin({
+      resourceRegExp: /@jeppesen-foreflight\/dp-dls-global-angular\/styles\/.*/,
+    }),
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
@@ -144,21 +148,6 @@ module.exports = {
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],
           },
-        },
-        {
-          from: path.resolve(environment.paths.source, 'js', 'variables.js'),
-          to: path.resolve(environment.paths.output, 'js', 'variables.js'),
-          toType: 'file',
-        },
-        {
-          from: path.resolve(environment.paths.source, 'js', 'variables.module.js'),
-          to: path.resolve(environment.paths.output, 'js', 'variables.module.js'),
-          toType: 'file',
-        },
-        {
-          from: path.resolve(environment.paths.source, 'json', 'variables.json'),
-          to: path.resolve(environment.paths.output, 'json', 'variables.json'),
-          toType: 'file',
         },
         {
           from: path.resolve('package.json'),
