@@ -57,10 +57,10 @@
 
 ### Create an .npmrc
 
-Public NPM packages will be installed from npmjs.com. Private NPM packages (`@jeppesen-foreflight/dls-global-assets`) will be downloaded from the GitHub Package Registry. To enable this, create a new file named `.npmrc` in your project root. The content should be:
+Public NPM packages will be installed from npmjs.com. Private NPM packages (`@kellieisme/dls-global-assets`) will be downloaded from the GitHub Package Registry. To enable this, create a new file named `.npmrc` in your project root. The content should be:
 
 ```text
-@jeppesen-foreflight:registry=https://npm.pkg.github.com/
+@kellieisme:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=GITHUB_AUTH_TOKEN
 ```
 
