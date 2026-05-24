@@ -6,7 +6,6 @@
   - [Features](#features)
   - [Requirements](#requirements)
 - [Setup](#setup)
-  - [Create an .npmrc](#create-an-npmrc)
   - [Installation](#installation)
 - [Configuration](#configuration)
   - [Environment Configuration](#environment-configuration)
@@ -16,7 +15,6 @@
   - [Build Assets](#build-assets)
 - [Production](#production)
   - [Build for Production](#build-for-production)
-  - [Publishing to GitHub Packages](#publishing-to-github-packages)
   - [Get Built Assets](#get-built-assets)
 - [Additional Tools](#additional-tools)
   - [Run Assets Bundle Analyzer](#run-assets-bundle-analyzer)
@@ -54,19 +52,6 @@
 - `npm`
 
 ## Setup
-
-### Create an .npmrc
-
-Public NPM packages will be installed from npmjs.com. Private NPM packages (`@kellieisme/dls-global-assets`) will be downloaded from the GitHub Package Registry. To enable this, create a new file named `.npmrc` in your project root. The content should be:
-
-```text
-@kellieisme:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/:_authToken=GITHUB_AUTH_TOKEN
-```
-
-Replace the following values:
-
-- `GITHUB_AUTH_TOKEN`: Create a [GitHub Personal Access Token](https://github.com/settings/tokens) with `read:packages` permission. Save it in a safe place and use that string as the GITHUB_AUTH_TOKEN.
 
 ### Installation
 
@@ -192,29 +177,6 @@ This command:
 4. Optimizes images and fonts
 5. Generates production-ready HTML
 6. Outputs everything to the `dist/` directory
-
-### Publishing to GitHub Packages
-
-This package is automatically published to GitHub Packages via CI/CD when changes are pushed to the `main` branch.
-
-#### Manual Publishing
-
-1. Ensure you're on the `main` branch
-2. Update the version in `package.json`
-3. Commit and push changes
-4. The CI/CD pipeline will automatically:
-   - Generate tokens from Figma
-   - Build production assets
-   - Publish to GitHub Packages
-
-#### CI/CD Pipeline
-
-The GitHub Actions workflow (`.github/workflows/ci-cd.yml`) runs on every push and:
-
-1. Installs dependencies
-2. Generates design tokens from Figma
-3. Builds production assets
-4. Publishes to GitHub Packages (on main branch only)
 
 ### Get Built Assets
 

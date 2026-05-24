@@ -437,22 +437,6 @@ Use component tokens in your styles:
 \```
 ```
 
-### CHANGELOG.md
-```markdown
-## [1.x.0] - 2025-12-XX
-
-### Added
-- Component token CSS custom property generation mixins
-- `generateComponentVariables()` master mixin
-- New `_component.scss` unified import file
-- Support for runtime component token usage
-
-### Features
-- All 24 component token files now support CSS custom properties
-- ~770 component-level CSS custom properties
-- Maintains backward compatibility with SCSS variables
-```
-
 ### Migration Guide
 ✅ **Complete** - See `COMPONENT_TOKENS_MIGRATION.md` for:
 - How to import component tokens
@@ -506,7 +490,6 @@ Each component file includes:
 **Next Actions:**
 1. **Build & Test:** Run `npm run build` to verify implementation
 2. **Team Review:** Get approval on approach and implementation
-3. **Publish:** Update version and publish to npm registry
 
 ---
 
@@ -551,8 +534,6 @@ Each component file includes:
 
 2. **Publishing:**
    - [ ] Update version (minor bump: 4.0.2 → 4.1.0)
-   - [ ] Update CHANGELOG.md
-   - [ ] Publish to npm registry
    - [ ] Notify consuming teams
 
 ---
@@ -572,4 +553,4 @@ Each component file includes:
 **Document Version:** 1.1  
 **Status:** Ready for Assets Library Team Review  
 **Priority:** Medium (enables better design system adoption)  
-**Last Updated:** December 17, 2025
+**Last Updated:** May 23, 2026
