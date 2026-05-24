@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(curl -s \"http://localhost:4200/main.js\")",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(npx ng *)",
+      "Read(//private/var/folders/g7/1j8v4jhs5_jdjy1r3wjvq_b80000gp/T/ng-TEUK3r/**)",
+      "Bash(lsof -ti:4201)",
+      "Bash(xargs ps -p)",
+      "Bash(xargs cat)",
+      "Bash(node -e \"const a=require\\('./angular.json'\\); const b=a.projects['dls-global-docs'].architect.build.options; console.log\\(JSON.stringify\\({styles: b.styles, stylePreprocessorOptions: b.stylePreprocessorOptions, sassOptions: b.sassOptions}, null, 2\\)\\)\")",
+      "Bash(grep -v \"^$\")",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
