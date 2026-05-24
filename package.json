@@ -1,12 +1,16 @@
 {
-  "author": "BGS Digital Aviation Design System",
+  "author": "Boeing Design System",
   "name": "@jeppesen-foreflight/dls-global-assets",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "version": "4.0.2",
   "description": "Atmosphere global assets",
-  "homepage": "https://github.com/jeppesen-foreflight/dp-dls-global-assets",
+  "homepage": "https://github.com/Kellieisme/dp-dls-global-assets",
+  "bugs": {
+    "url": "https://github.com/Kellieisme/dp-dls-global-assets/issues"
+  },
+  "main": "dist/index.js",
   "browserslist": [
     "last 2 versions",
     "> 5%"

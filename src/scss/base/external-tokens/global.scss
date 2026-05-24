@@ -1,4 +1,7 @@
+@forward './base';
 @forward './foundation';
+@forward './foundational';
+@forward './foundational-color';
 @forward './foundation-color';
 @forward './breakpoints';
 @forward './typography';
@@ -6,6 +9,7 @@
 
 @use './breakpoints';
 @use './foundation-color' as color;
+@use './foundational-color' as foundationalColor;
 @use './density';
 
 $_initialized: false;
@@ -14,6 +18,7 @@ $_initialized: false;
 	@if $_initialized ==false {
 		@include density.generateDensityVariables();
 		@include color.generateColorThemeVariables();
+		@include foundationalColor.generateFoundationalColorThemeVariables();
 		@include breakpoints.generateBreakpointVariables();
 		$_initialized: true !global;
 	}

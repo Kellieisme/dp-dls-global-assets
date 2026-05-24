@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(curl -s \"http://localhost:4200/chunk-6DJ2WMDV.js\")"
+      "Bash(curl -s \"http://localhost:4200/chunk-6DJ2WMDV.js\")",
+      "Bash(grep -oP '\\\\$[a-z][a-z0-9-]+' \"/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-angular/projects/design/dp-dls-global-angular/navigation-drawer/src/navigation-drawer.component.scss\")",
+      "Bash(grep -oP '\\\\$[a-z][a-z0-9-]+' \"/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-angular/projects/design/dp-dls-global-angular/navigation-rail/src/navigation-rail.component.scss\")",
+      "Bash(grep -oE '\\\\$[a-z][a-z0-9-]+' \"/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-angular/projects/design/dp-dls-global-angular/navigation-drawer/src/navigation-drawer.component.scss\")",
+      "Bash(grep -oE '\\\\$[a-z][a-z0-9-]+' \"/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-angular/projects/design/dp-dls-global-angular/navigation-rail/src/navigation-rail.component.scss\")",
+      "Bash(grep -E '^\\\\$sizing|^\\\\$border-regular' '/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-tokens/packages/tokens/dist/scss/_foundational.scss')",
+      "Bash(grep -E '^\\\\$ui-textandicon|^\\\\$ui-divider|^\\\\$effect-glass|^\\\\$interactive-accent' '/Users/TestAccount/Documents/ my work stuff/jeppffy/dp-dls-global-tokens/packages/tokens/dist/scss/_foundational-color.scss')",
+      "Bash(node -e \"console.log\\(require.resolve\\('esbuild'\\)\\)\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

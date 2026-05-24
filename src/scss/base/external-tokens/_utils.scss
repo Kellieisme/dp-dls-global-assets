@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Sass - Border Shorthand Mixin
 // A mixin to simplify writing multiple border shorthands for specific elements.
 // To-do:
@@ -77,7 +79,7 @@
 
 @mixin createvars ($theme, $aliasses) {
 	@each $key, $subkey in $theme {
-		$value: map-get($aliasses, $subkey);
+		$value: map.get($aliasses, $subkey);
 		--#{$key}: #{$value};
 	}
 }
@@ -86,11 +88,11 @@
 // 	@if $breakpoints == null {
 // 		@warn 'No breakpoints provided.';
 // 	}
-// 	$breakpoint: map-get($breakpoints, $name);
+// 	$breakpoint: map.get($breakpoints, $name);
 // 	@if $breakpoint == null {
 // 		@warn 'Breakpoint not found: #{$name}';
 // 	}
-// 	$max: map-get($breakpoint, $token);
+// 	$max: map.get($breakpoint, $token);
 // 	@if $max {
 // 		@media (max-width: $max) {
 // 			@content;
@@ -102,7 +104,7 @@
 	@if $modules == null {
 		@warn 'No modules provided.';
 	}
-	$theme: map-get($modules, $name);
+	$theme: map.get($modules, $name);
 	@if $theme == null {
 		@warn 'Theme not found: #{$name}';
 	}

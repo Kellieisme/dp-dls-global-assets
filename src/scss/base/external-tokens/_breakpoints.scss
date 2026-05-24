@@ -227,11 +227,11 @@ $moduleBreakpoint:(
 		@warn 'No breakpoints provided.';
 		$breakpoints: $moduleBreakpoint;
 	}
-	$breakpoint: map-get($breakpoints, $name);
+	$breakpoint: map.get($breakpoints, $name);
 	@if $breakpoint == null {
 		@warn 'Breakpoint not found: #{$name}';
 	}
-	$max: map-get($breakpoint, $token);
+	$max: map.get($breakpoint, $token);
 	@if $max {
 		@media (max-width: $max) {
 			@content;
