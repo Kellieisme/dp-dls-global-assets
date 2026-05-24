@@ -1,11 +1,10 @@
-name: CI/CD Pipeline
+name: CI
 
 on:
   push:
     branches:
       - '*'
 
-# Remove before going to prod
 concurrency:
   group: release-workflow
   cancel-in-progress: true
@@ -26,66 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install token-service dependencies
-        run: cd token-service && npm install
-
-      - name: Generate token files
-        run: cd token-service && npm run ts
-
       - name: Build assets
-        run: npm run release
+        run: npm run build
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
-
-  publish:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      contents: read
-      packages: write
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          registry-url: 'https://npm.pkg.github.com/'
-
-      - name: Authenticate to GitHub Packages
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-
-      - name: Download and extract dist artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: ./dist
-
-      - name: List dist directory before publish
-        run: ls -la dist/
-
-      - name: Extract package info
-        id: package_info
-        run: |
-          NPM_PACKAGE_NAME=$(node -p "require('./package.json').name")
-          NPM_PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          echo "NPM_PACKAGE_NAME=$NPM_PACKAGE_NAME" >> $GITHUB_ENV
-          echo "NPM_PACKAGE_VERSION=$NPM_PACKAGE_VERSION" >> $GITHUB_ENV
-
-      - name: Publish to GitHub Packages
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            npm publish
-            echo "Successfully published version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
-          else
-            npm publish --dry-run
-            echo "Dry-run: Would publish version $NPM_PACKAGE_VERSION of $NPM_PACKAGE_NAME to GitHub Packages"
-          fi
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
