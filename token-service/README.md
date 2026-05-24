@@ -149,8 +149,8 @@ This repository can consume design tokens from the external repo `dp-dls-global-
 ### 1. Add Submodules
 
 ```bash
-git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-tokens token-service/external-tokens
-git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-angular angular
+git submodule add https://github.com/Kellieisme/dp-dls-global-tokens token-service/external-tokens
+git submodule add https://github.com/Kellieisme/dp-dls-global-angular angular
 ```
 
 ### 2. Build External Tokens

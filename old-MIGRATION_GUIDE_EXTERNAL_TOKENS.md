@@ -5,8 +5,8 @@ This condensed guide summarizes the migration steps documented in `token-service
 ## Steps
 1. Add submodules
 ```bash
-git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-tokens token-service/external-tokens
-git submodule add https://github.com/jeppesen-foreflight/dp-dls-global-angular angular
+git submodule add https://github.com/Kellieisme/dp-dls-global-tokens token-service/external-tokens
+git submodule add https://github.com/Kellieisme/dp-dls-global-angular angular
 ```
 2. Build external tokens
 ```bash

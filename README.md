@@ -106,7 +106,7 @@ This project uses design tokens from two sources that work together to provide a
 
 ### 1. External Tokens (Primary Design System)
 
-The primary design tokens are maintained in the separate [dp-dls-global-tokens](https://github.com/jeppesen-foreflight/dp-dls-global-tokens) repository. Compiled SCSS tokens from that repository are committed directly to this project at:
+The primary design tokens are maintained in the separate [dp-dls-global-tokens](https://github.com/Kellieisme/dp-dls-global-tokens) repository. Compiled SCSS tokens from that repository are committed directly to this project at:
 
 ```
 src/scss/base/external-tokens/
