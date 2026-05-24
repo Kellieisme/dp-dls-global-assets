@@ -32,3 +32,13 @@ node_modules/
 
 # Output
 dist/
+
+# Legacy token-service generated files (no longer part of build pipeline)
+src/css/variables.css
+src/css/variablesBase.css
+src/js/variables.js
+src/js/variables.module.js
+src/js/variablesBase.js
+src/js/variablesBase.module.js
+src/json/variables.json
+src/json/variablesBase.json
